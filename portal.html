@@ -1,1 +1,921 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="Borobudur Marathon 2026 — Registration Portal. Complete verification and choose your pathway to join the 10th anniversary.">
+<meta name="theme-color" content="#0D0D0D">
+<meta property="og:title" content="Registration Portal — Borobudur Marathon 2026">
+<meta property="og:description" content="Decade of Legacy — Verify, Choose, Register for the 10th Edition.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="logo.png">
+<title>Registration Portal — Borobudur Marathon 2026</title>
 
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Bebas+Neue&family=Archivo+Black&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['"Bebas Neue"', 'sans-serif'],
+        'heavy': ['"Archivo Black"', 'sans-serif'],
+        'serif': ['"Playfair Display"', 'serif'],
+        'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      colors: {
+        bm: {
+          red: { 50:'#FEF2F2', 100:'#FDE8E8', 200:'#F9C5C5', 300:'#F09898', 400:'#E05A5A', 500:'#C62828', 600:'#A82022', 700:'#8B181B', 800:'#7A0F12', 900:'#4A0A0C', deep:'#3A0608' },
+          gold: { 50:'#FFFDF5', 100:'#F8F0D4', 200:'#EDE4C0', 300:'#D4C48A', 400:'#C9A84C', 500:'#B8963E', 600:'#9A7D32', 700:'#7A6328', 800:'#5C4A1E', 900:'#3D3114' },
+          dark: { 50:'#F5F5F5', 100:'#E8E8E8', 200:'#D1D1D1', 300:'#AAAAAA', 400:'#777777', 500:'#555555', 600:'#3A3A3A', 700:'#252525', 800:'#1A1A1A', 900:'#0D0D0D', black:'#080808' }
+        }
+      }
+    }
+  }
+}
+</script>
+
+<style>
+:root {
+  --bm-red: #C62828; --bm-red-dark: #A82022; --bm-red-deep: #7A0F12; --bm-red-glow: rgba(198,40,40,0.15);
+  --bm-gold: #B8963E; --bm-gold-light: #D4C48A; --bm-gold-glow: rgba(184,150,62,0.12);
+  --bm-black: #0D0D0D; --bm-white: #FFFFFF;
+  --bm-gray-50: #FAFAFA; --bm-gray-100: #F0F0F0; --bm-gray-200: #E0E0E0; --bm-gray-300: #C0C0C0;
+  --bm-gray-400: #999999; --bm-gray-500: #666666; --bm-gray-600: #444444; --bm-gray-700: #2A2A2A; --bm-gray-800: #1A1A1A;
+  --surface-card: #FFFFFF; --surface-elevated: #FFFFFF; --surface-sunken: #F5F5F5;
+  --border-subtle: rgba(0,0,0,0.06); --border-default: rgba(0,0,0,0.10); --border-strong: rgba(0,0,0,0.16);
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04); --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --shadow-md: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); --shadow-lg: 0 4px 8px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.08);
+  --shadow-xl: 0 8px 16px rgba(0,0,0,0.05), 0 24px 64px rgba(0,0,0,0.10);
+  --shadow-glow-red: 0 4px 20px rgba(198,40,40,0.20), 0 12px 40px rgba(198,40,40,0.10); --shadow-glow-gold: 0 4px 20px rgba(184,150,62,0.15);
+  --r-xs: 6px; --r-sm: 10px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px; --r-2xl: 36px; --r-full: 9999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1); --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 0.15s; --dur-base: 0.3s; --dur-slow: 0.5s;
+}
+
+*, *::before, *::after { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+html { overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { background: var(--bm-white); margin: 0; padding: 0; color: var(--bm-gray-600); overflow-x: hidden; }
+:focus-visible { outline: 2px solid var(--bm-red); outline-offset: 3px; border-radius: var(--r-xs); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.bg-atmosphere { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.bg-orb { position: absolute; border-radius: 50%; filter: blur(80px); }
+.bg-orb-1 { top: -20%; right: -15%; width: 50vw; height: 50vw; max-width: 600px; max-height: 600px; background: radial-gradient(circle, var(--bm-gold-glow), transparent 70%); animation: orbFloat1 25s ease-in-out infinite; }
+.bg-orb-2 { bottom: -25%; left: -20%; width: 60vw; height: 60vw; max-width: 700px; max-height: 700px; background: radial-gradient(circle, var(--bm-red-glow), transparent 70%); animation: orbFloat2 30s ease-in-out infinite; }
+.bg-orb-3 { top: 50%; left: 40%; width: 30vw; height: 30vw; max-width: 350px; max-height: 350px; background: radial-gradient(circle, rgba(184,150,62,0.06), transparent 70%); animation: orbFloat3 20s ease-in-out infinite; }
+@keyframes orbFloat1 { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(30px, -20px) scale(1.05); } 66% { transform: translate(-20px, 15px) scale(0.95); } }
+@keyframes orbFloat2 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-30px, -25px) scale(1.08); } }
+@keyframes orbFloat3 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(40px, -30px); } }
+.bg-noise { position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.018; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 180px 180px; }
+
+.logo-container { position: relative; display: flex; align-items: center; gap: 14px; }
+.logo-img { width: 48px; height: 48px; border-radius: var(--r-md); object-fit: contain; transition: all var(--dur-slow) var(--ease); filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12)); }
+.logo-img:hover { transform: scale(1.05) rotate(1deg); filter: drop-shadow(0 4px 16px rgba(0,0,0,0.18)); }
+.logo-img-mobile { width: 38px; height: 38px; border-radius: var(--r-sm); object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10)); }
+.logo-glow { position: absolute; inset: -6px; background: linear-gradient(135deg, var(--bm-red), var(--bm-gold)); border-radius: calc(var(--r-md) + 4px); opacity: 0; filter: blur(16px); transition: opacity var(--dur-slow) var(--ease); z-index: -1; }
+.logo-container:hover .logo-glow { opacity: 0.25; }
+
+.step-circle { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; transition: all var(--dur-base) var(--ease); flex-shrink: 0; position: relative; }
+.step-circle.done { background: var(--bm-black); color: var(--bm-gold); animation: stepPop 0.5s var(--ease-spring); }
+.step-circle.current { background: linear-gradient(135deg, var(--bm-red), var(--bm-red-dark)); color: white; box-shadow: 0 0 0 5px rgba(198,40,40,0.10), 0 6px 20px rgba(198,40,40,0.25); animation: stepBreathe 3s ease-in-out infinite; }
+.step-circle.todo { background: var(--bm-gray-100); color: var(--bm-gray-300); border: 1.5px solid var(--bm-gray-200); }
+.step-line { height: 2px; flex: 1; background: var(--bm-gray-200); border-radius: 2px; overflow: hidden; position: relative; min-width: 16px; }
+.step-line.done::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--bm-black), var(--bm-red)); animation: lineFill 0.6s var(--ease) forwards; }
+@keyframes lineFill { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes stepPop { from { transform: scale(0.7); } to { transform: scale(1); } }
+@keyframes stepBreathe { 0%, 100% { box-shadow: 0 0 0 5px rgba(198,40,40,0.10), 0 6px 20px rgba(198,40,40,0.25); } 50% { box-shadow: 0 0 0 8px rgba(198,40,40,0.06), 0 10px 28px rgba(198,40,40,0.35); } }
+
+.citizen-card { transition: all var(--dur-base) var(--ease); cursor: pointer; position: relative; overflow: hidden; background: var(--surface-card); border: 1.5px solid var(--border-default); }
+.citizen-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(184,150,62,0.08), transparent); transition: left 0.7s var(--ease); }
+.citizen-card:hover::before { left: 100%; }
+.citizen-card:hover { border-color: var(--bm-gray-400); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.citizen-card.selected { border-color: var(--bm-red) !important; background: linear-gradient(135deg, rgba(198,40,40,0.03), rgba(184,150,62,0.03)); box-shadow: var(--shadow-glow-red); }
+.citizen-card.selected .check { opacity: 1; transform: scale(1); }
+.check { opacity: 0; transform: scale(0.5); transition: all 0.4s var(--ease-spring); }
+
+.field-input { background: var(--bm-gray-50); border: 1.5px solid var(--bm-gray-200); color: var(--bm-black); transition: all var(--dur-base) var(--ease); }
+.field-input:focus { outline: none; border-color: var(--bm-red); background: white; box-shadow: 0 0 0 4px rgba(198,40,40,0.06); }
+.field-input::placeholder { color: var(--bm-gray-300); }
+.field-input option { background: white; color: var(--bm-black); }
+input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; }
+
+.upload-area { border: 2px dashed var(--bm-gray-200); transition: all var(--dur-base) var(--ease); position: relative; overflow: hidden; background: var(--bm-gray-50); }
+.upload-area:hover { border-color: var(--bm-red); background: rgba(198,40,40,0.02); }
+.upload-area.has-file { border-style: solid; border-color: var(--bm-red); background: white; }
+.upload-area.dragover { border-color: var(--bm-red); background: rgba(198,40,40,0.04); transform: scale(1.01); box-shadow: var(--shadow-glow-red); }
+
+.btn-primary { background: linear-gradient(135deg, var(--bm-red), var(--bm-red-dark)); color: white; box-shadow: var(--shadow-glow-red); transition: all var(--dur-base) var(--ease); position: relative; overflow: hidden; }
+.btn-primary::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%); pointer-events: none; }
+.btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(198,40,40,0.35), 0 12px 40px rgba(198,40,40,0.15); filter: brightness(1.05); }
+.btn-primary:active:not(:disabled) { transform: translateY(0); filter: brightness(0.95); }
+.btn-primary:disabled { background: var(--bm-gray-200); color: var(--bm-gray-300); box-shadow: none; cursor: not-allowed; }
+.btn-primary:disabled::after { display: none; }
+.btn-primary.loading { pointer-events: none; color: transparent !important; }
+.btn-primary.loading .btn-text { opacity: 0; }
+.btn-primary.loading .btn-spinner { display: flex; }
+.btn-spinner { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; }
+.btn-spinner-circle { width: 20px; height: 20px; border: 2.5px solid rgba(255,255,255,0.25); border-top-color: #fff; border-radius: 50%; animation: spin 0.6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.shimmer { position: relative; overflow: hidden; }
+.shimmer::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.8s var(--ease); z-index: 1; pointer-events: none; }
+.shimmer:hover::before { left: 100%; }
+.btn-secondary { background: white; border: 1.5px solid var(--bm-gray-200); color: var(--bm-gray-700); transition: all var(--dur-base) var(--ease); }
+.btn-secondary:hover { border-color: var(--bm-gray-400); background: var(--bm-gray-50); transform: translateX(-2px); }
+
+.pathway-card { background: var(--surface-card); border: 1.5px solid var(--border-default); transition: all var(--dur-slow) var(--ease); position: relative; overflow: hidden; }
+.pathway-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bm-red), var(--bm-gold)); transform: scaleX(0); transform-origin: left; transition: transform var(--dur-slow) var(--ease); }
+.pathway-card::after { content: ''; position: absolute; bottom: -40%; right: -25%; width: 180px; height: 180px; background: var(--bm-gold); opacity: 0; border-radius: 50%; filter: blur(50px); transition: opacity var(--dur-slow) var(--ease); pointer-events: none; }
+.pathway-card:hover { border-color: var(--bm-gray-400); transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+.pathway-card:hover::before { transform: scaleX(1); }
+.pathway-card:hover::after { opacity: 0.10; }
+.pathway-icon { background: var(--bm-gray-50); border: 1.5px solid var(--bm-gray-200); transition: all var(--dur-base) var(--ease); }
+.pathway-card:hover .pathway-icon { background: var(--bm-black); border-color: var(--bm-black); transform: rotate(-5deg) scale(1.08); box-shadow: var(--shadow-md); }
+.pathway-card:hover .pathway-icon svg { color: var(--bm-gold) !important; }
+
+.badge-red { background: rgba(198,40,40,0.08); border: 1px solid rgba(198,40,40,0.18); color: var(--bm-red); }
+.badge-dark { background: var(--bm-gray-50); border: 1px solid var(--bm-gray-200); color: var(--bm-gray-700); transition: all var(--dur-fast) var(--ease); }
+.pathway-card:hover .badge-dark { background: rgba(0,0,0,0.04); border-color: var(--bm-gray-300); }
+
+.light-card { background: var(--surface-card); border: 1.5px solid var(--border-default); transition: all var(--dur-base) var(--ease); }
+.light-card:hover { border-color: var(--bm-gray-400); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.deco-line { height: 1px; background: linear-gradient(90deg, transparent, var(--bm-gray-200), transparent); }
+.step-content { animation: stepSlideIn 0.6s var(--ease-out); }
+@keyframes stepSlideIn { from { opacity: 0; transform: translateY(24px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.stagger-item { opacity: 0; transform: translateY(16px); animation: staggerIn 0.5s var(--ease-out) forwards; }
+@keyframes staggerIn { to { opacity: 1; transform: translateY(0); } }
+.counter-animate { animation: counterPop 0.6s var(--ease-spring); }
+@keyframes counterPop { 0% { transform: scale(0.8); opacity: 0; } 50% { transform: scale(1.08); } 100% { transform: scale(1); opacity: 1; } }
+
+.toast { position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px) scale(0.96); background: var(--bm-black); color: white; padding: 14px 28px; border-radius: var(--r-lg); font-size: 13px; font-weight: 600; box-shadow: var(--shadow-xl); opacity: 0; pointer-events: none; transition: all 0.4s var(--ease); z-index: 9999; max-width: 90vw; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+.toast.error { background: var(--bm-red); }
+.toast.success { background: #15803D; }
+
+.main-grid { display: block; position: relative; z-index: 10; }
+.main-content-wrap { display: block; position: relative; }
+.content-scroll { display: block; overflow: visible; }
+#bottomNav { position: sticky; bottom: 0; z-index: 50; background: white; }
+
+@media (min-width: 1024px) {
+  .main-grid { display: grid; grid-template-columns: 400px 1fr; height: 100vh; overflow: hidden; }
+  .sidebar-sticky { position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+  .main-content-wrap { display: flex; flex-direction: column; height: 100vh; min-height: 0; overflow: hidden; }
+  .content-scroll { display: block; flex: 1; min-height: 0; overflow-y: auto; }
+  #bottomNav { position: relative; bottom: auto; flex-shrink: 0; }
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--bm-red), var(--bm-gold)); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bm-red-dark); }
+.sidebar-enter { animation: sidebarSlide 0.8s var(--ease-out); }
+@keyframes sidebarSlide { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: translateX(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .step-content, .stagger-item, .counter-animate, .sidebar-enter { opacity: 1; transform: none; }
+}
+@media print { .bg-atmosphere, .bg-noise, #bottomNav, .toast { display: none !important; } body { background: white; } .main-grid { display: block !important; height: auto !important; overflow: visible !important; } .sidebar-sticky { display: none !important; } .main-content-wrap { height: auto !important; overflow: visible !important; } .content-scroll { overflow: visible !important; } .pathway-card, .light-card, .citizen-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; } .btn-primary { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="bg-atmosphere" aria-hidden="true">
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+</div>
+<div class="bg-noise" aria-hidden="true"></div>
+
+<div class="main-grid">
+  <aside class="sidebar-sticky sidebar-enter hidden lg:flex flex-col justify-between p-8 xl:p-10 border-r border-bm-dark-800 bg-bm-dark-900 text-white" role="complementary">
+    <div>
+      <div class="logo-container mb-2">
+        <div class="logo-glow"></div>
+        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/20">
+            <img src="logo.png" alt="Borobudur Marathon Logo" class="w-8 h-8 object-contain" loading="eager" />
+        </div>
+        <div>
+          <div class="font-display text-xl text-white leading-none tracking-wide">BOROBUDUR</div>
+          <div class="font-display text-xl text-bm-red-500 leading-none tracking-wide">MARATHON</div>
+        </div>
+      </div>
+      <div class="text-[10px] tracking-[0.4em] text-bm-gold-500 font-bold mb-8 uppercase">Decade of Legacy · 2026</div>
+      <div class="h-px bg-bm-dark-700 mb-8"></div>
+      <div class="text-[10px] uppercase tracking-[0.3em] text-bm-red-500 font-bold mb-3">Registration Portal</div>
+      <h1 class="font-display text-5xl xl:text-6xl text-white leading-[0.92] mb-6">
+        Verify.<br>
+        Choose.<br>
+        <span class="text-bm-red-500">Register.</span>
+      </h1>
+      <p class="text-bm-dark-400 text-sm leading-relaxed mb-8 max-w-xs">
+        Complete your citizen verification and select your registration pathway to join the 10th anniversary of Borobudur Marathon.
+      </p>
+      <div class="grid grid-cols-2 gap-3 mb-8">
+        <div class="bg-bm-dark-800 border border-bm-dark-700 rounded-2xl p-4 stagger-item" style="animation-delay: 0.1s;">
+          <div class="font-display text-3xl text-white counter-animate">10K+</div>
+          <div class="text-[10px] uppercase tracking-wider text-bm-dark-400 mt-1">Runners Expected</div>
+        </div>
+        <div class="bg-bm-dark-800 border border-bm-dark-700 rounded-2xl p-4 stagger-item" style="animation-delay: 0.2s;">
+          <div class="font-display text-3xl text-bm-red-500 counter-animate" style="animation-delay: 0.2s;">6</div>
+          <div class="text-[10px] uppercase tracking-wider text-bm-dark-400 mt-1">Pathways Available</div>
+        </div>
+        <div class="bg-bm-dark-800 border border-bm-dark-700 rounded-2xl p-4 stagger-item" style="animation-delay: 0.3s;">
+          <div class="font-display text-3xl text-white counter-animate" style="animation-delay: 0.3s;">42K</div>
+          <div class="text-[10px] uppercase tracking-wider text-bm-dark-400 mt-1">Full Marathon</div>
+        </div>
+        <div class="bg-bm-dark-800 border border-bm-dark-700 rounded-2xl p-4 stagger-item" style="animation-delay: 0.4s;">
+          <div class="font-display text-3xl text-bm-red-500 counter-animate" style="animation-delay: 0.4s;">2026</div>
+          <div class="text-[10px] uppercase tracking-wider text-bm-dark-400 mt-1">10th Edition</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="h-px bg-bm-dark-700 mb-5"></div>
+      <div class="flex items-center gap-3 text-xs text-bm-dark-400">
+        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+        <span class="font-semibold">Registration is open</span>
+        <span class="ml-auto text-bm-dark-600 font-bold">v2.4.1</span>
+      </div>
+      <div class="mt-4 text-[10px] text-bm-dark-500 leading-relaxed">
+        Powered by Bank Jateng · Magelang, Central Java, Indonesia
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content-wrap">
+    <header class="lg:hidden px-5 pt-5 pb-3 bg-white border-b border-bm-dark-100" role="banner">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <img src="logo.png" alt="Borobudur Marathon Logo" class="logo-img-mobile" loading="eager" />
+          <div>
+            <div class="font-display text-sm text-bm-dark-black leading-none tracking-wide">BOROBUDUR MARATHON</div>
+            <div class="text-[8px] tracking-[0.25em] text-bm-red-500 font-bold mt-0.5 uppercase">Decade of Legacy · 2026</div>
+          </div>
+        </div>
+        <span class="text-[10px] text-bm-dark-300 font-semibold">v2.4.1</span>
+      </div>
+    </header>
+
+    <div class="px-5 lg:px-10 pt-4 lg:pt-8 pb-3 bg-white">
+      <div id="stepIndicator" class="flex items-center gap-2 max-w-2xl" role="navigation" aria-label="Registration steps"></div>
+      <div class="mt-3 flex items-center justify-between max-w-2xl">
+        <div>
+          <div class="text-[10px] tracking-[0.25em] text-bm-red-500 font-bold uppercase">Step <span id="stepNumLabel">1</span> of 4</div>
+          <div id="stepTitleLabel" class="font-display text-2xl lg:text-3xl text-bm-dark-black mt-1">Choose Citizen</div>
+        </div>
+        <div class="hidden sm:block text-right">
+          <div class="text-[10px] tracking-[0.25em] text-bm-dark-300 font-bold uppercase">Progress</div>
+          <div class="font-display text-2xl text-bm-red-500 mt-1"><span id="progressPercent">25</span>%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-scroll px-5 lg:px-10 pb-6 bg-white">
+
+      <section id="step1" class="step-content max-w-4xl" aria-label="Step 1: Choose citizen type">
+        <div class="mb-6">
+          <h2 class="font-display text-3xl lg:text-4xl text-bm-dark-black mb-2">Choose Citizen</h2>
+          <p class="text-bm-dark-400 text-sm lg:text-base">Select your citizenship status to begin the verification process for Borobudur Marathon 2026.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+          <div class="citizen-card selected rounded-2xl p-5 lg:p-6 stagger-item" data-citizen="WNI" style="animation-delay: 0.1s;" role="radio" aria-checked="true" tabindex="0">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-xl bg-bm-red-500 flex items-center justify-center text-white font-display text-xl shadow-lg flex-shrink-0" style="box-shadow: 0 6px 20px rgba(198,40,40,0.30);">ID</div>
+              <div class="flex-1 min-w-0">
+                <div class="font-display text-2xl text-bm-dark-black">WNI</div>
+                <div class="text-sm text-bm-dark-400">Indonesia Citizen</div>
+                <div class="mt-3 text-xs text-bm-dark-400 leading-relaxed">For Indonesian citizens with valid KTP or national ID.</div>
+              </div>
+              <div class="check w-7 h-7 rounded-full bg-bm-red-500 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="citizen-card rounded-2xl p-5 lg:p-6 stagger-item" data-citizen="WNA" style="animation-delay: 0.2s;" role="radio" aria-checked="false" tabindex="0">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-xl bg-bm-dark-50 border border-bm-dark-200 flex items-center justify-center text-bm-dark-400 font-display text-sm flex-shrink-0">INT</div>
+              <div class="flex-1 min-w-0">
+                <div class="font-display text-2xl text-bm-dark-black">WNA</div>
+                <div class="text-sm text-bm-dark-400">Foreign Citizen</div>
+                <div class="mt-3 text-xs text-bm-dark-400 leading-relaxed">For international runners with passport identification.</div>
+              </div>
+              <div class="check w-7 h-7 rounded-full bg-bm-red-500 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="light-card rounded-xl p-4 flex gap-3 stagger-item" style="animation-delay: 0.3s;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-bm-red-500 flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <p class="text-xs lg:text-sm text-bm-dark-400 leading-relaxed">Ensure your selection matches your nationality document. This determines which registration pathways are available to you.</p>
+        </div>
+      </section>
+
+      <section id="step2" class="step-content max-w-4xl hidden" aria-label="Step 2: Upload ID document">
+        <div class="mb-6">
+          <h2 class="font-display text-3xl lg:text-4xl text-bm-dark-black mb-2">Upload National ID</h2>
+          <p class="text-bm-dark-400 text-sm lg:text-base">Please upload a clear photo of your national ID card (KTP) or passport.</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-5">
+          <div id="uploadArea" class="upload-area rounded-2xl p-8 flex flex-col items-center justify-center text-center cursor-pointer min-h-[260px] stagger-item" style="animation-delay: 0.1s;" role="button" tabindex="0" aria-label="Click or drag to upload ID document">
+            <div id="uploadPlaceholder" class="flex flex-col items-center">
+              <div class="w-20 h-20 rounded-2xl bg-bm-red-500 flex items-center justify-center mb-4" style="box-shadow: 0 8px 24px rgba(198,40,40,0.30);">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 16V8M12 8L9 11M12 8L15 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 15V16C3 18.2091 4.79086 20 7 20H17C19.2091 20 21 18.2091 21 16V15" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <div class="font-display text-xl text-bm-dark-black mb-1">Tap to Upload</div>
+              <div class="text-xs text-bm-dark-400">JPG, PNG · max 5MB</div>
+              <div class="text-[10px] text-bm-red-500 mt-2 font-bold uppercase tracking-wider">or drag & drop here</div>
+            </div>
+            <img id="uploadPreview" class="hidden max-h-32 rounded-lg shadow-lg" alt="ID preview"/>
+            <input type="file" id="fileInput" accept="image/jpeg,image/png,image/jpg" class="hidden" aria-label="Upload ID file" />
+          </div>
+          <div class="light-card rounded-2xl p-5 stagger-item" style="animation-delay: 0.2s;">
+            <div class="text-xs font-bold text-bm-dark-black mb-4 uppercase tracking-wider">File Requirements</div>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 text-sm text-bm-dark-700">
+                <div class="w-6 h-6 rounded-full bg-bm-red-50 flex items-center justify-center flex-shrink-0"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M4 7L6 9L10 5" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Maximum file size: 5MB
+              </div>
+              <div class="flex items-center gap-3 text-sm text-bm-dark-700">
+                <div class="w-6 h-6 rounded-full bg-bm-red-50 flex items-center justify-center flex-shrink-0"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M4 7L6 9L10 5" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Format: .jpg or .png
+              </div>
+              <div class="flex items-center gap-3 text-sm text-bm-dark-700">
+                <div class="w-6 h-6 rounded-full bg-bm-red-50 flex items-center justify-center flex-shrink-0"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M4 7L6 9L10 5" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Clear image, no blur or glare
+              </div>
+              <div class="flex items-center gap-3 text-sm text-bm-dark-700">
+                <div class="w-6 h-6 rounded-full bg-bm-red-50 flex items-center justify-center flex-shrink-0"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M4 7L6 9L10 5" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Recommended min. width: 1280px
+              </div>
+              <div class="flex items-center gap-3 text-sm text-bm-dark-700">
+                <div class="w-6 h-6 rounded-full bg-bm-red-50 flex items-center justify-center flex-shrink-0"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M4 7L6 9L10 5" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                All four corners visible
+              </div>
+            </div>
+            <div class="deco-line my-5"></div>
+            <p class="text-xs text-bm-dark-400 leading-relaxed">Your document is encrypted with 256-bit SSL and stored securely. We never share your data with third parties.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="step3" class="step-content max-w-4xl hidden" aria-label="Step 3: Account information">
+        <div class="mb-6">
+          <h2 class="font-display text-3xl lg:text-4xl text-bm-dark-black mb-2">Account Information</h2>
+          <p class="text-bm-dark-400 text-sm lg:text-base">Fill in your personal account information for race communication.</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-5">
+          <div class="stagger-item" style="animation-delay: 0.1s;">
+            <label for="fullName" class="text-[11px] font-bold text-bm-dark-black mb-2 block uppercase tracking-wider">Full Name *</label>
+            <input id="fullName" type="text" value="ANGGA" class="field-input w-full px-4 py-3.5 rounded-xl text-sm font-semibold" placeholder="Enter your full name" required />
+          </div>
+          <div class="stagger-item" style="animation-delay: 0.15s;">
+            <label for="email" class="text-[11px] font-bold text-bm-dark-black mb-2 block uppercase tracking-wider">Email Address *</label>
+            <input id="email" type="email" class="field-input w-full px-4 py-3.5 rounded-xl text-sm font-semibold" placeholder="you@example.com" required />
+          </div>
+          <div class="stagger-item" style="animation-delay: 0.2s;">
+            <label for="phoneNumber" class="text-[11px] font-bold text-bm-dark-black mb-2 block uppercase tracking-wider">Phone Number *</label>
+            <div class="flex gap-2">
+              <div class="relative">
+                <select id="countryCode" class="field-input appearance-none pl-3 pr-8 py-3.5 rounded-xl text-sm font-bold cursor-pointer w-24" aria-label="Country code">
+                  <option value="62" selected>+62</option>
+                  <option value="1">+1</option>
+                  <option value="44">+44</option>
+                  <option value="65">+65</option>
+                  <option value="60">+60</option>
+                  <option value="66">+66</option>
+                  <option value="81">+81</option>
+                  <option value="82">+82</option>
+                </select>
+                <svg class="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="#999" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <input id="phoneNumber" type="tel" class="field-input flex-1 px-4 py-3.5 rounded-xl text-sm font-semibold" placeholder="812 3456 7890" required />
+            </div>
+          </div>
+          <div class="stagger-item" style="animation-delay: 0.25s;">
+            <label for="emergencyContact" class="text-[11px] font-bold text-bm-dark-black mb-2 block uppercase tracking-wider">Emergency Contact</label>
+            <input id="emergencyContact" type="text" class="field-input w-full px-4 py-3.5 rounded-xl text-sm font-semibold" placeholder="Emergency contact name & phone" />
+          </div>
+          <div class="lg:col-span-2 stagger-item" style="animation-delay: 0.3s;">
+            <label for="address" class="text-[11px] font-bold text-bm-dark-black mb-2 block uppercase tracking-wider">Address</label>
+            <input id="address" type="text" class="field-input w-full px-4 py-3.5 rounded-xl text-sm font-semibold" placeholder="Street, City, Province, Postal Code" />
+          </div>
+        </div>
+        <div class="mt-5 rounded-xl p-4 flex items-center gap-3 border stagger-item" style="background: rgba(22,163,74,0.05); border-color: rgba(22,163,74,0.25); animation-delay: 0.4s;">
+          <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 12px rgba(22,163,74,0.30);">
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M4 8L7 11L12 5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flex-1">
+            <div class="text-sm font-extrabold text-bm-dark-black">Upload ID Success</div>
+            <div class="text-xs text-bm-dark-400">Your ID document has been verified and accepted.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="step4" class="step-content max-w-6xl hidden" aria-label="Step 4: Choose registration pathway">
+        <div class="mb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="badge-red text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full">Final Step</div>
+            <div class="text-[10px] text-bm-dark-300 uppercase tracking-wider">Choose your path</div>
+          </div>
+          <h2 class="font-display text-3xl lg:text-5xl text-bm-dark-black mb-2">Registration <span class="text-bm-red-500">Pathways</span></h2>
+          <p class="text-bm-dark-400 text-sm lg:text-base max-w-2xl">Select your preferred registration pathway. Click "Daftar" to proceed to the detailed information page.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5">
+
+          <article class="pathway-card rounded-2xl p-5 lg:p-6 flex flex-col stagger-item" style="animation-delay: 0.1s;">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="pathway-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-bm-red-500"><path d="M3 6H21M5 6V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V6M9 6V4C9 3.4 9.4 3 10 3H14C14.6 3 15 3.4 15 4V6M10 11V17M14 11V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-[10px] text-bm-red-500 font-bold uppercase tracking-wider">Pathway 01</div>
+                <div class="font-display text-xl text-bm-dark-black leading-tight">BALLOT</div>
+              </div>
+            </div>
+            <p class="text-xs text-bm-dark-400 leading-relaxed mb-4 flex-1">Random ballot system ensuring equal opportunity for all runners. Open to the general public through the My Borobudur Marathon app.</p>
+            <div class="flex items-center gap-2 mb-4 text-[10px] flex-wrap">
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Public</span>
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Random Draw</span>
+            </div>
+            <button onclick="BM_Portal.redirectToPathway('BALLOT', this)" class="btn-primary shimmer w-full py-3 rounded-xl font-extrabold text-sm tracking-wide flex items-center justify-center gap-2" aria-label="Daftar BALLOT">
+              <span class="btn-text">Daftar</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="relative z-10"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="btn-spinner"><span class="btn-spinner-circle"></span></span>
+            </button>
+          </article>
+
+          <article class="pathway-card rounded-2xl p-5 lg:p-6 flex flex-col stagger-item" style="animation-delay: 0.15s;">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="pathway-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-bm-red-500"><path d="M3 10H21M5 10V20H19V10M9 14H15M12 4V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="4" r="1.5" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-[10px] text-bm-red-500 font-bold uppercase tracking-wider">Pathway 02</div>
+                <div class="font-display text-xl text-bm-dark-black leading-tight">XTRARUN BANK JATENG</div>
+              </div>
+            </div>
+            <p class="text-xs text-bm-dark-400 leading-relaxed mb-4 flex-1">Exclusive for Bank Jateng savings account holders meeting minimum balance requirements. Register via branches in Central Java, DI Yogyakarta, and Jakarta.</p>
+            <div class="flex items-center gap-2 mb-4 text-[10px] flex-wrap">
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Bank Jateng</span>
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Min. Balance</span>
+            </div>
+            <button onclick="BM_Portal.redirectToPathway('XTRARUN BANK JATENG', this)" class="btn-primary shimmer w-full py-3 rounded-xl font-extrabold text-sm tracking-wide flex items-center justify-center gap-2" aria-label="Daftar XTRARUN BANK JATENG">
+              <span class="btn-text">Daftar</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="relative z-10"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="btn-spinner"><span class="btn-spinner-circle"></span></span>
+            </button>
+          </article>
+
+          <article class="pathway-card rounded-2xl p-5 lg:p-6 flex flex-col stagger-item" style="animation-delay: 0.2s;">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="pathway-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-bm-red-500"><path d="M12 1V23M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-[10px] text-bm-red-500 font-bold uppercase tracking-wider">Pathway 03</div>
+                <div class="font-display text-xl text-bm-dark-black leading-tight">SAVEDUIT BANK JATENG</div>
+              </div>
+            </div>
+            <p class="text-xs text-bm-dark-400 leading-relaxed mb-4 flex-1">Special registration program for Bank Jateng customers. Available at designated branches across Central Java, DI Yogyakarta, and Jakarta.</p>
+            <div class="flex items-center gap-2 mb-4 text-[10px] flex-wrap">
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Customer</span>
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Exclusive</span>
+            </div>
+            <button onclick="BM_Portal.redirectToPathway('SAVEDUIT BANK JATENG', this)" class="btn-primary shimmer w-full py-3 rounded-xl font-extrabold text-sm tracking-wide flex items-center justify-center gap-2" aria-label="Daftar SAVEDUIT BANK JATENG">
+              <span class="btn-text">Daftar</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="relative z-10"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="btn-spinner"><span class="btn-spinner-circle"></span></span>
+            </button>
+          </article>
+
+          <article class="pathway-card rounded-2xl p-5 lg:p-6 flex flex-col stagger-item" style="animation-delay: 0.25s;">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="pathway-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-bm-red-500"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5S14.5 7.62 14.5 9S13.38 11.5 12 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9" r="1.5" fill="currentColor"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-[10px] text-bm-red-500 font-bold uppercase tracking-wider">Pathway 04</div>
+                <div class="font-display text-xl text-bm-dark-black leading-tight">URBANA QUALIFIERS</div>
+              </div>
+            </div>
+            <p class="text-xs text-bm-dark-400 leading-relaxed mb-4 flex-1">Virtual running qualifier in partnership with Kompas Urbana. Complete missions via the My Borobudur Marathon app to earn your slot.</p>
+            <div class="flex items-center gap-2 mb-4 text-[10px] flex-wrap">
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Virtual Run</span>
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Kompas</span>
+            </div>
+            <button onclick="BM_Portal.redirectToPathway('URBANA QUALIFIERS', this)" class="btn-primary shimmer w-full py-3 rounded-xl font-extrabold text-sm tracking-wide flex items-center justify-center gap-2" aria-label="Daftar URBANA QUALIFIERS">
+              <span class="btn-text">Daftar</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="relative z-10"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="btn-spinner"><span class="btn-spinner-circle"></span></span>
+            </button>
+          </article>
+
+          <article class="pathway-card rounded-2xl p-5 lg:p-6 flex flex-col stagger-item" style="animation-delay: 0.3s;">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="pathway-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-bm-red-500"><path d="M21 16V8C21 6.9 20.1 6 19 6H5C3.9 6 3 6.9 3 8V16C3 17.1 3.9 18 5 18H19C20.1 18 21 17.1 21 16ZM3 10H21M8 14H8.01M12 14H12.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6L15 3M7 6L9 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-[10px] text-bm-red-500 font-bold uppercase tracking-wider">Pathway 05</div>
+                <div class="font-display text-xl text-bm-dark-black leading-tight">TRAVEL AGENT PARTNER</div>
+              </div>
+            </div>
+            <p class="text-xs text-bm-dark-400 leading-relaxed mb-4 flex-1">Register through official travel partners: Carita Nara, TX Travel Jogja, and Pace n Place. Packages include race entry and travel services.</p>
+            <div class="flex items-center gap-2 mb-4 text-[10px] flex-wrap">
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Carita Nara</span>
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">TX Travel</span>
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Pace n Place</span>
+            </div>
+            <button onclick="BM_Portal.redirectToPathway('TRAVEL AGENT PARTNER', this)" class="btn-primary shimmer w-full py-3 rounded-xl font-extrabold text-sm tracking-wide flex items-center justify-center gap-2" aria-label="Daftar TRAVEL AGENT PARTNER">
+              <span class="btn-text">Daftar</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="relative z-10"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="btn-spinner"><span class="btn-spinner-circle"></span></span>
+            </button>
+          </article>
+
+          <article class="pathway-card rounded-2xl p-5 lg:p-6 flex flex-col stagger-item" style="animation-delay: 0.35s;">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="pathway-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-bm-red-500"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12H22M12 2C14.5 4.7 16 8.2 16 12C16 15.8 14.5 19.3 12 22C9.5 19.3 8 15.8 8 12C8 8.2 9.5 4.7 12 2Z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-[10px] text-bm-red-500 font-bold uppercase tracking-wider">Pathway 06</div>
+                <div class="font-display text-xl text-bm-dark-black leading-tight">INTERNATIONAL RUNNERS</div>
+              </div>
+            </div>
+            <p class="text-xs text-bm-dark-400 leading-relaxed mb-4 flex-1">Exclusive registration for international runners through official partners World Marathons and Ahotu. Available for Marathon and Half Marathon categories.</p>
+            <div class="flex items-center gap-2 mb-4 text-[10px] flex-wrap">
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">World Marathons</span>
+              <span class="badge-dark px-2 py-1 rounded-md font-semibold">Ahotu</span>
+            </div>
+            <button onclick="BM_Portal.redirectToPathway('INTERNATIONAL RUNNERS', this)" class="btn-primary shimmer w-full py-3 rounded-xl font-extrabold text-sm tracking-wide flex items-center justify-center gap-2" aria-label="Daftar INTERNATIONAL RUNNERS">
+              <span class="btn-text">Daftar</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="relative z-10"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="btn-spinner"><span class="btn-spinner-circle"></span></span>
+            </button>
+          </article>
+
+        </div>
+        <div class="mt-6 rounded-2xl p-5 flex flex-col sm:flex-row items-start gap-4 border stagger-item" style="background: linear-gradient(135deg, rgba(184,150,62,0.06), rgba(198,40,40,0.03)); border-color: var(--bm-gold-border, rgba(184,150,62,0.20)); animation-delay: 0.4s;">
+          <div class="w-12 h-12 rounded-xl bg-bm-dark-black flex items-center justify-center flex-shrink-0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B8963E" stroke-width="2"/><path d="M12 8V12M12 16H12.01" stroke="#B8963E" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flex-1">
+            <div class="font-display text-lg text-bm-dark-black mb-1">Important Notice</div>
+            <p class="text-xs lg:text-sm text-bm-dark-400 leading-relaxed">All pathways lead to the detailed information page. Registration is only accessible through the <span class="text-bm-red-500 font-bold">My Borobudur Marathon</span> app or authorized partners. Slots are limited and processed on a first-come, first-served or ballot basis depending on the pathway chosen.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div id="bottomNav" class="px-5 lg:px-10 py-4 lg:py-5 border-t border-bm-dark-100 bg-white">
+      <div class="max-w-4xl flex items-center gap-3">
+        <button id="backBtn" class="btn-secondary hidden sm:flex w-14 h-14 rounded-xl items-center justify-center flex-shrink-0" aria-label="Previous step">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none"><path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button id="backBtnMobile" class="btn-secondary sm:hidden flex-1 py-3.5 rounded-xl font-bold text-sm items-center justify-center gap-2" aria-label="Previous step">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back
+        </button>
+        <div class="flex-1 hidden sm:block"></div>
+        <button id="nextBtn" class="btn-primary shimmer flex-1 sm:flex-none sm:px-12 py-3.5 rounded-xl font-extrabold text-sm tracking-wide flex items-center justify-center gap-2" aria-label="Next step">
+          <span class="btn-text" id="nextBtnText">Next</span>
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" class="relative z-10"><path d="M5 10L15 10M15 10L11 6M15 10L11 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="btn-spinner"><span class="btn-spinner-circle"></span></span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  var CONFIG = {
+    redirectDelay: 1200,
+    toastDuration: 3000,
+    totalSteps: 4,
+    maxFileSize: 5 * 1024 * 1024,
+    allowedTypes: ['image/jpeg', 'image/jpg', 'image/png']
+  };
+
+  var STEPS = [
+    { name: 'Citizen', label: 'Choose Citizen' },
+    { name: 'Upload ID', label: 'Upload National ID' },
+    { name: 'Account', label: 'Account Information' },
+    { name: 'Pathways', label: 'Registration Pathways' }
+  ];
+
+  var state = {
+    currentStep: 1,
+    selectedCitizen: 'WNI',
+    uploadedFile: null,
+    isRedirecting: false
+  };
+
+  var dom = {};
+  function cacheDom() {
+    dom.stepIndicator = document.getElementById('stepIndicator');
+    dom.stepNumLabel = document.getElementById('stepNumLabel');
+    dom.stepTitleLabel = document.getElementById('stepTitleLabel');
+    dom.progressPercent = document.getElementById('progressPercent');
+    dom.backBtn = document.getElementById('backBtn');
+    dom.backBtnMobile = document.getElementById('backBtnMobile');
+    dom.nextBtn = document.getElementById('nextBtn');
+    dom.nextBtnText = document.getElementById('nextBtnText');
+    dom.bottomNav = document.getElementById('bottomNav');
+    dom.uploadArea = document.getElementById('uploadArea');
+    dom.fileInput = document.getElementById('fileInput');
+    dom.uploadPreview = document.getElementById('uploadPreview');
+    dom.uploadPlaceholder = document.getElementById('uploadPlaceholder');
+    dom.toast = document.getElementById('toast');
+    dom.fullName = document.getElementById('fullName');
+    dom.email = document.getElementById('email');
+    dom.phoneNumber = document.getElementById('phoneNumber');
+    dom.citizenCards = document.querySelectorAll('.citizen-card');
+  }
+
+  var _toastTimer = null;
+  function showToast(msg, type) {
+    if (!dom.toast) return;
+    dom.toast.textContent = msg;
+    dom.toast.className = 'toast show';
+    if (type === 'error') dom.toast.classList.add('error');
+    if (type === 'success') dom.toast.classList.add('success');
+    clearTimeout(_toastTimer);
+    _toastTimer = setTimeout(function() {
+      dom.toast.classList.remove('show', 'error', 'success');
+    }, CONFIG.toastDuration);
+  }
+
+  function renderStepIndicator() {
+    if (!dom.stepIndicator) return;
+    var html = '';
+    for (var i = 0; i < STEPS.length; i++) {
+      var idx = i + 1;
+      var cls = 'todo';
+      if (idx < state.currentStep) cls = 'done';
+      else if (idx === state.currentStep) cls = 'current';
+      var inner = '';
+      if (cls === 'done') {
+        inner = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      } else {
+        inner = idx;
+      }
+      html += '<div class="flex items-center gap-2">';
+      html += '<div class="step-circle ' + cls + '">' + inner + '</div>';
+      html += '<span class="text-xs font-bold uppercase tracking-wider hidden md:inline ' + (idx <= state.currentStep ? 'text-bm-dark-black' : 'text-bm-dark-300') + '">' + STEPS[i].name + '</span>';
+      html += '</div>';
+      if (i < STEPS.length - 1) {
+        html += '<div class="step-line' + (idx < state.currentStep ? ' done' : '') + '"></div>';
+      }
+    }
+    dom.stepIndicator.innerHTML = html;
+    dom.stepNumLabel.textContent = state.currentStep;
+    dom.stepTitleLabel.textContent = STEPS[state.currentStep - 1].label;
+    dom.progressPercent.textContent = Math.round((state.currentStep / CONFIG.totalSteps) * 100);
+  }
+
+  function showStep(step) {
+    for (var i = 1; i <= CONFIG.totalSteps; i++) {
+      var el = document.getElementById('step' + i);
+      if (!el) continue;
+      if (i === step) {
+        el.classList.remove('hidden');
+        el.style.animation = 'none';
+        void el.offsetHeight;
+        el.style.animation = '';
+      } else {
+        el.classList.add('hidden');
+      }
+    }
+    renderStepIndicator();
+    updateButtons();
+    scrollToTop();
+  }
+
+  function scrollToTop() {
+    if (window.innerWidth >= 1024) {
+      var scrollEl = document.querySelector('.content-scroll');
+      if (scrollEl) scrollEl.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  function updateButtons() {
+    if (!dom.backBtn) return;
+    if (state.currentStep === CONFIG.totalSteps) {
+      dom.bottomNav.classList.add('hidden');
+      return;
+    }
+    dom.bottomNav.classList.remove('hidden');
+    if (state.currentStep === 1) {
+      dom.backBtn.classList.add('hidden');
+      dom.backBtnMobile.classList.add('hidden');
+    } else {
+      dom.backBtn.classList.remove('hidden');
+      dom.backBtnMobile.classList.remove('hidden');
+    }
+    dom.nextBtnText.textContent = (state.currentStep === CONFIG.totalSteps - 1) ? 'View Pathways' : 'Next';
+    dom.nextBtn.disabled = !validateStep(state.currentStep);
+  }
+
+  function validateStep(step) {
+    if (step === 1) return !!state.selectedCitizen;
+    if (step === 2) return !!state.uploadedFile;
+    if (step === 3) {
+      var name = dom.fullName ? dom.fullName.value.trim() : '';
+      var phone = dom.phoneNumber ? dom.phoneNumber.value.trim() : '';
+      var email = dom.email ? dom.email.value.trim() : '';
+      return name.length >= 2 && phone.length >= 6 && email.indexOf('@') !== -1 && email.indexOf('.') !== -1;
+    }
+    return true;
+  }
+
+  // PERBAIKAN UTAMA: Menargetkan tombol secara langsung dan redirect ke home.html
+  function redirectToPathway(pathway, btn) {
+    if (state.isRedirecting) return;
+    state.isRedirecting = true;
+
+    if (btn) {
+      btn.classList.add('loading');
+    } else {
+      document.querySelectorAll('.pathway-card .btn-primary').forEach(function(b) { 
+        b.classList.add('loading'); 
+      });
+    }
+
+    showToast('Memuat halaman utama...', 'success');
+
+    setTimeout(function() {
+      window.location.href = 'home.html';
+    }, CONFIG.redirectDelay);
+  }
+
+  function initCitizenCards() {
+    if (!dom.citizenCards) return;
+    dom.citizenCards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        dom.citizenCards.forEach(function(c) {
+          c.classList.remove('selected');
+          c.setAttribute('aria-checked', 'false');
+        });
+        this.classList.add('selected');
+        this.setAttribute('aria-checked', 'true');
+        state.selectedCitizen = this.getAttribute('data-citizen');
+        updateButtons();
+      });
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  }
+
+  function initUpload() {
+    if (!dom.uploadArea || !dom.fileInput) return;
+    dom.uploadArea.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (!dom.uploadArea.classList.contains('has-file') || true) {
+        dom.fileInput.click();
+      }
+    });
+    dom.uploadArea.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dom.fileInput.click();
+      }
+    });
+    var dragEnter = ['dragenter', 'dragover'];
+    var dragLeave = ['dragleave', 'drop'];
+    dragEnter.forEach(function(evt) {
+      dom.uploadArea.addEventListener(evt, function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dom.uploadArea.classList.add('dragover');
+      });
+    });
+    dragLeave.forEach(function(evt) {
+      dom.uploadArea.addEventListener(evt, function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dom.uploadArea.classList.remove('dragover');
+      });
+    });
+    dom.uploadArea.addEventListener('drop', function(e) {
+      if (e.dataTransfer && e.dataTransfer.files.length) {
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+    dom.fileInput.addEventListener('change', function(e) {
+      if (e.target.files.length) {
+        handleFile(e.target.files[0]);
+      }
+    });
+  }
+
+  function handleFile(file) {
+    if (file.size > CONFIG.maxFileSize) {
+      showToast('Ukuran file melebihi batas 5MB', 'error');
+      return;
+    }
+    if (CONFIG.allowedTypes.indexOf(file.type) === -1) {
+      showToast('Hanya format JPG dan PNG yang diperbolehkan', 'error');
+      return;
+    }
+    state.uploadedFile = file;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      dom.uploadPreview.src = e.target.result;
+      dom.uploadPreview.classList.remove('hidden');
+      var sizeKB = Math.round(file.size / 1024);
+      dom.uploadPlaceholder.innerHTML =
+        '<div class="flex items-center gap-2 mb-1 justify-center">' +
+          '<svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 1.5H8L11.5 5V13.5C11.5 14.05 11.05 14.5 10.5 14.5H4C3.45 14.5 3 14.05 3 13.5V2.5C3 1.95 3.45 1.5 4 1.5Z" stroke="#C62828" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 1.5V5H11.5" stroke="#C62828" stroke-width="1.5" stroke-linejoin="round"/></svg>' +
+          '<div class="font-bold text-bm-dark-black text-xs truncate max-w-[160px]">' + file.name + '</div>' +
+        '</div>' +
+        '<div class="text-[10px] text-bm-red-500">' + sizeKB + ' KB · Tap to change</div>';
+      dom.uploadArea.classList.add('has-file');
+    };
+    reader.readAsDataURL(file);
+    updateButtons();
+    showToast('Dokumen berhasil diunggah', 'success');
+  }
+
+  function initLiveValidation() {
+    var fields = ['fullName', 'phoneNumber', 'email'];
+    fields.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', function() {
+          if (state.currentStep === 3) updateButtons();
+        });
+      }
+    });
+  }
+
+  function initNavigation() {
+    dom.nextBtn.addEventListener('click', function() {
+      if (!validateStep(state.currentStep)) {
+        showToast('Mohon lengkapi semua data yang wajib diisi', 'error');
+        return;
+      }
+      if (state.currentStep < CONFIG.totalSteps) {
+        state.currentStep++;
+        showStep(state.currentStep);
+        if (state.currentStep === CONFIG.totalSteps) {
+          showToast('Pilih jalur pendaftaran Anda', 'success');
+        }
+      }
+    });
+    function goBack() {
+      if (state.currentStep > 1) {
+        state.currentStep--;
+        showStep(state.currentStep);
+      }
+    }
+    dom.backBtn.addEventListener('click', goBack);
+    dom.backBtnMobile.addEventListener('click', goBack);
+  }
+
+  window.BM_Portal = {
+    redirectToPathway: redirectToPathway
+  };
+
+  function init() {
+    cacheDom();
+    renderStepIndicator();
+    updateButtons();
+    initCitizenCards();
+    initUpload();
+    initLiveValidation();
+    initNavigation();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+
+</body>
+</html>
