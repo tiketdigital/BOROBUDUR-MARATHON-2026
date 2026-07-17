@@ -1,1 +1,1248 @@
 
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="Pendaftaran Jalur Ballot Borobudur Marathon 2026. Sistem undian (lottery) untuk kategori Marathon 42K, Half Marathon 21K, dan 10K.">
+<meta name="keywords" content="Borobudur Marathon 2026, Ballot, Pendaftaran, Marathon, Half Marathon, 10K, Magelang">
+<meta name="author" content="Borobudur Marathon">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6B1012">
+<link rel="canonical" href="https://borobudurmarathon.com/ballot">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jalur Ballot — Borobudur Marathon 2026">
+<meta property="og:description" content="Daftar melalui Jalur Ballot Borobudur Marathon 2026. Sistem undian terbuka untuk semua pelari.">
+<meta property="og:url" content="https://borobudurmarathon.com/ballot">
+<meta property="og:site_name" content="Borobudur Marathon 2026">
+<meta property="og:locale" content="id_ID">
+<meta property="og:image" content="logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jalur Ballot — Borobudur Marathon 2026">
+<meta name="twitter:description" content="Daftar melalui Jalur Ballot Borobudur Marathon 2026.">
+<link rel="icon" type="image/png" href="logo.png">
+<title>Jalur Ballot — Borobudur Marathon 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+<style>
+
+:root {
+    --red-950: #330708;
+    --red-900: #4A0A0C;
+    --red-800: #6B1012;
+    --red-700: #8B181B;
+    --red-600: #A82022;
+    --red-500: #C62828;
+    --red-400: #E05A5A;
+    --red-300: #EF9A9A;
+    --red-100: #FDECEC;
+    --red-50:  #FFF5F5;
+    --gold-700: #7D6420;
+    --gold-600: #A68530;
+    --gold-500: #B8963E;
+    --gold-400: #D4AD4A;
+    --gold-300: #E4C86E;
+    --gold-200: #EDE4C8;
+    --gold-100: #F8F3E8;
+    --gold-50:  #FDFBF5;
+    --n-950: #060606;
+    --n-900: #0D0D0D;
+    --n-800: #1A1A1A;
+    --n-700: #2A2A2A;
+    --n-600: #444444;
+    --n-500: #666666;
+    --n-400: #888888;
+    --n-300: #AAAAAA;
+    --n-200: #D4D4D4;
+    --n-100: #EDEDED;
+    --n-50:  #F7F7F7;
+    --bg:     #F3F1EE;
+    --card:   #FFFFFF;
+    --shadow-xs:  0 1px 2px rgba(0,0,0,0.04);
+    --shadow-sm:  0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+    --shadow-md:  0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+    --shadow-lg:  0 4px 8px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.08);
+    --shadow-xl:  0 8px 16px rgba(0,0,0,0.05), 0 24px 64px rgba(0,0,0,0.10);
+    --shadow-glow-red: 0 4px 20px rgba(198,40,40,0.25), 0 12px 40px rgba(198,40,40,0.12);
+    --shadow-glow-gold: 0 4px 20px rgba(184,150,62,0.18);
+    --r-sm: 10px;
+    --r-md: 16px;
+    --r-lg: 24px;
+    --r-xl: 32px;
+    --r-full: 9999px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur-fast: 0.15s;
+    --dur-base: 0.3s;
+    --dur-slow: 0.5s;
+    --topbar-h: 3px;
+}
+
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--n-600);
+    line-height: 1.7;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font-family: inherit; }
+
+
+:focus-visible { outline: 2px solid var(--red-500); outline-offset: 3px; border-radius: var(--r-sm); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--topbar-h);
+    background: linear-gradient(90deg, var(--red-700), var(--gold-500) 50%, var(--red-700));
+    z-index: 10001;
+}
+
+
+.scroll-prog {
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--red-500), var(--gold-400));
+    z-index: 10000;
+    will-change: width;
+    transition: width 0.08s linear;
+}
+
+
+.bg-atmo { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.bg-orb { position: absolute; border-radius: 50%; filter: blur(90px); }
+.bg-orb-1 { top: -20%; right: -15%; width: 50vw; height: 50vw; max-width: 620px; max-height: 620px; background: radial-gradient(circle, rgba(198,40,40,0.07), transparent 70%); animation: orbA 25s ease-in-out infinite; }
+.bg-orb-2 { bottom: -25%; left: -20%; width: 60vw; height: 60vw; max-width: 720px; max-height: 720px; background: radial-gradient(circle, rgba(184,150,62,0.05), transparent 70%); animation: orbB 30s ease-in-out infinite; }
+.bg-orb-3 { top: 40%; left: 50%; width: 30vw; height: 30vw; max-width: 360px; max-height: 360px; background: radial-gradient(circle, rgba(198,40,40,0.035), transparent 70%); animation: orbC 22s ease-in-out infinite; }
+@keyframes orbA { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,-20px) scale(1.05)} }
+@keyframes orbB { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-30px,-25px) scale(1.08)} }
+@keyframes orbC { 0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,-30px)} }
+
+.bg-noise {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.018;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+}
+
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+
+
+.hero {
+    position: relative;
+    background: linear-gradient(160deg, var(--red-950) 0%, var(--red-800) 35%, var(--red-700) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 110px 24px 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+.hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    pointer-events: none;
+}
+.hero::after {
+    content: '';
+    position: absolute; top: -50%; right: -25%; width: 80%; height: 140%;
+    background: radial-gradient(ellipse, rgba(184,150,62,0.1) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.hero-vignette {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none; z-index: 1;
+}
+.hero-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+
+.hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 7px 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--r-full);
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold-400);
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.04);
+}
+.hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-400); animation: pulseDot 2s ease-in-out infinite; }
+@keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.6)} }
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 7.5vw, 60px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: 22px;
+}
+.hero h1 .gold { color: var(--gold-400); font-style: italic; }
+
+.hero p {
+    font-size: clamp(14px, 2.2vw, 17px);
+    font-weight: 400; line-height: 1.85;
+    color: rgba(255,255,255,0.75);
+    max-width: 580px; margin: 0 auto;
+}
+
+.hero-cta { margin-top: 40px; }
+
+.hero-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 17px 42px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: var(--r-full);
+    font-size: 15px; font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    transition: all var(--dur-base) var(--ease);
+    position: relative; overflow: hidden;
+    animation: heroPulse 3s ease-in-out infinite;
+}
+.hero-btn::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s var(--ease);
+    pointer-events: none;
+}
+.hero-btn:hover::after { transform: translateX(100%); }
+.hero-btn:hover {
+    background: #fff; color: var(--red-800);
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 36px rgba(0,0,0,0.25);
+    animation: none;
+}
+.hero-btn:active { transform: translateY(0); }
+.hero-btn .arrow { transition: transform var(--dur-base) var(--ease); display: inline-flex; }
+.hero-btn:hover .arrow { transform: translateX(4px); }
+@keyframes heroPulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0.18)} 50%{box-shadow:0 0 0 14px rgba(255,255,255,0)} }
+
+
+.hero-scroll {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 6px;
+    cursor: pointer; color: rgba(255,255,255,0.4);
+    transition: color var(--dur-base) var(--ease);
+}
+.hero-scroll:hover { color: rgba(255,255,255,0.8); }
+.hero-scroll-text { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
+.hero-scroll-icon { animation: scrollBounce 2s ease-in-out infinite; }
+@keyframes scrollBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+
+.hero-fade {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 90px;
+    background: linear-gradient(to top, var(--bg), transparent);
+    pointer-events: none; z-index: 3;
+}
+
+
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.section-spacing { padding-top: 80px; }
+
+
+.section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--red-500);
+    margin-bottom: 14px;
+}
+.section-label::before, .section-label::after { content: ''; width: 22px; height: 1px; background: var(--red-500); opacity: 0.3; }
+
+.section-head { text-align: center; max-width: 560px; margin: 0 auto 52px; }
+.section-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700; color: var(--n-900);
+    line-height: 1.18; letter-spacing: -0.025em;
+    margin-bottom: 14px;
+}
+.section-head p { font-size: 15px; color: var(--n-500); line-height: 1.8; }
+
+
+.card {
+    background: var(--card);
+    border-radius: var(--r-xl);
+    padding: 44px 40px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.04);
+    margin-bottom: 28px;
+    transition: box-shadow var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+    position: relative; overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--red-500), var(--gold-500));
+    opacity: 0; transition: opacity var(--dur-base) var(--ease);
+}
+
+.card::after {
+    content: '';
+    position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+    transition: left 0.7s var(--ease);
+    pointer-events: none;
+}
+.card:hover { box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.8); transform: translateY(-3px); }
+.card:hover::before { opacity: 1; }
+.card:hover::after { left: 130%; }
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 3vw, 27px);
+    font-weight: 700; color: var(--n-900);
+    line-height: 1.25; letter-spacing: -0.015em;
+    margin-bottom: 18px;
+}
+.card > p { font-size: 14.5px; color: var(--n-500); line-height: 1.85; }
+
+
+.info-box {
+    background: var(--red-50);
+    border-left: 3px solid var(--red-500);
+    padding: 20px 24px;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin-top: 22px;
+    font-size: 13.5px; line-height: 1.9;
+    color: var(--n-600);
+}
+.info-box strong { color: var(--n-900); }
+.info-box-gold { background: var(--gold-100); border-left-color: var(--gold-500); }
+
+
+.timeline { margin-top: 30px; position: relative; padding-left: 40px; }
+.timeline::before {
+    content: '';
+    position: absolute; left: 20px; top: 8px; bottom: 8px; width: 2px;
+    background: linear-gradient(to bottom, var(--red-500), var(--gold-400) 50%, var(--red-500));
+    border-radius: 2px;
+}
+
+.tl-item { position: relative; padding-bottom: 34px; }
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-dot {
+    position: absolute; left: -40px; top: 4px;
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--card);
+    border: 2.5px solid var(--red-500);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px; font-weight: 500; color: var(--red-600);
+    box-shadow: 0 2px 12px rgba(198,40,40,0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+    transition: all var(--dur-base) var(--ease);
+    z-index: 1;
+}
+.tl-item:hover .tl-dot {
+    background: var(--red-600); color: #fff;
+    border-color: var(--red-600);
+    transform: scale(1.12);
+    box-shadow: 0 6px 20px rgba(198,40,40,0.3);
+}
+
+.tl-content h4 {
+    font-size: 16px; font-weight: 700; color: var(--n-900);
+    margin-bottom: 6px; letter-spacing: -0.01em;
+}
+.tl-content p { font-size: 14px; color: var(--n-500); line-height: 1.8; }
+.tl-content ul { margin: 8px 0 0 18px; }
+.tl-content ul li {
+    position: relative; padding-left: 14px; margin-bottom: 3px;
+    font-size: 13.5px; color: var(--n-500); line-height: 1.75;
+}
+.tl-content ul li::before {
+    content: ''; position: absolute; left: 0; top: 9px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--red-400);
+}
+
+
+.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+
+.cat-card {
+    background: var(--card);
+    border-radius: var(--r-lg);
+    padding: 32px 24px 28px;
+    border: 1.5px solid rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all var(--dur-slow) var(--ease);
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.cat-card[data-cat="42k"] { border-top: 3px solid var(--red-500); }
+.cat-card[data-cat="21k"] { border-top: 3px solid var(--gold-500); }
+.cat-card[data-cat="10k"] { border-top: 3px solid var(--red-400); }
+
+
+.cat-card::before {
+    content: '';
+    position: absolute; bottom: -40%; right: -25%;
+    width: 140px; height: 140px;
+    background: var(--red-500);
+    opacity: 0; border-radius: 50%; filter: blur(45px);
+    transition: opacity var(--dur-base) var(--ease);
+    pointer-events: none;
+}
+.cat-card[data-cat="21k"]::before { background: var(--gold-500); }
+.cat-card[data-cat="10k"]::before { background: var(--red-400); }
+
+.cat-card:hover {
+    border-color: rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.cat-card:hover::before { opacity: 0.1; }
+
+.cat-dist {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px; line-height: 1; margin-bottom: 4px; letter-spacing: 0.02em;
+}
+.cat-card[data-cat="42k"] .cat-dist { color: var(--red-600); }
+.cat-card[data-cat="21k"] .cat-dist { color: var(--gold-600); }
+.cat-card[data-cat="10k"] .cat-dist { color: var(--red-400); }
+
+.cat-name { font-size: 15px; font-weight: 700; color: var(--n-900); margin-bottom: 10px; }
+.cat-desc { font-size: 12.5px; color: var(--n-500); line-height: 1.75; }
+
+
+.result-success {
+    background: #F0FDF4; border: 1px solid #BBF7D0;
+    border-left: 4px solid #22C55E;
+    padding: 24px 26px;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    font-size: 14px; line-height: 2.1; color: #166534;
+}
+.result-success .ri { color: #22C55E; margin-right: 8px; font-weight: 700; }
+
+.result-fail {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-left: 4px solid #F59E0B;
+    padding: 24px 26px;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin-top: 18px;
+    font-size: 14px; line-height: 2; color: #92400E;
+}
+
+
+.cta-wrap { text-align: center; margin-top: 44px; }
+
+.btn-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 19px 52px;
+    background: linear-gradient(135deg, var(--red-600) 0%, var(--red-700) 100%);
+    color: #fff; border: none;
+    border-radius: var(--r-md);
+    font-size: 16px; font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-glow-red), inset 0 1px 0 rgba(255,255,255,0.15);
+    transition: all var(--dur-slow) var(--ease);
+    position: relative; overflow: hidden;
+    letter-spacing: 0.01em;
+}
+
+.btn-cta::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+    pointer-events: none;
+}
+.btn-cta:hover {
+    background: linear-gradient(135deg, var(--red-700) 0%, var(--red-800) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(198,40,40,0.4), 0 20px 56px rgba(198,40,40,0.18), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.btn-cta:active { transform: translateY(0); }
+.btn-cta .iconify { font-size: 18px; transition: transform var(--dur-base) var(--ease); }
+.btn-cta:hover .iconify { transform: translateX(4px); }
+
+
+.btn-cta.loading { pointer-events: none; }
+.btn-cta.loading .btn-cta-text,
+.btn-cta.loading .btn-cta .iconify { opacity: 0; }
+.btn-cta.loading .btn-cta-spin { display: flex; }
+.btn-cta-spin {
+    display: none; position: absolute; inset: 0;
+    align-items: center; justify-content: center;
+}
+.btn-cta-spin-circle {
+    width: 22px; height: 22px;
+    border: 2.5px solid rgba(255,255,255,0.25);
+    border-top-color: #fff; border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+
+.fab { position: fixed; bottom: 28px; right: 28px; z-index: 9999; }
+.fab-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    background: linear-gradient(135deg, var(--red-600) 0%, var(--red-700) 100%);
+    color: #fff; border: none;
+    border-radius: var(--r-full);
+    font-size: 14px; font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(198,40,40,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
+    transition: all var(--dur-slow) var(--ease);
+    animation: fabPulse 3s ease-in-out infinite;
+    white-space: nowrap;
+    position: relative; overflow: hidden;
+}
+.fab-btn::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+    pointer-events: none;
+}
+.fab-btn:hover {
+    animation: none;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 12px 40px rgba(198,40,40,0.55), inset 0 1px 0 rgba(255,255,255,0.12);
+}
+.fab-btn .iconify { font-size: 18px; animation: fabArrow 1.5s ease-in-out infinite; }
+.fab-btn:hover .iconify { animation: none; transform: translateX(3px); }
+@keyframes fabPulse { 0%,100%{box-shadow:0 6px 24px rgba(198,40,40,0.4)} 50%{box-shadow:0 6px 32px rgba(198,40,40,0.55), 0 0 0 10px rgba(198,40,40,0.06)} }
+@keyframes fabArrow { 0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)} }
+
+
+.scroll-top {
+    position: fixed; bottom: 28px; left: 28px;
+    width: 46px; height: 46px; border-radius: 50%;
+    background: var(--card);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.8);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: var(--n-500);
+    opacity: 0; visibility: hidden;
+    transform: translateY(12px);
+    transition: all var(--dur-slow) var(--ease);
+    z-index: 9998;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-top:hover {
+    background: var(--red-600); color: #fff;
+    border-color: var(--red-600);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-red);
+}
+
+
+.reg-overlay {
+    position: fixed; inset: 0;
+    z-index: 50000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.4s var(--ease), visibility 0.4s;
+}
+.reg-overlay.active { opacity: 1; visibility: visible; }
+
+.reg-overlay-bg {
+    position: absolute; inset: 0;
+    background: rgba(13, 13, 13, 0.82);
+    backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+}
+
+.reg-overlay-content {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center; gap: 32px;
+    transform: scale(0.92) translateY(16px);
+    transition: transform 0.5s var(--ease-out);
+}
+.reg-overlay.active .reg-overlay-content { transform: scale(1) translateY(0); }
+
+
+.reg-ring-wrap { position: relative; width: 130px; height: 130px; }
+.reg-ring { width: 130px; height: 130px; display: block; }
+.reg-ring-track { fill: none; stroke: rgba(255,255,255,0.07); stroke-width: 4; }
+.reg-ring-progress {
+    fill: none; stroke: url(#ringGrad); stroke-width: 4.5;
+    stroke-linecap: round;
+    stroke-dasharray: 326.73;
+    stroke-dashoffset: 326.73;
+}
+.reg-overlay.active .reg-ring-progress {
+    animation: ringFill 2.5s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards;
+}
+@keyframes ringFill { to { stroke-dashoffset: 0; } }
+
+
+.reg-icon-wrap {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-400); font-size: 36px;
+    animation: iconPulse 2s ease-in-out infinite;
+}
+@keyframes iconPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(0.92)} }
+
+
+.reg-text-group { text-align: center; min-height: 90px; }
+.reg-text-step {
+    font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.85);
+    letter-spacing: 0.01em; line-height: 1.6;
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+    position: absolute; left: 50%; transform: translateX(-50%) translateY(8px);
+    width: 320px; max-width: 85vw;
+}
+.reg-text-step.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.reg-text-step:nth-child(2) { transition-delay: 0s; }
+.reg-text-step:nth-child(3) { transition-delay: 0s; }
+
+
+.reg-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px; letter-spacing: 0.25em;
+    color: rgba(255,255,255,0.2);
+    text-transform: uppercase;
+}
+
+
+.site-footer {
+    background: var(--n-800);
+    color: rgba(255,255,255,0.5);
+    padding: 56px 24px;
+    text-align: center;
+    position: relative; z-index: 1;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184,150,62,0.2), transparent);
+}
+
+.footer-inner { max-width: 500px; margin: 0 auto; }
+
+.footer-logo {
+    height: 36px; margin: 0 auto 18px;
+    opacity: 0.45; object-fit: contain;
+    transition: opacity var(--dur-base) var(--ease);
+}
+.footer-logo:hover { opacity: 0.75; }
+
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: rgba(255,255,255,0.75); letter-spacing: 0.1em; margin-bottom: 4px; }
+.footer-loc { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 18px; }
+
+.footer-links { display: flex; justify-content: center; gap: 22px; margin-bottom: 22px; flex-wrap: wrap; }
+.footer-links a {
+    font-size: 12px; color: rgba(255,255,255,0.35);
+    transition: color var(--dur-fast) var(--ease);
+    position: relative;
+}
+.footer-links a::after {
+    content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 1px;
+    background: rgba(255,255,255,0.3); transform: scaleX(0);
+    transition: transform var(--dur-base) var(--ease);
+}
+.footer-links a:hover { color: rgba(255,255,255,0.85); }
+.footer-links a:hover::after { transform: scaleX(1); }
+
+.footer-copy {
+    font-size: 11px; color: rgba(255,255,255,0.18);
+    line-height: 1.8; margin-top: 22px; padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+
+.toast-wrap { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); z-index: 9000; pointer-events: none; }
+.toast-pill {
+    background: var(--n-900); color: #fff;
+    padding: 12px 26px; border-radius: var(--r-full);
+    font-size: 13px; font-weight: 500; font-family: inherit;
+    box-shadow: var(--shadow-xl);
+    opacity: 0; transform: translateY(12px) scale(0.96);
+    transition: all 0.35s var(--ease);
+    white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.toast-pill.on { opacity: 1; transform: translateY(0) scale(1); }
+
+
+@media (max-width: 768px) {
+    body { padding-bottom: 92px; }
+    .hero { padding: 80px 18px 70px; }
+    .card { padding: 28px 22px; border-radius: var(--r-lg); }
+    .cat-grid { grid-template-columns: 1fr; }
+    .cat-card { padding: 24px 22px; }
+    .btn-cta { padding: 17px 32px; font-size: 15px; width: 100%; max-width: 340px; justify-content: center; }
+    .fab { bottom: 18px; right: 16px; }
+    .fab-btn { padding: 14px 20px; font-size: 13px; gap: 8px; }
+    .scroll-top { bottom: 18px; left: 16px; width: 42px; height: 42px; }
+    .tl-dot { width: 36px; height: 36px; font-size: 14px; left: -34px; }
+    .timeline { padding-left: 34px; }
+    .timeline::before { left: 17px; }
+    .reg-text-step { width: 260px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 400px) {
+    .hero h1 { font-size: 28px; }
+    .card { padding: 24px 18px; }
+    .fab-btn span:not(.iconify) { display: none; }
+    .fab-btn { padding: 14px; border-radius: 50%; }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+}
+
+
+@media print {
+    .top-bar, .scroll-prog, .bg-atmo, .bg-noise, .fab, .scroll-top,
+    .toast-wrap, .hero-cta, .cta-wrap, .reg-overlay, .hero-scroll { display: none !important; }
+    body { background: #fff; color: #000; padding-bottom: 0; }
+    .hero { background: #eee !important; color: #000; padding: 30px; }
+    .hero::before, .hero::after, .hero-fade, .hero-vignette { display: none; }
+    .hero-badge, .hero-btn { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    .card::before, .card::after { display: none; }
+    .btn-cta { display: none; }
+    .tl-dot { border-color: #999; color: #999; }
+    .timeline::before { background: #ccc; }
+    .site-footer { background: #eee; color: #666; }
+    .site-footer::before { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar" aria-hidden="true"></div>
+
+<div class="scroll-prog" id="scrollProg" aria-hidden="true"></div>
+
+<div class="bg-atmo" aria-hidden="true">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+</div>
+<div class="bg-noise" aria-hidden="true"></div>
+
+<div class="reg-overlay" id="regOverlay" aria-hidden="true" role="dialog" aria-label="Memproses pendaftaran">
+    <div class="reg-overlay-bg"></div>
+    <div class="reg-overlay-content">
+        <div class="reg-ring-wrap">
+            <svg class="reg-ring" viewBox="0 0 130 130" aria-hidden="true">
+                <defs>
+                    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#C62828" />
+                        <stop offset="100%" stop-color="#D4AD4A" />
+                    </linearGradient>
+                </defs>
+                <circle class="reg-ring-track" cx="65" cy="65" r="52" />
+                <circle class="reg-ring-progress" cx="65" cy="65" r="52"
+                        transform="rotate(-90 65 65)" />
+            </svg>
+            <div class="reg-icon-wrap" aria-hidden="true">
+                <span class="iconify" data-icon="mdi:run-fast"></span>
+            </div>
+        </div>
+        <div class="reg-text-group" aria-live="polite">
+            <p class="reg-text-step" id="regStep1">Memproses Pendaftaran…</p>
+            <p class="reg-text-step" id="regStep2">Mempersiapkan formulir ballot…</p>
+            <p class="reg-text-step" id="regStep3">Mengalihkan halaman…</p>
+        </div>
+        <div class="reg-brand" aria-hidden="true">Borobudur Marathon 2026</div>
+    </div>
+</div>
+
+<div class="fab" role="complementary" aria-label="Pendaftaran cepat">
+    <button class="fab-btn" id="fabBtn" aria-label="Daftar Sekarang">
+        <span class="iconify" data-icon="mdi:arrow-right" aria-hidden="true"></span>
+        <span>Daftar Sekarang</span>
+    </button>
+</div>
+
+<button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <span class="iconify" data-icon="mdi:chevron-up" style="font-size:22px" aria-hidden="true"></span>
+</button>
+
+<header class="hero" role="banner">
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-inner">
+        <div class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            Pathway 01 — Lottery System
+        </div>
+        <h1>Jalur <span class="gold">Ballot</span></h1>
+        <p>
+            Jalur Ballot merupakan jalur pendaftaran reguler Borobudur Marathon
+            melalui sistem undian (lottery system). Setiap pelari memiliki
+            kesempatan yang sama untuk memperoleh slot lomba.
+        </p>
+        <div class="hero-cta">
+            <button class="hero-btn" id="heroBtn" aria-label="Daftar melalui Jalur Ballot">
+                Daftar Sekarang
+                <span class="arrow" aria-hidden="true">→</span>
+            </button>
+        </div>
+    </div>
+    <div class="hero-scroll" id="heroScroll" aria-hidden="true" role="presentation">
+        <span class="hero-scroll-text">Scroll</span>
+        <span class="hero-scroll-icon">
+            <span class="iconify" data-icon="mdi:chevron-down" style="font-size:20px"></span>
+        </span>
+    </div>
+    <div class="hero-fade" aria-hidden="true"></div>
+</header>
+
+<main class="container" id="mainContent" role="main">
+
+    <section class="section-spacing reveal" aria-labelledby="sec-info">
+        <div class="section-head">
+            <div class="section-label">Informasi</div>
+            <h2 id="sec-info">Apa Itu Jalur Ballot?</h2>
+            <p>Mekanisme seleksi peserta menggunakan sistem undian yang adil dan transparan.</p>
+        </div>
+        <div class="card reveal reveal-d1">
+            <p>
+                Ballot adalah mekanisme seleksi peserta menggunakan sistem undian.
+                Peserta melakukan registrasi terlebih dahulu, kemudian panitia
+                melakukan proses pengundian sesuai jumlah kuota yang tersedia.
+            </p>
+            <div class="info-box" role="note">
+                <strong>Catatan Penting:</strong><br>
+                Seluruh peserta Ballot wajib melakukan pembayaran biaya registrasi di awal sebagai syarat mengikuti proses pengundian. Pembayaran <strong>tidak menjamin</strong> peserta mendapatkan slot lomba karena penentuan peserta tetap dilakukan melalui sistem undian (Ballot).
+            </div>
+        </div>
+    </section>
+
+    <section class="section-spacing reveal" aria-labelledby="sec-cat">
+        <div class="section-head">
+            <div class="section-label">Kategori</div>
+            <h2 id="sec-cat">Kategori Lomba</h2>
+            <p>Tiga kategori tersedia melalui Jalur Ballot.</p>
+        </div>
+        <div class="cat-grid">
+            <div class="cat-card reveal reveal-d1" data-cat="42k">
+                <div class="cat-dist">42K</div>
+                <div class="cat-name">Marathon</div>
+                <p class="cat-desc">Menempuh jarak 42,195 km. Direkomendasikan bagi pelari berpengalaman dengan catatan waktu finish di bawah 6 jam.</p>
+            </div>
+            <div class="cat-card reveal reveal-d2" data-cat="21k">
+                <div class="cat-dist">21K</div>
+                <div class="cat-name">Half Marathon</div>
+                <p class="cat-desc">Menempuh jarak 21,097 km. Cocok untuk pelari menengah hingga berpengalaman.</p>
+            </div>
+            <div class="cat-card reveal reveal-d3" data-cat="10k">
+                <div class="cat-dist">10K</div>
+                <div class="cat-name">10 Kilometer</div>
+                <p class="cat-desc">Menempuh jarak 10 km. Cocok bagi pemula maupun pelari rekreasional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-spacing reveal" aria-labelledby="sec-proses">
+        <div class="section-head">
+            <div class="section-label">Proses</div>
+            <h2 id="sec-proses">Alur Pendaftaran Ballot</h2>
+            <p>Tujuh langkah dari pembuatan akun hingga konfirmasi kepesertaan.</p>
+        </div>
+        <div class="card reveal reveal-d1">
+            <h3>Langkah-Langkah Pendaftaran</h3>
+            <div class="timeline" role="list">
+                <div class="tl-item" role="listitem">
+                    <div class="tl-dot" aria-hidden="true">1</div>
+                    <div class="tl-content">
+                        <h4>Buat Akun</h4>
+                        <p>Unduh aplikasi My Borobudur Marathon atau buka website resmi, kemudian lakukan pembuatan akun peserta.</p>
+                    </div>
+                </div>
+                <div class="tl-item" role="listitem">
+                    <div class="tl-dot" aria-hidden="true">2</div>
+                    <div class="tl-content">
+                        <h4>Lengkapi Profil</h4>
+                        <p>Isi data diri secara lengkap:</p>
+                        <ul>
+                            <li>Nama lengkap</li>
+                            <li>Email aktif</li>
+                            <li>Nomor telepon</li>
+                            <li>Tanggal lahir</li>
+                            <li>Jenis kelamin</li>
+                            <li>Alamat</li>
+                            <li>Nomor identitas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tl-item" role="listitem">
+                    <div class="tl-dot" aria-hidden="true">3</div>
+                    <div class="tl-content">
+                        <h4>Pilih Kategori</h4>
+                        <p>Pilih kategori lomba: Marathon 42K, Half Marathon 21K, atau 10K sesuai kemampuan dan target Anda.</p>
+                    </div>
+                </div>
+                <div class="tl-item" role="listitem">
+                    <div class="tl-dot" aria-hidden="true">4</div>
+                    <div class="tl-content">
+                        <h4>Kirim Pendaftaran & Bayar</h4>
+                        <p>Setelah data diri dinyatakan benar, peserta wajib mengirim pendaftaran dan melakukan pembayaran biaya registrasi untuk mengikuti proses Ballot.</p>
+                    </div>
+                </div>
+                <div class="tl-item" role="listitem">
+                    <div class="tl-dot" aria-hidden="true">5</div>
+                    <div class="tl-content">
+                        <h4>Proses Ballot & Pengumuman</h4>
+                        <p>Panitia akan mengumumkan peserta yang lolos melalui:</p>
+                        <ul>
+                            <li>Email</li>
+                            <li>Aplikasi My Borobudur Marathon</li>
+                            <li>Website resmi</li>
+                        </ul>
+                        <div class="info-box info-box-gold" role="note">
+                            <strong>Refund Otomatis:</strong><br>
+                            Apabila peserta tidak lolos Ballot, biaya registrasi yang telah dibayarkan akan dikembalikan (refund) secara otomatis ke rekening bank pengirim sesuai periode refund yang ditetapkan penyelenggara.
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item" role="listitem">
+                    <div class="tl-dot" aria-hidden="true">6</div>
+                    <div class="tl-content">
+                        <h4>Verifikasi Pembayaran</h4>
+                        <p>Sistem akan melakukan verifikasi terhadap pembayaran yang telah dilakukan. Peserta yang lolos Ballot akan langsung diproses menjadi peserta resmi.</p>
+                    </div>
+                </div>
+                <div class="tl-item" role="listitem">
+                    <div class="tl-dot" aria-hidden="true">7</div>
+                    <div class="tl-content">
+                        <h4>Konfirmasi Kepesertaan</h4>
+                        <p>Setelah pembayaran berhasil diverifikasi, peserta akan menerima:</p>
+                        <ul>
+                            <li>Email konfirmasi</li>
+                            <li>Nomor registrasi</li>
+                            <li>Status peserta aktif</li>
+                            <li>Informasi Race Pack Collection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-spacing reveal" aria-labelledby="sec-hasil">
+        <div class="section-head">
+            <div class="section-label">Hasil</div>
+            <h2 id="sec-hasil">Hasil Ballot</h2>
+            <p>Dua kemungkinan hasil setelah proses pengundian selesai.</p>
+        </div>
+        <div class="card reveal reveal-d1">
+            <h3>Yang Terjadi Setelah Pengundian</h3>
+            <div class="result-success" role="status">
+                <span class="ri">✔</span> Mendapat slot resmi Borobudur Marathon 2026.<br>
+                <span class="ri">✔</span> Status berubah menjadi Active Registered Runner.<br>
+                <span class="ri">✔</span> Menerima email konfirmasi dan nomor registrasi.<br>
+                <span class="ri">✔</span> Berhak mengikuti Race Pack Collection dan Race Day.
+            </div>
+            <div class="result-fail" role="alert">
+                <strong>⚠ Jika tidak lolos Ballot</strong>, peserta tidak memperoleh slot lomba. Namun, seluruh biaya registrasi yang telah dibayarkan akan direfund secara otomatis ke rekening bank pengirim tanpa perlu mengajukan permohonan refund secara manual.
+            </div>
+
+            <div class="cta-wrap">
+                <button class="btn-cta" id="mainCtaBtn" aria-label="Daftar Ballot Sekarang">
+                    <span class="btn-cta-text">Daftar Ballot Sekarang</span>
+                    <span class="iconify" data-icon="mdi:arrow-right" aria-hidden="true"></span>
+                    <span class="btn-cta-spin"><span class="btn-cta-spin-circle"></span></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+        <img src="logo.png" alt="Borobudur Marathon" class="footer-logo" onerror="this.style.display='none'">
+        <div class="footer-brand">BOROBUDUR MARATHON 2026</div>
+        <div class="footer-loc">Magelang, Jawa Tengah, Indonesia</div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="https://borobudurmarathon.com" rel="noopener noreferrer" target="_blank">Website Resmi</a>
+            <a href="https://instagram.com/borobudurmarathon" rel="noopener noreferrer" target="_blank">Instagram</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </nav>
+        <p class="footer-copy">
+            Halaman ini merupakan panduan informasi pendaftaran Jalur Ballot Borobudur Marathon 2026 — Decade of Legacy.<br>
+            Informasi dapat berubah sewaktu-waktu sesuai kebijakan penyelenggara.<br>
+            &copy; 2026 Borobudur Marathon. Seluruh hak cipta dilindungi.
+        </p>
+    </div>
+</footer>
+
+<div class="toast-wrap" aria-live="polite">
+    <div class="toast-pill" id="toast"></div>
+</div>
+
+<script>
+(function() {
+    'use strict';
+
+    
+    var CONFIG = {
+        redirectUrl:   'form-ballot.html',
+        animDuration:  3000,    // Durasi animasi overlay (ms)
+        toastDuration: 3000,    // Durasi tampilan toast (ms)
+        scrollThreshold: 500,   // Jarak scroll sebelum tombol top muncul (px)
+        reducedMotion: window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
+    };
+
+    
+    var dom = {
+        overlay:     document.getElementById('regOverlay'),
+        step1:       document.getElementById('regStep1'),
+        step2:       document.getElementById('regStep2'),
+        step3:       document.getElementById('regStep3'),
+        scrollProg:  document.getElementById('scrollProg'),
+        scrollTopBtn:document.getElementById('scrollTopBtn'),
+        fabBtn:      document.getElementById('fabBtn'),
+        heroBtn:     document.getElementById('heroBtn'),
+        mainCtaBtn:  document.getElementById('mainCtaBtn'),
+        heroScroll:  document.getElementById('heroScroll'),
+        mainContent: document.getElementById('mainContent'),
+        toast:       document.getElementById('toast')
+    };
+
+    
+    var _isRedirecting = false;
+    var _toastTimer = null;
+    var _animTimers  = [];
+
+    
+    function safeTimeout(fn, ms) {
+        var id = setTimeout(fn, ms);
+        _animTimers.push(id);
+        return id;
+    }
+
+    function clearAnimTimers() {
+        for (var i = 0; i < _animTimers.length; i++) {
+            clearTimeout(_animTimers[i]);
+        }
+        _animTimers = [];
+    }
+
+    
+    function toast(msg) {
+        if (!dom.toast) return;
+        dom.toast.textContent = msg;
+        dom.toast.classList.add('on');
+        clearTimeout(_toastTimer);
+        _toastTimer = setTimeout(function() {
+            dom.toast.classList.remove('on');
+        }, CONFIG.toastDuration);
+    }
+
+    
+    function updateScrollProgress() {
+        if (!dom.scrollProg) return;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        dom.scrollProg.style.width = pct + '%';
+    }
+
+    
+    function updateScrollTopBtn() {
+        if (!dom.scrollTopBtn) return;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > CONFIG.scrollThreshold) {
+            dom.scrollTopBtn.classList.add('visible');
+        } else {
+            dom.scrollTopBtn.classList.remove('visible');
+        }
+    }
+
+    function scrollToTop(e) {
+        if (e) e.preventDefault();
+        window.scrollTo({ top: 0, behavior: CONFIG.reducedMotion ? 'auto' : 'smooth' });
+    }
+
+    
+    function scrollDown(e) {
+        if (e) e.preventDefault();
+        if (dom.mainContent) {
+            dom.mainContent.scrollIntoView({ behavior: CONFIG.reducedMotion ? 'auto' : 'smooth' });
+        }
+    }
+
+    
+    function initReveal() {
+        var els = document.querySelectorAll('.reveal');
+        if (!els.length) return;
+
+        if ('IntersectionObserver' in window) {
+            var obs = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('visible');
+                        obs.unobserve(entries[i].target);
+                    }
+                }
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+            for (var j = 0; j < els.length; j++) {
+                obs.observe(els[j]);
+            }
+        } else {
+            for (var k = 0; k < els.length; k++) {
+                els[k].classList.add('visible');
+            }
+        }
+    }
+
+    
+    function goRegister(e) {
+        if (e) e.preventDefault();
+        if (_isRedirecting) return;
+        _isRedirecting = true;
+
+        // Lock all CTA buttons
+        var allBtns = [dom.fabBtn, dom.heroBtn, dom.mainCtaBtn];
+        for (var i = 0; i < allBtns.length; i++) {
+            if (allBtns[i]) {
+                allBtns[i].style.pointerEvents = 'none';
+                allBtns[i].style.opacity = '0.5';
+            }
+        }
+
+        // Show overlay
+        if (dom.overlay) {
+            dom.overlay.classList.add('active');
+            dom.overlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Animate text steps sequentially
+        if (dom.step1) safeTimeout(function() { dom.step1.classList.add('show'); }, 200);
+        if (dom.step2) safeTimeout(function() { dom.step2.classList.add('show'); }, 1000);
+        if (dom.step3) safeTimeout(function() { dom.step3.classList.add('show'); }, 2200);
+
+        // Redirect after animation completes
+        safeTimeout(function() {
+            window.location.href = CONFIG.redirectUrl;
+        }, CONFIG.animDuration);
+
+        // Safety fallback: if redirect fails after 5s, show error
+        safeTimeout(function() {
+            // If we're still here, something went wrong
+            if (_isRedirecting && dom.overlay) {
+                dom.overlay.classList.remove('active');
+                dom.overlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                _isRedirecting = false;
+                // Re-enable buttons
+                for (var j = 0; j < allBtns.length; j++) {
+                    if (allBtns[j]) {
+                        allBtns[j].style.pointerEvents = '';
+                        allBtns[j].style.opacity = '';
+                    }
+                }
+                // Reset steps
+                if (dom.step1) dom.step1.classList.remove('show');
+                if (dom.step2) dom.step2.classList.remove('show');
+                if (dom.step3) dom.step3.classList.remove('show');
+                toast('Gagal mengalihkan. Silakan coba lagi.');
+            }
+        }, CONFIG.animDuration + 2000);
+    }
+
+    
+    function bindEvents() {
+        // FAB button
+        if (dom.fabBtn) {
+            dom.fabBtn.addEventListener('click', goRegister);
+        }
+        // Hero button
+        if (dom.heroBtn) {
+            dom.heroBtn.addEventListener('click', goRegister);
+        }
+        // Main CTA button
+        if (dom.mainCtaBtn) {
+            dom.mainCtaBtn.addEventListener('click', goRegister);
+        }
+        // Scroll-to-top
+        if (dom.scrollTopBtn) {
+            dom.scrollTopBtn.addEventListener('click', scrollToTop);
+        }
+        // Hero scroll down
+        if (dom.heroScroll) {
+            dom.heroScroll.addEventListener('click', scrollDown);
+        }
+        // Scroll events (passive for performance)
+        var scrollHandler = function() {
+            updateScrollProgress();
+            updateScrollTopBtn();
+        };
+        window.addEventListener('scroll', scrollHandler, { passive: true });
+
+        // Keyboard: Escape to close overlay (safety)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && _isRedirecting && dom.overlay) {
+                // Don't close during redirect — just ignore
+            }
+        });
+    }
+
+    
+    function init() {
+        initReveal();
+        bindEvents();
+        updateScrollProgress();
+        updateScrollTopBtn();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+})();
+</script>
+
+</body>
+</html>
