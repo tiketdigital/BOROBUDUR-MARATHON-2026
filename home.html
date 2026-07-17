@@ -7,7 +7,6 @@
 <meta content="#0A0A0A" name="theme-color"/>
 <meta content="Bank Jateng Borobudur Marathon 2026 — Decade of Legacy. Pendaftaran resmi dengan 6 jalur: Ballot, XTRARUN, Saveduit, Urbana, Travel Agent, International." name="description"/>
 <title>Bank Jateng Borobudur Marathon 2026 — Registration Pathways</title>
-
 <link as="image" href="poster.png" rel="preload"/>
 <link as="image" href="logo.png" rel="preload"/>
 <link as="image" href="banner.png" rel="preload"/>
@@ -40,7 +39,7 @@
     body{font-family:'Inter',sans-serif;background:#080808;color:#fff;overflow-x:hidden}
     ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#080808}::-webkit-scrollbar-thumb{background:#C8102E;border-radius:3px}
 
-     Hero video background 
+    /* Hero video background */
     .hero-video-wrap{position:absolute;inset:0;overflow:hidden;background:#0A0A0A}
     .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,16,46,0.85) 0%,rgba(154,12,35,0.80) 40%,rgba(10,10,10,0.95) 100%);z-index:1}
@@ -48,7 +47,7 @@
 
     .gold-line{background:linear-gradient(90deg,transparent,#D4A843,transparent);height:1px}
     
-     Premium Card Upgrade 
+    /* Premium Card Upgrade */
     .pathway-card{transition:all .4s cubic-bezier(.4,0,.2,1);border:1px solid rgba(212,168,67,.15);position:relative;overflow:hidden;background:linear-gradient(145deg, rgba(26,26,26,0.8), rgba(10,10,10,0.9));backdrop-filter:blur(10px)}
     .pathway-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#D4A843,transparent);opacity:0;transition:opacity .4s}
     .pathway-card:hover::before{opacity:1}
@@ -80,7 +79,7 @@
 
     .btn-shine{position:relative;overflow:hidden}.btn-shine::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(to right,transparent 0%,rgba(255,255,255,.2) 50%,transparent 100%);transform:rotate(30deg) translateX(-100%);transition:transform .6s}.btn-shine:hover::after{transform:rotate(30deg) translateX(100%)}
 
-     Categories Premium Design 
+    /* Categories Premium Design */
     .cat-badge{position:relative;width:220px;height:220px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;transition:transform .5s cubic-bezier(.4,0,.2,1)}.cat-badge:hover{transform:scale(1.05)}
     .cat-badge-marathon{background:radial-gradient(circle at 40% 35%,#2A2A2A,#111 60%,#0A0A0A);box-shadow:0 0 0 3px rgba(212,168,67,.3),0 0 60px rgba(212,168,67,.08),inset 0 0 40px rgba(0,0,0,.5)}
     .cat-badge-marathon::before{content:'';position:absolute;inset:8px;border-radius:50%;border:1px solid rgba(212,168,67,.25)}
@@ -106,7 +105,7 @@
     .logo-img{height:40px;width:auto;object-fit:contain;display:block}
     .banner-img{width:100%;height:100%;object-fit:cover;object-position:center}
 
-     Responsive tweaks 
+    /* Responsive tweaks */
     @media (max-width:640px){
       .cat-badge{width:180px;height:180px}
       .cat-distance{bottom:28px;font-size:9px}
@@ -115,7 +114,7 @@
       .cat-badge{width:160px;height:160px}
     }
 
-     Focus visible for accessibility 
+    /* Focus visible for accessibility */
     a:focus-visible,button:focus-visible{outline:2px solid #D4A843;outline-offset:2px;border-radius:4px}
 
     @media (prefers-reduced-motion:reduce){
@@ -125,7 +124,6 @@
 </head>
 <body class="font-inter">
 <div class="fixed top-24 right-4 z-[100] flex flex-col gap-3 max-w-[calc(100vw-2rem)]" id="toastContainer"></div>
-
 <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar" style="background:rgba(10,10,10,0);backdrop-filter:blur(0px)">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
 <a class="flex items-center gap-3 group" href="#hero">
@@ -150,7 +148,6 @@
 </button>
 </div>
 </nav>
-
 <div class="mobile-menu fixed inset-0 z-40 bg-bjBlack/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8" id="mobileMenu">
 <a class="text-2xl font-bold text-white hover:text-bjGold transition-colors" href="#hero" onclick="toggleMenu()">Beranda</a>
 <a class="text-2xl font-bold text-white hover:text-bjGold transition-colors" href="#pathways" onclick="toggleMenu()">Jalur Pendaftaran</a>
@@ -158,7 +155,6 @@
 <a class="text-2xl font-bold text-white hover:text-bjGold transition-colors" href="#faq" onclick="toggleMenu()">FAQ</a>
 <a class="btn-shine bg-bjRed hover:bg-bjRedDark text-white text-lg font-semibold px-10 py-3 rounded-lg mt-4 transition-colors inline-flex items-center gap-2" href="info-ballot.html" onclick="toggleMenu()">Daftar Sekarang</a>
 </div>
-
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero">
 <div class="hero-video-wrap">
 <video autoplay="" class="hero-video" loop="" muted="" playsinline="" poster="poster.png" preload="auto">
@@ -167,7 +163,6 @@
 <div class="hero-overlay"></div>
 <div class="hero-overlay-bottom"></div>
 </div>
-
 <div class="absolute top-20 right-10 w-72 h-72 bg-bjGold/5 rounded-full blur-3xl float-1 pointer-events-none"></div>
 <div class="absolute bottom-20 left-10 w-96 h-96 bg-bjRed/10 rounded-full blur-3xl float-2 pointer-events-none"></div>
 <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
@@ -209,7 +204,6 @@
 <span class="iconify text-white/30" data-icon="lucide:chevron-down"></span>
 </div>
 </section>
-
 <section class="relative py-20 md:py-32 bg-bjBlack" id="pathways">
 <div class="absolute top-0 left-0 right-0 gold-line"></div>
 <div class="absolute top-1/2 right-0 w-96 h-96 bg-bjRed/5 rounded-full blur-3xl -translate-y-1/2 pointer-events-none"></div>
@@ -221,7 +215,6 @@
 <div class="gold-line w-24 mx-auto mt-8"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
 <div class="pathway-card rounded-2xl p-6 sm:p-8 reveal-section">
 <div class="flex items-start justify-between mb-6">
 <div class="num-badge w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black text-white">1</div>
@@ -238,7 +231,6 @@
 <span class="iconify" data-icon="lucide:arrow-right"></span>Daftar Sekarang
           </a>
 </div>
-
 <div class="pathway-card rounded-2xl p-6 sm:p-8 reveal-section">
 <div class="flex items-start justify-between mb-6">
 <div class="num-badge w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black text-white">2</div>
@@ -256,7 +248,6 @@
 <span class="iconify" data-icon="lucide:arrow-right"></span>Daftar Sekarang
           </a>
 </div>
-
 <div class="pathway-card rounded-2xl p-6 sm:p-8 reveal-section">
 <div class="flex items-start justify-between mb-6">
 <div class="num-badge w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black text-white">3</div>
@@ -274,7 +265,6 @@
 <span class="iconify" data-icon="lucide:arrow-right"></span>Daftar Sekarang
           </a>
 </div>
-
 <div class="pathway-card rounded-2xl p-6 sm:p-8 reveal-section">
 <div class="flex items-start justify-between mb-6">
 <div class="num-badge w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black text-white">4</div>
@@ -292,7 +282,6 @@
 <span class="iconify" data-icon="lucide:arrow-right"></span>Daftar Sekarang
           </a>
 </div>
-
 <div class="pathway-card rounded-2xl p-6 sm:p-8 reveal-section">
 <div class="flex items-start justify-between mb-6">
 <div class="num-badge w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black text-white">5</div>
@@ -310,7 +299,6 @@
 <span class="iconify" data-icon="lucide:arrow-right"></span>Daftar Sekarang
           </a>
 </div>
-
 <div class="pathway-card rounded-2xl p-6 sm:p-8 reveal-section">
 <div class="flex items-start justify-between mb-6">
 <div class="num-badge w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black text-white">6</div>
@@ -331,7 +319,6 @@
 </div>
 </div>
 </section>
-
 <section class="relative py-20 md:py-32 overflow-hidden" id="howto">
 <div class="absolute inset-0 bg-gradient-to-b from-bjBlack via-bjRedDarker/30 to-bjBlack"></div>
 <div class="absolute top-0 left-0 right-0 gold-line"></div>
@@ -389,10 +376,8 @@
 </div>
 </div>
 </section>
-
 <section class="relative py-20 md:py-32 bg-bjBlack" id="categories">
 <div class="absolute top-0 left-0 right-0 gold-line"></div>
-
 <div class="absolute top-1/3 left-0 w-80 h-80 bg-bjRed/5 rounded-full blur-3xl -translate-x-1/2 pointer-events-none"></div>
 <div class="absolute bottom-1/3 right-0 w-80 h-80 bg-bjGold/5 rounded-full blur-3xl translate-x-1/2 pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
@@ -402,7 +387,6 @@
 <div class="gold-line w-24 mx-auto mt-8"></div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
-
 <div class="cat-card reveal-section py-8">
 <div class="cat-badge cat-badge-marathon mb-8">
 <div class="cat-dots-ring">
@@ -422,7 +406,6 @@
 <a class="price-tag mb-5 inline-block" href="info-ballot.html">IDR 950.000</a>
 <p class="text-xs text-white/40 leading-relaxed px-2">Borobudur Marathon will bring back a 42.195 km offline race. Experience the legendary route passing through the magnificent Borobudur Temple.</p>
 </div>
-
 <div class="cat-card reveal-section py-8">
 <div class="cat-badge cat-badge-half mb-8">
 <div class="cat-dots-ring">
@@ -442,7 +425,6 @@
 <a class="price-tag mb-5 inline-block" href="info-ballot.html">IDR 850.000</a>
 <p class="text-xs text-white/40 leading-relaxed px-2">Half Marathon 21.097 km offline race at the Lumbini Park Complex. A challenging yet rewarding half-distance experience.</p>
 </div>
-
 <div class="cat-card reveal-section py-8">
 <div class="cat-badge cat-badge-10k mb-8">
 <div class="cat-dots-ring">
@@ -462,7 +444,6 @@
 <a class="price-tag mb-5 inline-block" href="info-ballot.html">IDR 650.000</a>
 <p class="text-xs text-white/40 leading-relaxed px-2">This year we bring back the 10K offline race at the Lumbini Park Complex around the magnificent Borobudur Temple.</p>
 </div>
-
 <div class="cat-card reveal-section py-8">
 <div class="cat-badge cat-badge-5k mb-8">
 <div class="cat-dots-ring">
@@ -485,7 +466,6 @@
 </div>
 </div>
 </section>
-
 <section class="relative py-20 md:py-32" id="faq">
 <div class="absolute inset-0 bg-gradient-to-b from-bjBlack via-bjRedDarker/20 to-bjBlack"></div>
 <div class="absolute top-0 left-0 right-0 gold-line"></div>
@@ -498,7 +478,6 @@
 <div class="space-y-4 reveal-section" id="faqContainer"></div>
 </div>
 </section>
-
 <section class="relative py-20 md:py-32 overflow-hidden">
 <div class="absolute inset-0">
 <img alt="Bank Jateng Borobudur Marathon Banner" class="banner-img" onerror="this.style.display='none'" src="banner.png"/>
@@ -518,7 +497,6 @@
 </div>
 </div>
 </section>
-
 <footer class="bg-bjBlack border-t border-white/5">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-12">
@@ -575,9 +553,8 @@
 </div>
 </div>
 </footer>
-
 <script>
-     ===== NAVBAR SCROLL ===== 
+    /* ===== NAVBAR SCROLL ===== */
     var navbar=document.getElementById('navbar');
     window.addEventListener('scroll',function(){
       if(window.scrollY>80){
@@ -591,7 +568,7 @@
       }
     });
 
-     ===== MOBILE MENU ===== 
+    /* ===== MOBILE MENU ===== */
     var menuOpen=false;
     function toggleMenu(){
       menuOpen=!menuOpen;
@@ -616,7 +593,7 @@
       }
     }
 
-     ===== TOAST ===== 
+    /* ===== TOAST ===== */
     function showToast(message,type){
       var c=document.getElementById('toastContainer'),
           t=document.createElement('div'),
@@ -634,7 +611,7 @@
       },5000);
     }
 
-     ===== FAQ ===== 
+    /* ===== FAQ ===== */
     var faqData=[
       {q:"Apa itu sistem Ballot?",a:"Ballot adalah sistem undian (lotere) yang memberikan kesempatan yang sama bagi semua pelari untuk berpartisipasi. Anda mendaftar melalui aplikasi My Borobudur Marathon, dan pemenang undian akan mendapatkan slot race."},
       {q:"Bagaimana cara mengikuti jalur XTRARUN Bank Jateng?",a:"Jalur XTRARUN ditujukan bagi pemegang rekening Tabungan Bima Bank Jateng yang memenuhi saldo minimum. Pendaftaran dilakukan langsung di cabang-cabang terpilih di Jawa Tengah, DI Yogyakarta, dan Jakarta."},
@@ -665,7 +642,7 @@
       }
     }
 
-     ===== REVEAL ON SCROLL ===== 
+    /* ===== REVEAL ON SCROLL ===== */
     var rs=document.querySelectorAll('.reveal-section');
     var obs=new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
@@ -674,7 +651,7 @@
     },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
     rs.forEach(function(s){obs.observe(s)});
 
-     ===== SMOOTH SCROLL ANCHOR ===== 
+    /* ===== SMOOTH SCROLL ANCHOR ===== */
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
       anchor.addEventListener('click',function(e){
         var href=this.getAttribute('href');
@@ -687,7 +664,7 @@
       });
     });
 
-     ===== VIDEO FALLBACK (if background.mp4 fails to load, poster.png remains) ===== 
+    /* ===== VIDEO FALLBACK (if background.mp4 fails to load, poster.png remains) ===== */
     var heroVideo=document.querySelector('.hero-video');
     if(heroVideo){
       heroVideo.addEventListener('error',function(){
