@@ -1,16 +1,5 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"><meta name="description" content="Jalur Urbana Qualifiers Borobudur Marathon 2026. Kualifikasi virtual run bekerja sama dengan Kompas Urbana. Selesaikan tantangan di My Borobudur Marathon app untuk memenangkan slot."><meta name="keywords" content="Borobudur Marathon 2026, Urbana Qualifiers, Kompas Urbana, Virtual Run, My Borobudur Marathon, Bank Jateng, Decade of Legacy"><meta name="author" content="Borobudur Marathon"><meta name="robots" content="index, follow"><meta name="theme-color" content="#6B1012"><link rel="canonical" href="https://borobudurmarathon.com/urbana-qualifiers"><meta property="og:type" content="website"><meta property="og:title" content="Jalur Urbana Qualifiers — Borobudur Marathon 2026"><meta property="og:description" content="Ikuti tantangan virtual bersama Kompas Urbana di My Borobudur Marathon app dan menangkan slot resmi Borobudur Marathon 2026."><meta property="og:url" content="https://borobudurmarathon.com/urbana-qualifiers"><meta property="og:site_name" content="Borobudur Marathon 2026"><meta property="og:locale" content="id_ID"><meta property="og:image" content="logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Jalur Urbana Qualifiers — Borobudur Marathon 2026"><meta name="twitter:description" content="Ikuti tantangan virtual bersama Kompas Urbana di My Borobudur Marathon app dan menangkan slot resmi Borobudur Marathon 2026."><link rel="icon" type="image/png" href="logo.png"><title>Jalur Urbana Qualifiers — Borobudur Marathon 2026</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Bebas+Neue&display=swap" rel="stylesheet"><script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script><style>
 
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Formulir Pendaftaran Jalur Urbana Qualifiers Borobudur Marathon 2026 - Decade of Legacy">
-<title>Formulir Pendaftaran — Urbana Qualifiers BM 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://code.iconify.design/3/3.1.0/iconify.min.css">
-<style>
 :root {
     --red-950: #330708;
     --red-900: #4A0A0C;
@@ -18,12 +7,19 @@
     --red-700: #8B181B;
     --red-600: #A82022;
     --red-500: #C62828;
+    --red-400: #E05A5A;
+    --red-300: #EF9A9A;
+    --red-100: #FDECEC;
     --red-50:  #FFF5F5;
     --gold-700: #7D6420;
     --gold-600: #A68530;
     --gold-500: #B8963E;
     --gold-400: #D4AD4A;
+    --gold-300: #E4C86E;
+    --gold-200: #EDE4C8;
     --gold-100: #F8F3E8;
+    --gold-50:  #FDFBF5;
+    --n-950: #060606;
     --n-900: #0D0D0D;
     --n-800: #1A1A1A;
     --n-700: #2A2A2A;
@@ -36,362 +32,601 @@
     --n-50:  #F7F7F7;
     --bg:     #F3F1EE;
     --card:   #FFFFFF;
+    --shadow-xs:  0 1px 2px rgba(0,0,0,0.04);
     --shadow-sm:  0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
     --shadow-md:  0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
     --shadow-lg:  0 4px 8px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.08);
+    --shadow-xl:  0 8px 16px rgba(0,0,0,0.05), 0 24px 64px rgba(0,0,0,0.10);
     --shadow-glow-red: 0 4px 20px rgba(198,40,40,0.25), 0 12px 40px rgba(198,40,40,0.12);
+    --shadow-glow-gold: 0 4px 20px rgba(184,150,62,0.18);
     --r-sm: 10px;
     --r-md: 16px;
     --r-lg: 24px;
     --r-xl: 32px;
     --r-full: 9999px;
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur-fast: 0.15s;
+    --dur-base: 0.3s;
+    --dur-slow: 0.5s;
+    --topbar-h: 3px;
 }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--n-600);
     line-height: 1.7;
     overflow-x: hidden;
+    padding-bottom: 100px;
 }
 img { max-width: 100%; height: auto; display: block; }
-/* Header */
-.header {
-    background: linear-gradient(160deg, var(--red-950) 0%, var(--red-800) 35%, var(--red-700) 100%);
-    padding: 40px 24px 60px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    color: #fff;
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--red-500); outline-offset: 3px; border-radius: var(--r-sm); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.top-bar {
+    position: fixed; top: 0; left: 0; right: 0; height: var(--topbar-h);
+    background: linear-gradient(90deg, var(--red-700), var(--gold-500) 50%, var(--red-700));
+    z-index: 10001;
 }
-.header::before {
-    content: '';
-    position: absolute; top: -50%; right: -25%; width: 80%; height: 140%;
+.scroll-prog {
+    position: fixed; top: var(--topbar-h); left: 0; height: 2px; width: 0%;
+    background: linear-gradient(90deg, var(--red-500), var(--gold-400));
+    z-index: 10000; will-change: width; transition: width 0.08s linear;
+}
+.bg-atmo { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.bg-orb { position: absolute; border-radius: 50%; filter: blur(90px); }
+.bg-orb-1 { top: -20%; right: -15%; width: 50vw; height: 50vw; max-width: 620px; max-height: 620px; background: radial-gradient(circle, rgba(198,40,40,0.07), transparent 70%); animation: orbA 25s ease-in-out infinite; }
+.bg-orb-2 { bottom: -25%; left: -20%; width: 60vw; height: 60vw; max-width: 720px; max-height: 720px; background: radial-gradient(circle, rgba(184,150,62,0.05), transparent 70%); animation: orbB 30s ease-in-out infinite; }
+.bg-orb-3 { top: 40%; left: 50%; width: 30vw; height: 30vw; max-width: 360px; max-height: 360px; background: radial-gradient(circle, rgba(198,40,40,0.035), transparent 70%); animation: orbC 22s ease-in-out infinite; }
+@keyframes orbA { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,-20px) scale(1.05)} }
+@keyframes orbB { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-30px,-25px) scale(1.08)} }
+@keyframes orbC { 0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,-30px)} }
+.bg-noise {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.018;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+}
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.hero {
+    position: relative;
+    background: linear-gradient(160deg, var(--red-950) 0%, var(--red-800) 35%, var(--red-700) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 110px 24px 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+.hero::before {
+    content: ''; position: absolute; inset: 0; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px; pointer-events: none;
+}
+.hero::after {
+    content: ''; position: absolute; top: -50%; right: -25%; width: 80%; height: 140%;
     background: radial-gradient(ellipse, rgba(184,150,62,0.1) 0%, transparent 55%);
     pointer-events: none;
 }
-.header-logo {
-    height: 80px; margin: 0 auto 24px; object-fit: contain;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+.hero-vignette {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none; z-index: 1;
 }
-.header-badge {
+.hero-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+.hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
-    padding: 7px 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--r-full);
+    padding: 7px 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--r-full);
     font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold-400); margin-bottom: 16px;
+    color: var(--gold-400); margin-bottom: 30px;
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
     background: rgba(255,255,255,0.04);
 }
-.header h1 {
+.hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-400); animation: pulseDot 2s ease-in-out infinite; }
+@keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.6)} }
+.hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 42px); font-weight: 800;
-    line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 12px;
+    font-size: clamp(34px, 7.5vw, 60px); font-weight: 800;
+    line-height: 1.08; letter-spacing: -0.025em; margin-bottom: 22px;
 }
-.header h1 .gold { color: var(--gold-400); font-style: italic; }
-.header p { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto; }
-/* Layout */
-.container { max-width: 820px; margin: -40px auto 60px; padding: 0 24px; position: relative; z-index: 2; }
-/* Card */
+.hero h1 .gold { color: var(--gold-400); font-style: italic; }
+.hero p {
+    font-size: clamp(14px, 2.2vw, 17px); font-weight: 400; line-height: 1.85;
+    color: rgba(255,255,255,0.75); max-width: 580px; margin: 0 auto;
+}
+.hero-cta { margin-top: 40px; }
+.hero-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 17px 42px;
+    background: rgba(255,255,255,0.08); color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.25); border-radius: var(--r-full);
+    font-size: 15px; font-weight: 600; cursor: pointer;
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    transition: all var(--dur-base) var(--ease);
+    position: relative; overflow: hidden;
+    animation: heroPulse 3s ease-in-out infinite;
+}
+.hero-btn::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    transform: translateX(-100%); transition: transform 0.6s var(--ease); pointer-events: none;
+}
+.hero-btn:hover::after { transform: translateX(100%); }
+.hero-btn:hover {
+    background: #fff; color: var(--red-800); border-color: #fff;
+    transform: translateY(-2px); box-shadow: 0 10px 36px rgba(0,0,0,0.25); animation: none;
+}
+.hero-btn:active { transform: translateY(0); }
+.hero-btn .arrow { transition: transform var(--dur-base) var(--ease); display: inline-flex; }
+.hero-btn:hover .arrow { transform: translateX(4px); }
+@keyframes heroPulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0.18)} 50%{box-shadow:0 0 0 14px rgba(255,255,255,0)} }
+.hero-scroll {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 6px;
+    cursor: pointer; color: rgba(255,255,255,0.4); transition: color var(--dur-base) var(--ease);
+}
+.hero-scroll:hover { color: rgba(255,255,255,0.8); }
+.hero-scroll-text { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
+.hero-scroll-icon { animation: scrollBounce 2s ease-in-out infinite; }
+@keyframes scrollBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+.hero-fade { position: absolute; bottom: 0; left: 0; right: 0; height: 90px; background: linear-gradient(to top, var(--bg), transparent); pointer-events: none; z-index: 3; }
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.section-spacing { padding-top: 80px; }
+.section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--red-500); margin-bottom: 14px;
+}
+.section-label::before, .section-label::after { content: ''; width: 22px; height: 1px; background: var(--red-500); opacity: 0.3; }
+.section-head { text-align: center; max-width: 560px; margin: 0 auto 52px; }
+.section-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px); font-weight: 700; color: var(--n-900);
+    line-height: 1.18; letter-spacing: -0.025em; margin-bottom: 14px;
+}
+.section-head p { font-size: 15px; color: var(--n-500); line-height: 1.8; }
 .card {
-    background: var(--card); border-radius: var(--r-xl); padding: 40px;
-    box-shadow: var(--shadow-lg); border: 1px solid rgba(0,0,0,0.04);
-    margin-bottom: 28px; position: relative;
+    background: var(--card); border-radius: var(--r-xl); padding: 44px 40px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.04); margin-bottom: 28px;
+    transition: box-shadow var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+    position: relative; overflow: hidden;
 }
 .card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
     background: linear-gradient(90deg, var(--red-500), var(--gold-500));
-    border-radius: var(--r-xl) var(--r-xl) 0 0;
+    opacity: 0; transition: opacity var(--dur-base) var(--ease);
 }
-/* Form Elements */
-.form-section { margin-bottom: 36px; }
-.form-section:last-child { margin-bottom: 0; }
-.section-title {
+.card::after {
+    content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+    transition: left 0.7s var(--ease); pointer-events: none;
+}
+.card:hover { box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.8); transform: translateY(-3px); }
+.card:hover::before { opacity: 1; }
+.card:hover::after { left: 130%; }
+.card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 22px; font-weight: 700; color: var(--n-900);
-    margin-bottom: 8px; display: flex; align-items: center; gap: 10px;
+    font-size: clamp(20px, 3vw, 27px); font-weight: 700; color: var(--n-900);
+    line-height: 1.25; letter-spacing: -0.015em; margin-bottom: 18px;
 }
-.section-title .iconify { color: var(--red-600); font-size: 24px; }
-.section-desc { font-size: 14px; color: var(--n-500); margin-bottom: 24px; }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.form-group { margin-bottom: 20px; }
-.form-group.full { grid-column: 1 / -1; }
-.form-label {
-    display: block; font-size: 13px; font-weight: 600; color: var(--n-700);
-    margin-bottom: 8px; letter-spacing: 0.01em;
+.card > p { font-size: 14.5px; color: var(--n-500); line-height: 1.85; }
+.info-box {
+    background: var(--red-50); border-left: 3px solid var(--red-500);
+    padding: 20px 24px; border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin-top: 22px; font-size: 13.5px; line-height: 1.9; color: var(--n-600);
 }
-.form-label .req { color: var(--red-500); }
-.form-control {
-    width: 100%; padding: 14px 18px;
-    background: var(--n-50); border: 1.5px solid var(--n-200);
-    border-radius: var(--r-sm); font-family: inherit; font-size: 14.5px; color: var(--n-800);
-    transition: all 0.2s var(--ease);
+.info-box strong { color: var(--n-900); }
+.info-box-gold { background: var(--gold-100); border-left-color: var(--gold-500); }
+.info-box ul { margin-top: 8px; padding-left: 18px; list-style: disc; }
+.timeline { margin-top: 30px; position: relative; padding-left: 40px; }
+.timeline::before {
+    content: ''; position: absolute; left: 20px; top: 8px; bottom: 8px; width: 2px;
+    background: linear-gradient(to bottom, var(--red-500), var(--gold-400) 50%, var(--red-500));
+    border-radius: 2px;
 }
-.form-control:focus {
-    outline: none; border-color: var(--red-500); background: #fff;
-    box-shadow: 0 0 0 4px rgba(198,40,40,0.08);
+.tl-item { position: relative; padding-bottom: 34px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+    position: absolute; left: -40px; top: 4px; width: 42px; height: 42px; border-radius: 50%;
+    background: var(--card); border: 2.5px solid var(--red-500);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif; font-size: 16px; font-weight: 500; color: var(--red-600);
+    box-shadow: 0 2px 12px rgba(198,40,40,0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+    transition: all var(--dur-base) var(--ease); z-index: 1;
 }
-.form-control::placeholder { color: var(--n-400); }
-textarea.form-control { resize: vertical; min-height: 100px; }
-/* Category Cards */
-.cat-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.cat-option { position: relative; }
-.cat-option input { position: absolute; opacity: 0; }
-.cat-label {
-    display: block; padding: 24px 16px; text-align: center;
-    background: var(--n-50); border: 2px solid var(--n-200);
-    border-radius: var(--r-md); cursor: pointer; transition: all 0.25s var(--ease);
+.tl-item:hover .tl-dot {
+    background: var(--red-600); color: #fff; border-color: var(--red-600);
+    transform: scale(1.12); box-shadow: 0 6px 20px rgba(198,40,40,0.3);
 }
-.cat-label .cat-dist {
-    font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 1;
-    color: var(--n-600); margin-bottom: 4px;
+.tl-content h4 { font-size: 16px; font-weight: 700; color: var(--n-900); margin-bottom: 6px; letter-spacing: -0.01em; }
+.tl-content p { font-size: 14px; color: var(--n-500); line-height: 1.8; }
+.tl-content ul { margin: 8px 0 0 18px; list-style: disc; }
+.tl-content ul li { position: relative; padding-left: 14px; margin-bottom: 3px; font-size: 13.5px; color: var(--n-500); line-height: 1.75; }
+.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+.cat-card {
+    background: var(--card); border-radius: var(--r-lg); padding: 32px 24px 28px;
+    border: 1.5px solid rgba(0,0,0,0.05); text-align: center;
+    transition: all var(--dur-slow) var(--ease); position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.8);
 }
-.cat-label .cat-name { font-size: 13px; font-weight: 700; color: var(--n-700); }
-.cat-label:hover { border-color: var(--red-400); background: #fff; }
-.cat-option input:checked + .cat-label {
-    border-color: var(--red-600); background: var(--red-50);
-    box-shadow: 0 4px 16px rgba(198,40,40,0.1);
+.cat-card[data-cat="42k"] { border-top: 3px solid var(--red-500); }
+.cat-card[data-cat="21k"] { border-top: 3px solid var(--gold-500); }
+.cat-card[data-cat="10k"] { border-top: 3px solid var(--red-400); }
+.cat-card::before {
+    content: ''; position: absolute; bottom: -40%; right: -25%; width: 140px; height: 140px;
+    background: var(--red-500); opacity: 0; border-radius: 50%; filter: blur(45px);
+    transition: opacity var(--dur-base) var(--ease); pointer-events: none;
 }
-.cat-option input:checked + .cat-label .cat-dist { color: var(--red-600); }
-.cat-option input:checked + .cat-label .cat-name { color: var(--red-700); }
-/* Payment QRIS */
-.payment-box {
-    display: flex; flex-direction: column; align-items: center;
-    background: var(--gold-100); border: 1px solid var(--gold-400);
-    padding: 32px; border-radius: var(--r-md); margin-top: 16px;
+.cat-card[data-cat="21k"]::before { background: var(--gold-500); }
+.cat-card[data-cat="10k"]::before { background: var(--red-400); }
+.cat-card:hover { border-color: rgba(0,0,0,0.08); transform: translateY(-5px); box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.8); }
+.cat-card:hover::before { opacity: 0.1; }
+.cat-dist { font-family: 'Bebas Neue', sans-serif; font-size: 40px; line-height: 1; margin-bottom: 4px; letter-spacing: 0.02em; }
+.cat-card[data-cat="42k"] .cat-dist { color: var(--red-600); }
+.cat-card[data-cat="21k"] .cat-dist { color: var(--gold-600); }
+.cat-card[data-cat="10k"] .cat-dist { color: var(--red-400); }
+.cat-name { font-size: 15px; font-weight: 700; color: var(--n-900); margin-bottom: 10px; }
+.cat-desc { font-size: 12.5px; color: var(--n-500); line-height: 1.75; }
+.result-success {
+    background: #F0FDF4; border: 1px solid #BBF7D0; border-left: 4px solid #22C55E;
+    padding: 24px 26px; border-radius: 0 var(--r-md) var(--r-md) 0;
+    font-size: 14px; line-height: 2.1; color: #166534;
 }
-.payment-box h4 {
-    font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.05em;
-    color: var(--red-800); margin-bottom: 16px;
-}
-.qris-img {
-    width: 100%; max-width: 280px; border-radius: var(--r-sm);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08); margin-bottom: 16px;
-    border: 4px solid #fff;
-}
-.payment-note { font-size: 13px; color: var(--n-600); text-align: center; max-width: 400px; }
-/* Terms */
-.terms-box {
-    background: var(--n-50); border: 1px solid var(--n-200);
-    padding: 20px; border-radius: var(--r-sm); margin-bottom: 20px;
-    max-height: 160px; overflow-y: auto; font-size: 13px; color: var(--n-500); line-height: 1.6;
-}
-.terms-check {
-    display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
-}
-.terms-check input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--red-600); flex-shrink: 0; }
-.terms-check span { font-size: 14px; color: var(--n-700); }
-/* Submit Button */
-.btn-submit {
-    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
-    padding: 18px 32px; background: linear-gradient(135deg, var(--red-600) 0%, var(--red-700) 100%);
+.result-success .ri { color: #22C55E; margin-right: 8px; font-weight: 700; }
+.cta-wrap { text-align: center; margin-top: 44px; }
+.btn-cta {
+    display: inline-flex; align-items: center; gap: 10px; padding: 19px 52px;
+    background: linear-gradient(135deg, var(--red-600) 0%, var(--red-700) 100%);
     color: #fff; border: none; border-radius: var(--r-md);
-    font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit;
-    box-shadow: var(--shadow-glow-red); transition: all 0.3s var(--ease);
-    position: relative; overflow: hidden;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    box-shadow: var(--shadow-glow-red), inset 0 1px 0 rgba(255,255,255,0.15);
+    transition: all var(--dur-slow) var(--ease); position: relative; overflow: hidden; letter-spacing: 0.01em;
 }
-.btn-submit::after {
+.btn-cta::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%); pointer-events: none;
 }
-.btn-submit:hover {
+.btn-cta:hover {
     background: linear-gradient(135deg, var(--red-700) 0%, var(--red-800) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 32px rgba(198,40,40,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(198,40,40,0.4), 0 20px 56px rgba(198,40,40,0.18), inset 0 1px 0 rgba(255,255,255,0.15);
 }
-.btn-submit .iconify { font-size: 20px; transition: transform 0.2s var(--ease); }
-.btn-submit:hover .iconify { transform: translateX(4px); }
-/* Footer */
+.btn-cta:active { transform: translateY(0); }
+.btn-cta .iconify { font-size: 18px; transition: transform var(--dur-base) var(--ease); }
+.btn-cta:hover .iconify { transform: translateX(4px); }
+
+.btn-cta.loading { pointer-events: none; }
+.btn-cta.loading .btn-cta-text, .btn-cta.loading .iconify { opacity: 0; }
+.btn-cta.loading .btn-cta-spin { display: flex; }
+.btn-cta-spin { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; }
+.btn-cta-spin-circle {
+    width: 22px; height: 22px; border: 2.5px solid rgba(255,255,255,0.25);
+    border-top-color: #fff; border-radius: 50%; animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.fab { position: fixed; bottom: 28px; right: 28px; z-index: 9999; }
+.fab-btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px;
+    background: linear-gradient(135deg, var(--red-600) 0%, var(--red-700) 100%);
+    color: #fff; border: none; border-radius: var(--r-full);
+    font-size: 14px; font-weight: 700; cursor: pointer;
+    box-shadow: 0 6px 24px rgba(198,40,40,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
+    transition: all var(--dur-slow) var(--ease); animation: fabPulse 3s ease-in-out infinite;
+    white-space: nowrap; position: relative; overflow: hidden;
+}
+.fab-btn::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%); pointer-events: none; }
+.fab-btn:hover { animation: none; transform: translateY(-3px) scale(1.04); box-shadow: 0 12px 40px rgba(198,40,40,0.55), inset 0 1px 0 rgba(255,255,255,0.12); }
+.fab-btn .iconify { font-size: 18px; animation: fabArrow 1.5s ease-in-out infinite; }
+.fab-btn:hover .iconify { animation: none; transform: translateX(3px); }
+@keyframes fabPulse { 0%,100%{box-shadow:0 6px 24px rgba(198,40,40,0.4)} 50%{box-shadow:0 6px 32px rgba(198,40,40,0.55), 0 0 0 10px rgba(198,40,40,0.06)} }
+@keyframes fabArrow { 0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)} }
+.scroll-top {
+    position: fixed; bottom: 28px; left: 28px; width: 46px; height: 46px; border-radius: 50%;
+    background: var(--card); border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.8);
+    display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--n-500);
+    opacity: 0; visibility: hidden; transform: translateY(12px);
+    transition: all var(--dur-slow) var(--ease); z-index: 9998;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-top:hover { background: var(--red-600); color: #fff; border-color: var(--red-600); transform: translateY(-2px); box-shadow: var(--shadow-glow-red); }
+.reg-overlay {
+    position: fixed; inset: 0; z-index: 50000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden; transition: opacity 0.4s var(--ease), visibility 0.4s;
+}
+.reg-overlay.active { opacity: 1; visibility: visible; }
+.reg-overlay-bg { position: absolute; inset: 0; background: rgba(13, 13, 13, 0.82); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+.reg-overlay-content {
+    position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 32px;
+    transform: scale(0.92) translateY(16px); transition: transform 0.5s var(--ease-out);
+}
+.reg-overlay.active .reg-overlay-content { transform: scale(1) translateY(0); }
+.reg-ring-wrap { position: relative; width: 130px; height: 130px; }
+.reg-ring { width: 130px; height: 130px; display: block; }
+.reg-ring-track { fill: none; stroke: rgba(255,255,255,0.07); stroke-width: 4; }
+.reg-ring-progress {
+    fill: none; stroke: url(#ringGrad); stroke-width: 4.5; stroke-linecap: round;
+    stroke-dasharray: 326.73; stroke-dashoffset: 326.73;
+}
+.reg-overlay.active .reg-ring-progress { animation: ringFill 2.5s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards; }
+@keyframes ringFill { to { stroke-dashoffset: 0; } }
+.reg-icon-wrap {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: var(--gold-400); font-size: 36px; animation: iconPulse 2s ease-in-out infinite;
+}
+@keyframes iconPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(0.92)} }
+.reg-text-group { text-align: center; min-height: 90px; position: relative; width: 320px; max-width: 85vw; }
+.reg-text-step {
+    font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.85);
+    letter-spacing: 0.01em; line-height: 1.6; opacity: 0;
+    transition: opacity 0.45s var(--ease);
+    position: absolute; left: 50%; transform: translateX(-50%) translateY(8px); width: 100%;
+}
+.reg-text-step.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.reg-brand { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 0.25em; color: rgba(255,255,255,0.2); text-transform: uppercase; }
 .site-footer {
-    background: var(--n-800); color: rgba(255,255,255,0.5); padding: 40px 24px; text-align: center;
+    background: var(--n-800); color: rgba(255,255,255,0.5); padding: 56px 24px; text-align: center;
+    position: relative; z-index: 1;
 }
-.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: rgba(255,255,255,0.75); letter-spacing: 0.1em; margin-bottom: 8px; }
-.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.8; }
-/* Responsive */
+.site-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(184,150,62,0.2), transparent); }
+.footer-inner { max-width: 500px; margin: 0 auto; }
+.footer-logo { height: 36px; margin: 0 auto 18px; opacity: 0.45; object-fit: contain; transition: opacity var(--dur-base) var(--ease); }
+.footer-logo:hover { opacity: 0.75; }
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: rgba(255,255,255,0.75); letter-spacing: 0.1em; margin-bottom: 4px; }
+.footer-loc { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 18px; }
+.footer-links { display: flex; justify-content: center; gap: 22px; margin-bottom: 22px; flex-wrap: wrap; }
+.footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); transition: color var(--dur-fast) var(--ease); position: relative; }
+.footer-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 1px; background: rgba(255,255,255,0.3); transform: scaleX(0); transition: transform var(--dur-base) var(--ease); }
+.footer-links a:hover { color: rgba(255,255,255,0.85); }
+.footer-links a:hover::after { transform: scaleX(1); }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); line-height: 1.8; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.05); }
+.toast-wrap { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); z-index: 9000; pointer-events: none; }
+.toast-pill {
+    background: var(--n-900); color: #fff; padding: 12px 26px; border-radius: var(--r-full);
+    font-size: 13px; font-weight: 500; font-family: inherit; box-shadow: var(--shadow-xl);
+    opacity: 0; transform: translateY(12px) scale(0.96); transition: all 0.35s var(--ease);
+    white-space: nowrap; border: 1px solid rgba(255,255,255,0.06);
+}
+.toast-pill.on { opacity: 1; transform: translateY(0) scale(1); }
 @media (max-width: 768px) {
-    .card { padding: 24px; border-radius: var(--r-lg); }
-    .form-grid { grid-template-columns: 1fr; }
-    .cat-options { grid-template-columns: 1fr; }
-    .header { padding: 30px 18px 50px; }
-    .header-logo { height: 60px; }
+    body { padding-bottom: 92px; }
+    .hero { padding: 80px 18px 70px; }
+    .card { padding: 28px 22px; border-radius: var(--r-lg); }
+    .cat-grid { grid-template-columns: 1fr; }
+    .cat-card { padding: 24px 22px; }
+    .btn-cta { padding: 17px 32px; font-size: 15px; width: 100%; max-width: 340px; justify-content: center; }
+    .fab { bottom: 18px; right: 16px; }
+    .fab-btn { padding: 14px 20px; font-size: 13px; gap: 8px; }
+    .scroll-top { bottom: 18px; left: 16px; width: 42px; height: 42px; }
+    .tl-dot { width: 36px; height: 36px; font-size: 14px; left: -34px; }
+    .timeline { padding-left: 34px; }
+    .timeline::before { left: 17px; }
+    .reg-text-group { width: 260px; }
 }
-/* Alert Toast */
-.toast {
-    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px);
-    background: var(--n-900); color: #fff; padding: 16px 28px; border-radius: var(--r-full);
-    font-size: 14px; font-weight: 500; box-shadow: var(--shadow-lg);
-    opacity: 0; transition: all 0.4s var(--ease); z-index: 9999; pointer-events: none;
+@media (min-width: 769px) and (max-width: 1024px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 400px) {
+    .hero h1 { font-size: 28px; }
+    .card { padding: 24px 18px; }
+    .fab-btn span:not(.iconify) { display: none; }
+    .fab-btn { padding: 14px; border-radius: 50%; }
 }
-.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-.toast.success { background: #22C55E; }
-.toast.error { background: var(--red-600); }
-</style>
-</head>
-<body>
-<header class="header">
-    <img src="logo.png" alt="Borobudur Marathon 2026" class="header-logo" onerror="this.style.display='none'">
-    <div class="header-badge">
-        <span class="iconify" data-icon="mdi:run-fast"></span>
-        BANK JATENG BOROBUDUR MARATHON 2026 — DECADE OF LEGACY
-    </div>
-    <h1>Formulir Pendaftaran <span class="gold">Urbana Qualifiers</span></h1>
-    <p>Kualifikasi Virtual Run bekerja sama dengan Kompas Urbana. Selesaikan tantangan di My Borobudur Marathon app.</p>
-</header>
-<main class="container">
-    <form id="regForm" class="card" onsubmit="return handleSubmit(event)">
-        <div class="form-section">
-            <h2 class="section-title">
-                <span class="iconify" data-icon="mdi:account-circle-outline"></span>
-                Informasi Peserta
-            </h2>
-            <p class="section-desc">Isi data sesuai dengan KTP/SIM/Paspor yang berlaku.</p>
-            <div class="form-grid">
-                <div class="form-group full">
-                    <label class="form-label">Nama Lengkap <span class="req">*</span></label>
-                    <input type="text" class="form-control" placeholder="Contoh: Budi Santoso" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Nomor Identitas (KTP/SIM) <span class="req">*</span></label>
-                    <input type="text" class="form-control" placeholder="16 digit KTP" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Tanggal Lahir <span class="req">*</span></label>
-                    <input type="date" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Jenis Kelamin <span class="req">*</span></label>
-                    <select class="form-control" required>
-                        <option value="">Pilih...</option>
-                        <option value="L">Laki-laki</option>
-                        <option value="P">Perempuan</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Nomor Telepon (WhatsApp) <span class="req">*</span></label>
-                    <input type="tel" class="form-control" placeholder="0812xxxxxxx" required>
-                </div>
-                <div class="form-group full">
-                    <label class="form-label">Email Aktif <span class="req">*</span></label>
-                    <input type="email" class="form-control" placeholder="email@domain.com" required>
-                </div>
-                <div class="form-group full">
-                    <label class="form-label">Alamat Domisili <span class="req">*</span></label>
-                    <textarea class="form-control" placeholder="Jl. Contoh No. 123, Kota, Provinsi" required></textarea>
-                </div>
-                <div class="form-group full">
-                    <label class="form-label">Ukuran Jersey (Bonus Awal)</label>
-                    <select class="form-control">
-                        <option value="">Pilih Ukuran...</option>
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                        <option value="XXL">XXL</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="form-section">
-            <h2 class="section-title">
-                <span class="iconify" data-icon="mdi:map-marker-distance"></span>
-                Pilih Kategori Target
-            </h2>
-            <p class="section-desc">Pilih kategori target finish Borobudur Marathon 2026 yang ingin Anda ikuti.</p>
-            <div class="cat-options">
-                <div class="cat-option">
-                    <input type="radio" id="cat-10k" name="category" value="10K" required>
-                    <label for="cat-10k" class="cat-label">
-                        <div class="cat-dist">10K</div>
-                        <div class="cat-name">10 Kilometer</div>
-                    </label>
-                </div>
-                <div class="cat-option">
-                    <input type="radio" id="cat-21k" name="category" value="21K">
-                    <label for="cat-21k" class="cat-label">
-                        <div class="cat-dist">21K</div>
-                        <div class="cat-name">Half Marathon</div>
-                    </label>
-                </div>
-                <div class="cat-option">
-                    <input type="radio" id="cat-42k" name="category" value="42K">
-                    <label for="cat-42k" class="cat-label">
-                        <div class="cat-dist">42K</div>
-                        <div class="cat-name">Marathon</div>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="form-section">
-            <h2 class="section-title">
-                <span class="iconify" data-icon="mdi:qrcode-scan"></span>
-                Pembayaran Registrasi
-            </h2>
-            <p class="section-desc">Scan kode QRIS di bawah ini untuk membayar biaya administrasi dan aktivasi tantangan virtual.</p>
-            <div class="payment-box">
-                <h4>Scan QRIS Official</h4>
-                <img src="qris.png" alt="QRIS Pembayaran Borobudur Marathon" class="qris-img" onerror="this.style.display='none'">
-                <p class="payment-note">
-                    <strong>Langkah:</strong><br>
-                    1. Buka aplikasi m-banking atau e-wallet Anda.<br>
-                    2. Scan QR code di atas.<br>
-                    3. Simpan bukti pembayaran, lalu unggah di bawah ini.
-                </p>
-            </div>
-            <div class="form-group full" style="margin-top: 24px;">
-                <label class="form-label">Unggah Bukti Pembayaran <span class="req">*</span></label>
-                <input type="file" class="form-control" accept="image/*,application/pdf" required style="padding: 12px;">
-            </div>
-        </div>
-        <div class="form-section">
-            <h2 class="section-title">
-                <span class="iconify" data-icon="mdi:shield-check-outline"></span>
-                Ketentuan & Persetujuan
-            </h2>
-            <div class="terms-box">
-                <p>1. Peserta wajib mengunduh aplikasi "My Borobudur Marathon" untuk memantau tantangan virtual.</p>
-                <p>2. Tantangan virtual run wajib diselesaikan sebelum tanggal yang ditentukan oleh panitia.</p>
-                <p>3. Slot yang dimenangkan mencakup: tiket masuk lomba, paket Harian Kompas, dan akses ke aktivitas persiapan.</p>
-                <p>4. Biaya pendaftaran tidak dapat dikembalikan (refund) kecuali terjadi pembatalan acara oleh panitia.</p>
-                <p>5. Data yang diisi harus benar. Jika ditemukan kecurangan, pendaftaran akan dibatalkan secara sepihak.</p>
-            </div>
-            <label class="terms-check">
-                <input type="checkbox" id="agreeTerms" required>
-                <span>Saya telah membaca, memahami, dan menyetujui semua ketentuan yang berlaku untuk Jalur Urbana Qualifiers Borobudur Marathon 2026.</span>
-            </label>
-        </div>
-        <button type="submit" class="btn-submit">
-            <span>Kirim Pendaftaran</span>
-            <span class="iconify" data-icon="mdi:arrow-right"></span>
-        </button>
-    </form>
-</main>
-<footer class="site-footer">
-    <div class="footer-brand">BOROBUDUR MARATHON 2026 — DECADE OF LEGACY</div>
-    <p class="footer-copy">
-        Sebuah kolaborasi Borobudur Marathon & Kompas Urbana.<br>
-        &copy; 2026 Borobudur Marathon. Seluruh hak cipta dilindungi.
-    </p>
-</footer>
-<div class="toast" id="toast">Pendaftaran Berhasil Dikirim!</div>
-<script>
-let submitting=false;
-function handleSubmit(event){
- event.preventDefault();
- if(submitting) return false;
- submitting=true;
- const ov=document.createElement('div');
- ov.style='position:fixed;inset:0;background:#111;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999';
- ov.innerHTML='<h2>Loading Premium</h2><div style="width:80%;height:18px;background:#333"><div id=p style="height:100%;width:0;background:#d4ad4a"></div></div><div id=s>Validasi Data</div>';
- document.body.appendChild(ov);
- let i=0,st=['Validasi Data','Verifikasi Pembayaran','Sinkronisasi Server','Membuat E-Ticket','Selesai'];
- let t=setInterval(()=>{
- i++;
- document.getElementById('p').style.width=(i/60*100)+'%';
- document.getElementById('s').textContent=st[Math.min(4,Math.floor(i/12))];
- if(i>=60){clearInterval(t);location.href='e-ticket.html';}
- },1000);
- return false;
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
 }
-</script></body>
-</html>
+@media print {
+    .top-bar, .scroll-prog, .bg-atmo, .bg-noise, .fab, .scroll-top, .toast-wrap, .hero-cta, .cta-wrap, .reg-overlay, .hero-scroll { display: none !important; }
+    body { background: #fff; color: #000; padding-bottom: 0; }
+    .hero { background: #eee !important; color: #000; padding: 30px; }
+    .hero::before, .hero::after, .hero-fade, .hero-vignette { display: none; }
+    .hero-badge, .hero-btn { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    .card::before, .card::after { display: none; }
+    .btn-cta { display: none; }
+    .tl-dot { border-color: #999; color: #999; }
+    .timeline::before { background: #ccc; }
+    .site-footer { background: #eee; color: #666; }
+    .site-footer::before { display: none; }
+}
+</style></head><body><div class="top-bar" aria-hidden="true"></div><div class="scroll-prog" id="scrollProg" aria-hidden="true"></div><div class="bg-atmo" aria-hidden="true"><div class="bg-orb bg-orb-1"></div><div class="bg-orb bg-orb-2"></div><div class="bg-orb bg-orb-3"></div></div><div class="bg-noise" aria-hidden="true"></div><div class="reg-overlay" id="regOverlay" aria-hidden="true" role="dialog" aria-label="Memproses pendaftaran"><div class="reg-overlay-bg"></div><div class="reg-overlay-content"><div class="reg-ring-wrap"><svg class="reg-ring" viewBox="0 0 130 130" aria-hidden="true"><defs><linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C62828" /><stop offset="100%" stop-color="#D4AD4A" /></linearGradient></defs><circle class="reg-ring-track" cx="65" cy="65" r="52" /><circle class="reg-ring-progress" cx="65" cy="65" r="52" transform="rotate(-90 65 65)" /></svg><div class="reg-icon-wrap" aria-hidden="true"><span class="iconify" data-icon="mdi:run-fast"></span></div></div><div class="reg-text-group" aria-live="polite"><p class="reg-text-step" id="regStep1">Memproses Pendaftaran…</p><p class="reg-text-step" id="regStep2">Menghubungkan ke My Borobudur Marathon app…</p><p class="reg-text-step" id="regStep3">Mengalihkan halaman…</p></div><div class="reg-brand" aria-hidden="true">Borobudur Marathon 2026</div></div></div><div class="fab" role="complementary" aria-label="Pendaftaran cepat"><button class="fab-btn" id="fabBtn" aria-label="Daftar Sekarang"><span class="iconify" data-icon="mdi:arrow-right" aria-hidden="true"></span><span>Daftar Sekarang</span></button></div><button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas"><span class="iconify" data-icon="mdi:chevron-up" style="font-size:22px" aria-hidden="true"></span></button><header class="hero" role="banner"><div class="hero-vignette" aria-hidden="true"></div><div class="hero-inner"><div class="hero-badge"><span class="dot" aria-hidden="true"></span>
+            BANK JATENG BOROBUDUR MARATHON 2026 — DECADE OF LEGACY
+        </div><h1>Urbana <span class="gold">Qualifiers</span></h1><p>
+            Jalur kualifikasi virtual bekerja sama dengan Kompas Urbana. Selesaikan
+            tantangan lari melalui aplikasi "My Borobudur Marathon" untuk memperoleh
+            slot resmi Borobudur Marathon 2026 besaran berbagai keuntungan eksklusif.
+        </p><div class="hero-cta"><button class="hero-btn" id="heroBtn" aria-label="Daftar melalui Jalur Urbana Qualifiers">
+                Daftar Sekarang
+                <span class="arrow" aria-hidden="true">→</span></button></div></div><div class="hero-scroll" id="heroScroll" aria-hidden="true" role="presentation"><span class="hero-scroll-text">Scroll</span><span class="hero-scroll-icon"><span class="iconify" data-icon="mdi:chevron-down" style="font-size:20px"></span></span></div><div class="hero-fade" aria-hidden="true"></div></header><main class="container" id="mainContent" role="main"><section class="section-spacing reveal" aria-labelledby="sec-info"><div class="section-head"><div class="section-label">Informasi</div><h2 id="sec-info">Apa Itu Urbana Qualifiers?</h2><p>Proyek kualifikasi virtual run dari kolaborasi Borobudur Marathon dan Kompas Urbana.</p></div><div class="card reveal reveal-d1"><p>
+                Urbana Qualifiers adalah jalur kualifikasi virtual yang diadakan kerja
+                sama dengan Kompas Urbana. Peserta diharuskan menyelesaikan tantangan
+                lari yang dipantau melalui aplikasi <strong>My Borobudur Marathon</strong>.
+                Setiap slot yang dimenangkan akan memberikan berbagai hak istimewa bagi
+                peserta terpilih.
+            </p><div class="info-box" role="note"><strong>Hak Istimewa Peserta Terpilih:</strong><br>
+                Setiap nama slot yang dimenangkan pada jalur ini mencakup:
+                <ul><li>Tiket masuk lomba (Race Entry Ticket) Borobudur Marathon 2026.</li><li>Paket bundling Harian Kompas.</li><li>Akses ke serangkaian aktivitas persiapan lomba pilihan (Selected Preparation Activities).</li></ul></div></div></section><section class="section-spacing reveal" aria-labelledby="sec-cat"><div class="section-head"><div class="section-label">Kategori</div><h2 id="sec-cat">Kategori Tantangan</h2><p>Pilih kategori target finish sesuai kemampuan pada Borobudur Marathon 2026.</p></div><div class="cat-grid"><div class="cat-card reveal reveal-d1" data-cat="42k"><div class="cat-dist">42K</div><div class="cat-name">Marathon</div><p class="cat-desc">Target menempuh jarak 42,195 km. Direkomendasikan bagi pelari berpengalaman dengan catatan waktu finish di bawah 6 jam.</p></div><div class="cat-card reveal reveal-d2" data-cat="21k"><div class="cat-dist">21K</div><div class="cat-name">Half Marathon</div><p class="cat-desc">Target menempuh jarak 21,097 km. Cocok untuk pelari menengah hingga berpengalaman.</p></div><div class="cat-card reveal reveal-d3" data-cat="10k"><div class="cat-dist">10K</div><div class="cat-name">10 Kilometer</div><p class="cat-desc">Target menempuh jarak 10 km. Cocok bagi pemula maupun pelari rekreasional.</p></div></div></section><section class="section-spacing reveal" aria-labelledby="sec-proses"><div class="section-head"><div class="section-label">Proses</div><h2 id="sec-proses">Alur Kualifikasi Virtual</h2><p>Enam langkah persiapan hingga meraih slot eksklusif Borobudur Marathon 2026.</p></div><div class="card reveal reveal-d1"><h3>Langkah-Langkah Kualifikasi</h3><div class="timeline" role="list"><div class="tl-item" role="listitem"><div class="tl-dot" aria-hidden="true">1</div><div class="tl-content"><h4>Unduh Aplikasi & Buat Akun</h4><p>Unduh aplikasi <em>My Borobudur Marathon</em> melalui Google Play Store atau Apple App Store, kemudian lakukan pembuatan akun peserta.</p></div></div><div class="tl-item" role="listitem"><div class="tl-dot" aria-hidden="true">2</div><div class="tl-content"><h4>Lengkapi Profil</h4><p>Isi data diri secara lengkap di aplikasi:</p><ul><li>Nama lengkap & data identitas</li><li>Email aktif & nomor telepon</li><li>Tanggal lahir & jenis kelamin</li><li>Alamat domisili</li></ul></div></div><div class="tl-item" role="listitem"><div class="tl-dot" aria-hidden="true">3</div><div class="tl-content"><h4>Daftar Tantangan Urbana Qualifiers</h4><p>Pilih jalur kualifikasi virtual run bersama Kompas Urbana dan tentukan kategori target lomba (42K, 21K, atau 10K).</p></div></div><div class="tl-item" role="listitem"><div class="tl-dot" aria-hidden="true">4</div><div class="tl-content"><h4>Selesaikan Tantangan Virtual</h4><p>Lakukan aktivitas lari dan rekam jejaknya secara berkala melalui aplikasi <em>My Borobudur Marathon</em> hingga target tercapai.</p></div></div><div class="tl-item" role="listitem"><div class="tl-dot" aria-hidden="true">5</div><div class="tl-content"><h4>Verifikasi & Pengumuman</h4><p>Panitia akan melakukan verifikasi data lari Anda. Peserta yang berhasil menyelesaikan tantangan dan terpilih akan diumumkan melalui email dan aplikasi.</p><div class="info-box info-box-gold" role="note"><strong>Hadiah Langsung:</strong><br>
+                            Peserta yang terpilih akan langsung mendapatkan tiket lomba, paket Harian Kompas, dan akses ke aktivitas persiapan eksklusif.
+                        </div></div></div><div class="tl-item" role="listitem"><div class="tl-dot" aria-hidden="true">6</div><div class="tl-content"><h4>Konfirmasi Kepesertaan</h4><p>Setelah verifikasi, peserta akan menerima:</p><ul><li>Email konfirmasi dan nomor registrasi resmi</li><li>Status peserta aktif (Active Registered Runner)</li><li>Informasi jadwal aktivitas persiapan lomba</li><li>Informasi Race Pack Collection</li></ul></div></div></div></div></section><section class="section-spacing reveal" aria-labelledby="sec-hasil"><div class="section-head"><div class="section-label">Hasil</div><h2 id="sec-hasil">Hasil Kualifikasi</h2><p>Keuntungan yang didapat setelah berhasil dalam tantangan Urbana Qualifiers.</p></div><div class="card reveal reveal-d1"><h3>Yang Terjadi Setelah Terpilih</h3><div class="result-success" role="status"><span class="ri">✔</span> Mendapat slot resmi Borobudur Marathon 2026.<br><span class="ri">✔</span> Status berubah menjadi Active Registered Runner.<br><span class="ri">✔</span> Menerima tiket lomba, paket bundling Harian Kompas, dan akses ke preparation activities.<br><span class="ri">✔</span> Berhak mengikuti Race Pack Collection dan Race Day.
+            </div><div class="cta-wrap"><button class="btn-cta" id="mainCtaBtn" aria-label="Daftar Kualifikasi Sekarang"><span class="btn-cta-text">Daftar Kualifikasi Sekarang</span><span class="iconify" data-icon="mdi:arrow-right" aria-hidden="true"></span><span class="btn-cta-spin"><span class="btn-cta-spin-circle"></span></span></button></div></div></section></main><footer class="site-footer" role="contentinfo"><div class="footer-inner"><img src="logo.png" alt="Borobudur Marathon" class="footer-logo" onerror="this.style.display='none'"><div class="footer-brand">BANK JATENG BOROBUDUR MARATHON 2026</div><div class="footer-loc">DECADE OF LEGACY — Magelang, Jawa Tengah, Indonesia</div><nav class="footer-links" aria-label="Footer navigation"><a href="https://borobudurmarathon.com" rel="noopener noreferrer" target="_blank">Website Resmi</a><a href="https://instagram.com/borobudurmarathon" rel="noopener noreferrer" target="_blank">Instagram</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></nav><p class="footer-copy">
+            Halaman ini merupakan panduan informasi Jalur Urbana Qualifiers Borobudur Marathon 2026 — Decade of Legacy.<br>
+            Sebuah kolaborasi bersama Kompas Urbana menggunakan aplikasi My Borobudur Marathon.<br>
+            &copy; 2026 Borobudur Marathon. Seluruh hak cipta dilindungi.
+        </p></div></footer><div class="toast-wrap" aria-live="polite"><div class="toast-pill" id="toast"></div></div><script>
+(function() {
+    'use strict';
+    
+    var CONFIG = {
+        redirectUrl:   'form-urbana.html', // Link redirect diubah sesuai permintaan
+        animDuration:  3000,    // Durasi animasi overlay (ms) - 3 detik
+        toastDuration: 3000,    // Durasi tampilan toast (ms)
+        scrollThreshold: 500,   // Jarak scroll sebelum tombol top muncul (px)
+        reducedMotion: window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
+    };
+    
+    var dom = {
+        overlay:     document.getElementById('regOverlay'),
+        step1:       document.getElementById('regStep1'),
+        step2:       document.getElementById('regStep2'),
+        step3:       document.getElementById('regStep3'),
+        scrollProg:  document.getElementById('scrollProg'),
+        scrollTopBtn:document.getElementById('scrollTopBtn'),
+        fabBtn:      document.getElementById('fabBtn'),
+        heroBtn:     document.getElementById('heroBtn'),
+        mainCtaBtn:  document.getElementById('mainCtaBtn'),
+        heroScroll:  document.getElementById('heroScroll'),
+        mainContent: document.getElementById('mainContent'),
+        toast:       document.getElementById('toast')
+    };
+    
+    var _isRedirecting = false;
+    var _toastTimer = null;
+    var _animTimers  = [];
+    
+    function safeTimeout(fn, ms) {
+        var id = setTimeout(fn, ms);
+        _animTimers.push(id);
+        return id;
+    }
+    function toast(msg) {
+        if (!dom.toast) return;
+        dom.toast.textContent = msg;
+        dom.toast.classList.add('on');
+        clearTimeout(_toastTimer);
+        _toastTimer = setTimeout(function() {
+            dom.toast.classList.remove('on');
+        }, CONFIG.toastDuration);
+    }
+    
+    function updateScrollProgress() {
+        if (!dom.scrollProg) return;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        dom.scrollProg.style.width = pct + '%';
+    }
+    function updateScrollTopBtn() {
+        if (!dom.scrollTopBtn) return;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > CONFIG.scrollThreshold) {
+            dom.scrollTopBtn.classList.add('visible');
+        } else {
+            dom.scrollTopBtn.classList.remove('visible');
+        }
+    }
+    function scrollToTop(e) {
+        if (e) e.preventDefault();
+        window.scrollTo({ top: 0, behavior: CONFIG.reducedMotion ? 'auto' : 'smooth' });
+    }
+    function scrollDown(e) {
+        if (e) e.preventDefault();
+        if (dom.mainContent) {
+            dom.mainContent.scrollIntoView({ behavior: CONFIG.reducedMotion ? 'auto' : 'smooth' });
+        }
+    }
+    
+    function initReveal() {
+        var els = document.querySelectorAll('.reveal');
+        if (!els.length) return;
+        if ('IntersectionObserver' in window) {
+            var obs = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('visible');
+                        obs.unobserve(entries[i].target);
+                    }
+                }
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+            for (var j = 0; j < els.length; j++) {
+                obs.observe(els[j]);
+            }
+        } else {
+            for (var k = 0; k < els.length; k++) {
+                els[k].classList.add('visible');
+            }
+        }
+    }
+    
+    function goRegister(e) {
+        if (e) e.preventDefault();
+        if (_isRedirecting) return;
+        _isRedirecting = true;
+        // Lock all CTA buttons
+        var allBtns = [dom.fabBtn, dom.heroBtn, dom.mainCtaBtn];
+        for (var i = 0; i < allBtns.length; i++) {
+            if (allBtns[i]) {
+                allBtns[i].style.pointerEvents = 'none';
+                allBtns[i].style.opacity = '0.5';
+            }
+        }
+        // Show overlay
+        if (dom.overlay) {
+            dom.overlay.classList.add('active');
+            dom.overlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+        // Animate text steps sequentially (within 3 seconds)
+        if (dom.step1) safeTimeout(function() { dom.step1.classList.add('show'); }, 200);
+        if (dom.step2) safeTimeout(function() { dom.step2.classList.add('show'); }, 1200);
+        if (dom.step3) safeTimeout(function() { dom.step3.classList.add('show'); }, 2200);
+        // Redirect after animation completes (3 seconds)
+        safeTimeout(function() {
+            window.location.href = CONFIG.redirectUrl;
+        }, CONFIG.animDuration);
+        // Safety fallback: if redirect fails after 5s, show error
+        safeTimeout(function() {
+            if (_isRedirecting && dom.overlay) {
+                dom.overlay.classList.remove('active');
+                dom.overlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                _isRedirecting = false;
+                // Re-enable buttons
+                for (var j = 0; j < allBtns.length; j++) {
+                    if (allBtns[j]) {
+                        allBtns[j].style.pointerEvents = '';
+                        allBtns[j].style.opacity = '';
+                    }
+                }
+                // Reset steps
+                if (dom.step1) dom.step1.classList.remove('show');
+                if (dom.step2) dom.step2.classList.remove('show');
+                if (dom.step3) dom.step3.classList.remove('show');
+                toast('Gagal mengalihkan. Silakan coba lagi.');
+            }
+        }, CONFIG.animDuration + 2000);
+    }
+    
+    function bindEvents() {
+        if (dom.fabBtn) dom.fabBtn.addEventListener('click', goRegister);
+        if (dom.heroBtn) dom.heroBtn.addEventListener('click', goRegister);
+        if (dom.mainCtaBtn) dom.mainCtaBtn.addEventListener('click', goRegister);
+        if (dom.scrollTopBtn) dom.scrollTopBtn.addEventListener('click', scrollToTop);
+        if (dom.heroScroll) dom.heroScroll.addEventListener('click', scrollDown);
+        var scrollHandler = function() {
+            updateScrollProgress();
+            updateScrollTopBtn();
+        };
+        window.addEventListener('scroll', scrollHandler, { passive: true });
+    }
+    
+    function init() {
+        initReveal();
+        bindEvents();
+        updateScrollProgress();
+        updateScrollTopBtn();
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script></body></html>
