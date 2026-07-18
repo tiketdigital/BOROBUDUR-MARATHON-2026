@@ -1,1 +1,31 @@
-
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-Ticket Borobudur Marathon 2026</title>
+<style>
+body{margin:0;background:#0b0b0b;color:#fff;font-family:Arial,sans-serif;display:flex;justify-content:center;padding:30px}
+.card{max-width:420px;width:100%;background:#151515;border:1px solid #333;border-radius:18px;padding:24px}
+h1{text-align:center;color:#c41e3a} .row{margin:10px 0}.label{color:#aaa}.value{font-weight:bold}
+.qr{width:180px;height:180px;background:#fff;margin:20px auto;display:flex;align-items:center;justify-content:center;color:#000}
+button{padding:12px 18px;border:0;border-radius:8px;background:#c41e3a;color:#fff;cursor:pointer}
+</style></head><body>
+<div class="card">
+<h1>E-TICKET</h1>
+<div class="row"><span class="label">Nomor:</span> <span class="value" id="no"></span></div>
+<div class="row"><span class="label">Nama:</span> <span class="value" id="nm"></span></div>
+<div class="row"><span class="label">Email:</span> <span class="value" id="em"></span></div>
+<div class="row"><span class="label">Kategori:</span> <span class="value" id="kt"></span></div>
+<div class="row"><span class="label">Harga:</span> <span class="value" id="hg"></span></div>
+<div class="qr">QR CODE</div>
+<div style="display:flex;gap:10px;justify-content:center">
+<button onclick="window.print()">Print</button>
+<button onclick="location.href='index.html'">Beranda</button>
+</div>
+</div>
+<script>
+const d=JSON.parse(localStorage.getItem('ballotData')||'{}');
+document.getElementById('no').textContent=d.nomor||('BLT2026-'+Math.random().toString(36).substr(2,6).toUpperCase());
+document.getElementById('nm').textContent=d.nama||'-';
+document.getElementById('em').textContent=d.email||'-';
+document.getElementById('kt').textContent=d.kategori||'-';
+document.getElementById('hg').textContent=d.harga||'-';
+</script></body></html>
