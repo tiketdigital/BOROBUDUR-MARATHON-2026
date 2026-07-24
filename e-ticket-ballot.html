@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-Ticket - Borobudur Marathon 2026</title>
+<title>E-Ticket Ballot - Borobudur Marathon 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
@@ -33,16 +33,16 @@ button.primary:hover{opacity:.9;color:#fff;background:linear-gradient(135deg,#C4
 
 <div class="card">
     <div class="logo-text">Bank Jateng Borobudur Marathon 2026</div>
-    <div class="jalur-badge" id="jalurBadge">Jalur Pendaftaran</div>
-    <h1 id="ticketTitle">E-Ticket</h1>
+    <div class="jalur-badge">Jalur Ballot</div>
+    <h1>E-Ticket Ballot</h1>
     
     <div class="ticket-info">
         <div class="row"><span class="label">No. Registrasi:</span> <span class="value" id="no">-</span></div>
         <div class="row"><span class="label">Nama Peserta:</span> <span class="value" id="nm">-</span></div>
         <div class="row"><span class="label">Email:</span> <span class="value" id="em">-</span></div>
         <div class="row"><span class="label">Kategori:</span> <span class="value" id="kt">-</span></div>
-        <div class="row"><span class="label" id="hgLabel">Total Pembayaran:</span> <span class="value" id="hg">-</span></div>
-        <div class="row"><span class="label" id="acLabel">Keterangan:</span> <span class="value" id="ac">-</span></div>
+        <div class="row"><span class="label">Biaya Registrasi:</span> <span class="value" id="hg">-</span></div>
+        <div class="row"><span class="label">Keterangan:</span> <span class="value" id="ac">-</span></div>
     </div>
 
     <div id="qrcode" class="qr-box"></div>
@@ -55,37 +55,14 @@ button.primary:hover{opacity:.9;color:#fff;background:linear-gradient(135deg,#C4
 
 <script>
 const d = JSON.parse(localStorage.getItem('registrationData') || '{}');
-const jalur = d.jalur || 'UMUM';
-const prefix = d.prefix || 'BJBM';
+const regNum = d.nomor || ('BLT2026-' + Math.random().toString(36).substring(2, 8).toUpperCase());
 
-document.title = "E-Ticket " + jalur + " - Borobudur Marathon 2026";
-document.getElementById('jalurBadge').textContent = "Jalur " + jalur;
-document.getElementById('ticketTitle').textContent = "E-Ticket " + jalur;
-
-let hgLabel = "Total Pembayaran";
-let acLabel = "Keterangan";
-
-if (jalur === 'SAVE DUIT BANK JATENG' || jalur === 'XTRARUN BANK JATENG') {
-    hgLabel = "Dana Dikunci";
-    acLabel = "No. Rekening";
-} else if (jalur === 'TRAVEL AGENT') {
-    hgLabel = "Total Pembayaran";
-    acLabel = "Travel Agent";
-} else if (jalur === 'BALLOT' || jalur === 'URBANA QUALIFIERS') {
-    hgLabel = "Biaya Registrasi";
-    acLabel = "Keterangan";
-}
-
-document.getElementById('hgLabel').textContent = hgLabel + ":";
-document.getElementById('acLabel').textContent = acLabel + ":";
-
-const regNum = d.nomor || (prefix + '-' + Math.random().toString(36).substring(2, 8).toUpperCase());
 document.getElementById('no').textContent = regNum;
 document.getElementById('nm').textContent = d.nama || '-';
 document.getElementById('em').textContent = d.email || '-';
 document.getElementById('kt').textContent = d.kategori || '-';
 document.getElementById('hg').textContent = d.harga || '-';
-document.getElementById('ac').textContent = d.rekening || '-';
+document.getElementById('ac').textContent = d.rekening || 'Menunggu Pengumuman Ballot';
 
 const qrContainer = document.getElementById('qrcode');
 qrContainer.innerHTML = '';
