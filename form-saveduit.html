@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -222,8 +223,8 @@ function startPayTimer() {
         
         if (timeLeft <= 0) {
             clearInterval(payTimerInterval);
-            st('Waktu pembayaran habat! Silakan ulangi transaksi.', 'e');
-            // Kembali ke step 1 atau bisa disesuaikan
+            st('Waktu pembayaran habis! Silakan ulangi transaksi.', 'e');
+            // Kembali ke step 1
             gs(1);
         }
     }, 1000);
@@ -239,29 +240,41 @@ function rf(){uf=null;document.getElementById('pf').value='';document.getElement
 (function(){var z=document.getElementById('uz');if(!z)return;z.addEventListener('dragover',function(e){e.preventDefault();z.classList.add('drag')});z.addEventListener('dragleave',function(){z.classList.remove('drag')});z.addEventListener('drop',function(e){e.preventDefault();z.classList.remove('drag');if(e.dataTransfer.files.length>0){document.getElementById('pf').files=e.dataTransfer.files;hfu(document.getElementById('pf'))}})})();
 
 function sub(){
-if(!uf||!at.checked||!ah.checked||!ap.checked){st('Lengkapi bukti bayar & centang semua persetujuan!','e');return;}
-const b=document.getElementById('sbtn');
-if(b.disabled)return;
-b.disabled=true;
+    if(!uf||!at.checked||!ah.checked||!ap.checked){st('Lengkapi bukti bayar & centang semua persetujuan!','e');return;}
+    const b=document.getElementById('sbtn');
+    if(b.disabled)return;
+    b.disabled=true;
 
-// Hentikan timer saat submit
-clearInterval(payTimerInterval);
+    // Hentikan timer saat submit
+    clearInterval(payTimerInterval);
 
-let o=document.getElementById('lo'),bar=document.getElementById('lbar'),txt=document.getElementById('ltxt');
-o.classList.add('on');
-const msgs=['Memverifikasi data...','Memvalidasi pembayaran...','Sinkronisasi server...','Menerbitkan e-Ticket...','Selesai'];
-let i=0;
-let sec=60;
-const iv=setInterval(()=>{
-sec--;
-let p=((60-sec)/60)*100;
-bar.style.width=p+'%';
-txt.textContent=msgs[Math.min(4,Math.floor(p/20))]+' ('+(60-sec)+'/60)';
-if(sec<=0){
-clearInterval(iv);
-window.location.href='e-ticket.html';
-}
-},1000);
+    // ===== SIMPAN DATA KE LOCALSTORAGE UNTUK E-TICKET =====
+    var dataToSave = {
+        nomor: 'SVD2026-' + Math.random().toString(36).substr(2, 6).toUpperCase(),
+        nama: document.getElementById('fn').value.trim(),
+        email: document.getElementById('em').value.trim(),
+        kategori: cn,
+        harga: 'IDR ' + cp.toLocaleString('id-ID'),
+        rekening: document.getElementById('acc').value.trim()
+    };
+    localStorage.setItem('saveduitData', JSON.stringify(dataToSave));
+    // ======================================================
+
+    let o=document.getElementById('lo'),bar=document.getElementById('lbar'),txt=document.getElementById('ltxt');
+    o.classList.add('on');
+    const msgs=['Memverifikasi data...','Memvalidasi pembayaran...','Sinkronisasi server...','Menerbitkan e-Ticket...','Selesai'];
+    let i=0;
+    let sec=60;
+    const iv=setInterval(()=>{
+        sec--;
+        let p=((60-sec)/60)*100;
+        bar.style.width=p+'%';
+        txt.textContent=msgs[Math.min(4,Math.floor(p/20))]+' ('+(60-sec)+'/60)';
+        if(sec<=0){
+            clearInterval(iv);
+            window.location.href='e-ticket.html';
+        }
+    },1000);
 }
 
 function sl(){var o=document.getElementById('lo'),b=document.getElementById('lbar'),t=document.getElementById('ltxt');o.classList.add('on');var ms=['Memverifikasi nasabah Bank Jateng...','Memvalidasi data rekening...','Memproses pembayaran...','Menghasilkan nomor registrasi...','Hampir selesai...'],p=0,mi=0,inc=100/100;var tm=setInterval(function(){p+=inc;if(p>100)p=100;b.style.width=p+'%';var ni=Math.min(Math.floor(p/25),ms.length-1);if(ni!==mi){mi=ni;t.style.opacity='0';setTimeout(function(){t.textContent=ms[mi];t.style.opacity='1'},150)}if(p>=100){clearInterval(tm);setTimeout(function(){o.classList.remove('on');b.style.width='0%';ty()},400)}},30)}
