@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,202 +11,83 @@
 <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 <style>
 :root {
-    --red-950: #330708;
-    --red-900: #4A0A0C;
-    --red-800: #6B1012;
-    --red-700: #8B181B;
-    --red-600: #A82022;
-    --red-500: #C62828;
-    --red-50:  #FFF5F5;
-    --gold-700: #7D6420;
-    --gold-600: #A68530;
-    --gold-500: #B8963E;
-    --gold-400: #D4AD4A;
-    --gold-100: #F8F3E8;
-    --n-900: #0D0D0D;
-    --n-800: #1A1A1A;
-    --n-700: #2A2A2A;
-    --n-600: #444444;
-    --n-500: #666666;
-    --n-400: #888888;
-    --n-300: #AAAAAA;
-    --n-200: #D4D4D4;
-    --n-100: #EDEDED;
-    --n-50:  #F7F7F7;
-    --bg:     #F3F1EE;
-    --card:   #FFFFFF;
-    --shadow-sm:  0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
-    --shadow-md:  0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
-    --shadow-lg:  0 4px 8px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.08);
+    --red-950: #330708; --red-900: #4A0A0C; --red-800: #6B1012; --red-700: #8B181B;
+    --red-600: #A82022; --red-500: #C62828; --red-50: #FFF5F5;
+    --gold-700: #7D6420; --gold-600: #A68530; --gold-500: #B8963E; --gold-400: #D4AD4A; --gold-100: #F8F3E8;
+    --n-900: #0D0D0D; --n-800: #1A1A1A; --n-700: #2A2A2A; --n-600: #444444; --n-500: #666666;
+    --n-400: #888888; --n-300: #AAAAAA; --n-200: #D4D4D4; --n-100: #EDEDED; --n-50: #F7F7F7;
+    --bg: #F3F1EE; --card: #FFFFFF;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+    --shadow-md: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+    --shadow-lg: 0 4px 8px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.08);
     --shadow-glow-red: 0 4px 20px rgba(198,40,40,0.25), 0 12px 40px rgba(198,40,40,0.12);
-    --r-sm: 10px;
-    --r-md: 16px;
-    --r-lg: 24px;
-    --r-xl: 32px;
-    --r-full: 9999px;
+    --r-sm: 10px; --r-md: 16px; --r-lg: 24px; --r-xl: 32px; --r-full: 9999px;
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: var(--n-600);
-    line-height: 1.7;
-    overflow-x: hidden;
-}
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--n-600); line-height: 1.7; overflow-x: hidden; }
 img { max-width: 100%; height: auto; display: block; }
-/* Header */
-.header {
-    background: linear-gradient(160deg, var(--red-950) 0%, var(--red-800) 35%, var(--red-700) 100%);
-    padding: 40px 24px 60px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-}
-.header::before {
-    content: '';
-    position: absolute; top: -50%; right: -25%; width: 80%; height: 140%;
-    background: radial-gradient(ellipse, rgba(184,150,62,0.1) 0%, transparent 55%);
-    pointer-events: none;
-}
-.header-logo {
-    height: 80px; margin: 0 auto 24px; object-fit: contain;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-}
-.header-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 7px 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--r-full);
-    font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold-400); margin-bottom: 16px;
-    background: rgba(255,255,255,0.04);
-}
-.header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 42px); font-weight: 800;
-    line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 12px;
-}
+
+.header { background: linear-gradient(160deg, var(--red-950) 0%, var(--red-800) 35%, var(--red-700) 100%); padding: 40px 24px 60px; text-align: center; position: relative; overflow: hidden; color: #fff; }
+.header::before { content: ''; position: absolute; top: -50%; right: -25%; width: 80%; height: 140%; background: radial-gradient(ellipse, rgba(184,150,62,0.1) 0%, transparent 55%); pointer-events: none; }
+.header-logo { height: 80px; margin: 0 auto 24px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
+.header-badge { display: inline-flex; align-items: center; gap: 8px; padding: 7px 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--r-full); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-400); margin-bottom: 16px; background: rgba(255,255,255,0.04); }
+.header h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 12px; }
 .header h1 .gold { color: var(--gold-400); font-style: italic; }
 .header p { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto; }
-/* Layout */
+
 .container { max-width: 820px; margin: -40px auto 60px; padding: 0 24px; position: relative; z-index: 2; }
-/* Card */
-.card {
-    background: var(--card); border-radius: var(--r-xl); padding: 40px;
-    box-shadow: var(--shadow-lg); border: 1px solid rgba(0,0,0,0.04);
-    margin-bottom: 28px; position: relative;
-}
-.card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, var(--red-500), var(--gold-500));
-    border-radius: var(--r-xl) var(--r-xl) 0 0;
-}
-/* Form Elements */
+.card { background: var(--card); border-radius: var(--r-xl); padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid rgba(0,0,0,0.04); margin-bottom: 28px; position: relative; }
+.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--red-500), var(--gold-500)); border-radius: var(--r-xl) var(--r-xl) 0 0; }
+
 .form-section { margin-bottom: 36px; }
 .form-section:last-child { margin-bottom: 0; }
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-weight: 700; color: var(--n-900);
-    margin-bottom: 8px; display: flex; align-items: center; gap: 10px;
-}
+.section-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--n-900); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
 .section-title .iconify { color: var(--red-600); font-size: 24px; }
 .section-desc { font-size: 14px; color: var(--n-500); margin-bottom: 24px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .form-group { margin-bottom: 20px; }
 .form-group.full { grid-column: 1 / -1; }
-.form-label {
-    display: block; font-size: 13px; font-weight: 600; color: var(--n-700);
-    margin-bottom: 8px; letter-spacing: 0.01em;
-}
+.form-label { display: block; font-size: 13px; font-weight: 600; color: var(--n-700); margin-bottom: 8px; letter-spacing: 0.01em; }
 .form-label .req { color: var(--red-500); }
-.form-control {
-    width: 100%; padding: 14px 18px;
-    background: var(--n-50); border: 1.5px solid var(--n-200);
-    border-radius: var(--r-sm); font-family: inherit; font-size: 14.5px; color: var(--n-800);
-    transition: all 0.2s var(--ease);
-}
-.form-control:focus {
-    outline: none; border-color: var(--red-500); background: #fff;
-    box-shadow: 0 0 0 4px rgba(198,40,40,0.08);
-}
+.form-control { width: 100%; padding: 14px 18px; background: var(--n-50); border: 1.5px solid var(--n-200); border-radius: var(--r-sm); font-family: inherit; font-size: 14.5px; color: var(--n-800); transition: all 0.2s var(--ease); }
+.form-control:focus { outline: none; border-color: var(--red-500); background: #fff; box-shadow: 0 0 0 4px rgba(198,40,40,0.08); }
 .form-control::placeholder { color: var(--n-400); }
 textarea.form-control { resize: vertical; min-height: 100px; }
-/* Category Cards */
+
 .cat-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .cat-option { position: relative; }
 .cat-option input { position: absolute; opacity: 0; }
-.cat-label {
-    display: block; padding: 24px 16px; text-align: center;
-    background: var(--n-50); border: 2px solid var(--n-200);
-    border-radius: var(--r-md); cursor: pointer; transition: all 0.25s var(--ease);
-}
-.cat-label .cat-dist {
-    font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 1;
-    color: var(--n-600); margin-bottom: 4px;
-}
+.cat-label { display: block; padding: 24px 16px; text-align: center; background: var(--n-50); border: 2px solid var(--n-200); border-radius: var(--r-md); cursor: pointer; transition: all 0.25s var(--ease); }
+.cat-label .cat-dist { font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 1; color: var(--n-600); margin-bottom: 4px; }
 .cat-label .cat-name { font-size: 13px; font-weight: 700; color: var(--n-700); }
 .cat-label:hover { border-color: var(--red-400); background: #fff; }
-.cat-option input:checked + .cat-label {
-    border-color: var(--red-600); background: var(--red-50);
-    box-shadow: 0 4px 16px rgba(198,40,40,0.1);
-}
+.cat-option input:checked + .cat-label { border-color: var(--red-600); background: var(--red-50); box-shadow: 0 4px 16px rgba(198,40,40,0.1); }
 .cat-option input:checked + .cat-label .cat-dist { color: var(--red-600); }
 .cat-option input:checked + .cat-label .cat-name { color: var(--red-700); }
-/* Payment QRIS */
-.payment-box {
-    display: flex; flex-direction: column; align-items: center;
-    background: var(--gold-100); border: 1px solid var(--gold-400);
-    padding: 32px; border-radius: var(--r-md); margin-top: 16px;
-}
-.payment-box h4 {
-    font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.05em;
-    color: var(--red-800); margin-bottom: 16px;
-}
-.qris-img {
-    width: 100%; max-width: 280px; border-radius: var(--r-sm);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08); margin-bottom: 16px;
-    border: 4px solid #fff;
-}
+
+.payment-box { display: flex; flex-direction: column; align-items: center; background: var(--gold-100); border: 1px solid var(--gold-400); padding: 32px; border-radius: var(--r-md); margin-top: 16px; }
+.payment-box h4 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.05em; color: var(--red-800); margin-bottom: 16px; }
+.qris-img { width: 100%; max-width: 280px; border-radius: var(--r-sm); box-shadow: 0 8px 24px rgba(0,0,0,0.08); margin-bottom: 16px; border: 4px solid #fff; }
 .payment-note { font-size: 13px; color: var(--n-600); text-align: center; max-width: 400px; }
-/* Terms */
-.terms-box {
-    background: var(--n-50); border: 1px solid var(--n-200);
-    padding: 20px; border-radius: var(--r-sm); margin-bottom: 20px;
-    max-height: 160px; overflow-y: auto; font-size: 13px; color: var(--n-500); line-height: 1.6;
-}
-.terms-check {
-    display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
-}
+
+.terms-box { background: var(--n-50); border: 1px solid var(--n-200); padding: 20px; border-radius: var(--r-sm); margin-bottom: 20px; max-height: 160px; overflow-y: auto; font-size: 13px; color: var(--n-500); line-height: 1.6; }
+.terms-check { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
 .terms-check input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--red-600); flex-shrink: 0; }
 .terms-check span { font-size: 14px; color: var(--n-700); }
-/* Submit Button */
-.btn-submit {
-    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
-    padding: 18px 32px; background: linear-gradient(135deg, var(--red-600) 0%, var(--red-700) 100%);
-    color: #fff; border: none; border-radius: var(--r-md);
-    font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit;
-    box-shadow: var(--shadow-glow-red); transition: all 0.3s var(--ease);
-    position: relative; overflow: hidden;
-}
-.btn-submit::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%); pointer-events: none;
-}
-.btn-submit:hover {
-    background: linear-gradient(135deg, var(--red-700) 0%, var(--red-800) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 32px rgba(198,40,40,0.4);
-}
+
+.btn-submit { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 18px 32px; background: linear-gradient(135deg, var(--red-600) 0%, var(--red-700) 100%); color: #fff; border: none; border-radius: var(--r-md); font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; box-shadow: var(--shadow-glow-red); transition: all 0.3s var(--ease); position: relative; overflow: hidden; }
+.btn-submit::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%); pointer-events: none; }
+.btn-submit:hover { background: linear-gradient(135deg, var(--red-700) 0%, var(--red-800) 100%); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(198,40,40,0.4); }
 .btn-submit .iconify { font-size: 20px; transition: transform 0.2s var(--ease); }
 .btn-submit:hover .iconify { transform: translateX(4px); }
-/* Footer */
-.site-footer {
-    background: var(--n-800); color: rgba(255,255,255,0.5); padding: 40px 24px; text-align: center;
-}
+.btn-submit:disabled { opacity: .6; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
+
+.site-footer { background: var(--n-800); color: rgba(255,255,255,0.5); padding: 40px 24px; text-align: center; }
 .footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: rgba(255,255,255,0.75); letter-spacing: 0.1em; margin-bottom: 8px; }
 .footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.8; }
-/* Responsive */
+
 @media (max-width: 768px) {
     .card { padding: 24px; border-radius: var(--r-lg); }
     .form-grid { grid-template-columns: 1fr; }
@@ -215,19 +95,59 @@ textarea.form-control { resize: vertical; min-height: 100px; }
     .header { padding: 30px 18px 50px; }
     .header-logo { height: 60px; }
 }
-/* Alert Toast */
-.toast {
-    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px);
-    background: var(--n-900); color: #fff; padding: 16px 28px; border-radius: var(--r-full);
-    font-size: 14px; font-weight: 500; box-shadow: var(--shadow-lg);
-    opacity: 0; transition: all 0.4s var(--ease); z-index: 9999; pointer-events: none;
-}
+
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--n-900); color: #fff; padding: 16px 28px; border-radius: var(--r-full); font-size: 14px; font-weight: 500; box-shadow: var(--shadow-lg); opacity: 0; transition: all 0.4s var(--ease); z-index: 9999; pointer-events: none; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 .toast.success { background: #22C55E; }
 .toast.error { background: var(--red-600); }
+
+.lo { position: fixed; inset: 0; z-index: 99998; background: radial-gradient(ellipse at center, #0f0608 0%, #050505 100%); backdrop-filter: blur(40px); display: none; align-items: center; justify-content: center; flex-direction: column; padding: 24px; }
+.lo.on { display: flex; }
+.lo::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(196,30,58,.12), transparent 60%), radial-gradient(circle at 50% 70%, rgba(212,168,67,.08), transparent 60%); pointer-events: none; }
+.lo-brand { position: relative; z-index: 2; text-align: center; margin-bottom: 42px; }
+.lo-brand img { height: 46px; width: auto; margin: 0 auto 14px; opacity: .92; filter: drop-shadow(0 4px 20px rgba(196,30,58,.4)); }
+.lo-brand p { font-family: 'Oswald', sans-serif; font-size: 10px; letter-spacing: .4em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+.lr { width: 130px; height: 130px; position: relative; z-index: 2; }
+.lr .r { position: absolute; inset: 0; border-radius: 50%; border: 3px solid transparent; }
+.lr .r1 { border-top-color: #C41E3A; animation: sp 1.3s cubic-bezier(.5,0,.5,1) infinite; }
+.lr .r2 { border-right-color: #D4A843; animation: sp 1.3s cubic-bezier(.5,0,.5,1) infinite reverse; inset: 10px; }
+.lr .r3 { border-bottom-color: #C41E3A; animation: sp .9s cubic-bezier(.5,0,.5,1) infinite; inset: 20px; }
+.lr .cd { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 16px; height: 16px; background: linear-gradient(135deg, #C41E3A, #D4A843); border-radius: 50%; animation: pd 1s ease-in-out infinite; box-shadow: 0 0 20px rgba(196,30,58,.6); }
+@keyframes sp { to { transform: rotate(360deg); } }
+@keyframes pd { 0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 1; } 50% { transform: translate(-50%,-50%) scale(1.6); opacity: .4; } }
+.lo-pct { font-family: 'Oswald', sans-serif; font-size: 64px; font-weight: 700; line-height: 1; margin-top: 34px; background: linear-gradient(135deg, #fff, #D4A843); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; z-index: 2; letter-spacing: -.02em; }
+.lo-pct sup { font-size: 24px; vertical-align: super; color: rgba(255,255,255,.5); -webkit-text-fill-color: rgba(255,255,255,.5); margin-left: 4px; }
+.lbt { width: 340px; max-width: 80vw; height: 5px; background: rgba(255,255,255,.06); border-radius: 3px; overflow: hidden; margin-top: 28px; position: relative; z-index: 2; }
+.lbf { height: 100%; width: 0%; background: linear-gradient(90deg, #C41E3A, #D4A843, #C41E3A); background-size: 200% 100%; border-radius: 3px; transition: width .08s linear; animation: shimmer 2s linear infinite; box-shadow: 0 0 12px rgba(196,30,58,.5); }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.lo-status { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #fff; margin-top: 24px; text-align: center; position: relative; z-index: 2; transition: opacity .15s; letter-spacing: .02em; }
+.lo-sub { font-family: 'Inter', sans-serif; font-size: 11px; color: rgba(255,255,255,.4); margin-top: 10px; text-align: center; position: relative; z-index: 2; letter-spacing: .15em; text-transform: uppercase; }
+.lo-steps { display: flex; gap: 8px; margin-top: 38px; position: relative; z-index: 2; }
+.lo-step { width: 42px; height: 3px; background: rgba(255,255,255,.08); border-radius: 2px; transition: all .4s; }
+.lo-step.active { background: linear-gradient(90deg, #C41E3A, #D4A843); box-shadow: 0 0 8px rgba(196,30,58,.6); }
+.lo-step.done { background: #16A34A; }
+@media (max-width: 640px) { .lr { width: 90px; height: 90px; } .lbt { width: 240px; } .lo-pct { font-size: 48px; } .lo-brand img { height: 38px; } }
 </style>
 </head>
 <body>
+
+<div id="loadingOverlay" class="lo">
+  <div class="lo-brand">
+    <img src="logo.png" alt="Logo">
+    <p>Urbana Qualifiers · Borobudur Marathon 2026</p>
+  </div>
+  <div class="lr">
+    <div class="r r1"></div><div class="r r2"></div><div class="r r3"></div><div class="cd"></div>
+  </div>
+  <div class="lo-pct"><span id="lpct">0</span><sup>%</sup></div>
+  <div class="lbt"><div id="loadingBar" class="lbf"></div></div>
+  <p id="loadingText" class="lo-status">Memproses pendaftaran Urbana Qualifiers...</p>
+  <p class="lo-sub">Mohon tunggu, jangan tutup halaman ini</p>
+  <div class="lo-steps" id="lsteps"></div>
+</div>
+
+<div class="toast" id="toast">Pendaftaran Berhasil Dikirim!</div>
+
 <header class="header">
     <img src="logo.png" alt="Borobudur Marathon 2026" class="header-logo" onerror="this.style.display='none'">
     <div class="header-badge">
@@ -237,6 +157,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
     <h1>Formulir Pendaftaran <span class="gold">Urbana Qualifiers</span></h1>
     <p>Kualifikasi Virtual Run bekerja sama dengan Kompas Urbana. Selesaikan tantangan di My Borobudur Marathon app.</p>
 </header>
+
 <main class="container">
     <form id="regForm" class="card" onsubmit="return handleSubmit(event)">
         <div class="form-section">
@@ -252,23 +173,23 @@ textarea.form-control { resize: vertical; min-height: 100px; }
                 </div>
                 <div class="form-group">
                     <label class="form-label">Nomor Identitas (KTP/SIM) <span class="req">*</span></label>
-                    <input type="text" class="form-control" placeholder="16 digit KTP" required>
+                    <input type="text" id="idNumber" class="form-control" placeholder="16 digit KTP" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Tanggal Lahir <span class="req">*</span></label>
-                    <input type="date" class="form-control" required>
+                    <input type="date" id="birthDate" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Jenis Kelamin <span class="req">*</span></label>
-                    <select class="form-control" required>
+                    <select id="gender" class="form-control" required>
                         <option value="">Pilih...</option>
-                        <option value="L">Laki-laki</option>
-                        <option value="P">Perempuan</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Nomor Telepon (WhatsApp) <span class="req">*</span></label>
-                    <input type="tel" class="form-control" placeholder="0812xxxxxxx" required>
+                    <input type="tel" id="phone" class="form-control" placeholder="0812xxxxxxx" required>
                 </div>
                 <div class="form-group full">
                     <label class="form-label">Email Aktif <span class="req">*</span></label>
@@ -276,11 +197,11 @@ textarea.form-control { resize: vertical; min-height: 100px; }
                 </div>
                 <div class="form-group full">
                     <label class="form-label">Alamat Domisili <span class="req">*</span></label>
-                    <textarea class="form-control" placeholder="Jl. Contoh No. 123, Kota, Provinsi" required></textarea>
+                    <textarea id="address" class="form-control" placeholder="Jl. Contoh No. 123, Kota, Provinsi" required></textarea>
                 </div>
                 <div class="form-group full">
-                    <label class="form-label">Ukuran Jersey (Bonus Awal)</label>
-                    <select class="form-control">
+                    <label class="form-label">Ukuran jersey (Bonus Awal)</label>
+                    <select id="jerseySize" class="form-control">
                         <option value="">Pilih Ukuran...</option>
                         <option value="XS">XS</option>
                         <option value="S">S</option>
@@ -292,6 +213,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
                 </div>
             </div>
         </div>
+        
         <div class="form-section">
             <h2 class="section-title">
                 <span class="iconify" data-icon="mdi:map-marker-distance"></span>
@@ -322,6 +244,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
                 </div>
             </div>
         </div>
+        
         <div class="form-section">
             <h2 class="section-title">
                 <span class="iconify" data-icon="mdi:qrcode-scan"></span>
@@ -340,9 +263,10 @@ textarea.form-control { resize: vertical; min-height: 100px; }
             </div>
             <div class="form-group full" style="margin-top: 24px;">
                 <label class="form-label">Unggah Bukti Pembayaran <span class="req">*</span></label>
-                <input type="file" class="form-control" accept="image/*,application/pdf" required style="padding: 12px;">
+                <input type="file" id="paymentProof" class="form-control" accept="image/*,application/pdf" required style="padding: 12px;">
             </div>
         </div>
+        
         <div class="form-section">
             <h2 class="section-title">
                 <span class="iconify" data-icon="mdi:shield-check-outline"></span>
@@ -360,12 +284,14 @@ textarea.form-control { resize: vertical; min-height: 100px; }
                 <span>Saya telah membaca, memahami, dan menyetujui semua ketentuan yang berlaku untuk Jalur Urbana Qualifiers Borobudur Marathon 2026.</span>
             </label>
         </div>
-        <button type="submit" class="btn-submit">
+        
+        <button type="submit" class="btn-submit" id="submitBtn">
             <span>Kirim Pendaftaran</span>
             <span class="iconify" data-icon="mdi:arrow-right"></span>
         </button>
     </form>
 </main>
+
 <footer class="site-footer">
     <div class="footer-brand">BOROBUDUR MARATHON 2026 — DECADE OF LEGACY</div>
     <p class="footer-copy">
@@ -373,55 +299,94 @@ textarea.form-control { resize: vertical; min-height: 100px; }
         &copy; 2026 Borobudur Marathon. Seluruh hak cipta dilindungi.
     </p>
 </footer>
-<div class="toast" id="toast">Pendaftaran Berhasil Dikirim!</div>
-<script>
-let submitting=false;
-function handleSubmit(event){
- event.preventDefault();
- if(submitting) return false;
- submitting=true;
- 
- // ===== SIMPAN DATA URBANA QUALIFIERS KE LOCALSTORAGE UNTUK E-TICKET =====
- var selectedCat = document.querySelector('input[name="category"]:checked');
- var catName = selectedCat ? selectedCat.value : '-';
- 
- var dataToSave = {
-     jalur: 'URBANA QUALIFIERS',
-     prefix: 'URB2026',
-     nomor: 'URB2026-' + Math.random().toString(36).substring(2, 8).toUpperCase(),
-     nama: document.getElementById('fullName').value.trim(),
-     email: document.getElementById('email').value.trim(),
-     kategori: catName,
-     harga: 'IDR 150.000', // Harga dapat disesuaikan sesuai kebijakan panitia
-     rekening: '-'
- };
- localStorage.setItem('registrationData', JSON.stringify(dataToSave));
- // =====================================================================
 
- // Tampilan Loading Premium
- const ov=document.createElement('div');
- ov.style.cssText='position:fixed;inset:0;background:rgba(10,10,10,0.96);backdrop-filter:blur(10px);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999;font-family:Inter,sans-serif;';
- ov.innerHTML=`
- <div style="font-family:'Playfair Display',serif;font-size:24px;color:#D4A843;margin-bottom:30px;letter-spacing:2px;">Memproses Pendaftaran</div>
- <div style="width:280px;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;">
-     <div id="p" style="height:100%;width:0%;background:linear-gradient(90deg,#C62828,#D4A843);transition:width 1s linear;"></div>
- </div>
- <div id="s" style="margin-top:20px;font-size:14px;color:#aaa;letter-spacing:1px;text-transform:uppercase;">Validasi Data</div>
- `;
- document.body.appendChild(ov);
- 
- let i=0;
- let st=['Validasi Data','Verifikasi Pembayaran','Sinkronisasi Server','Membuat E-Ticket','Selesai'];
- let t=setInterval(()=>{
- i++;
- document.getElementById('p').style.width=(i/60*100)+'%';
- document.getElementById('s').textContent=st[Math.min(4,Math.floor(i/12))];
- if(i>=60){
-     clearInterval(t);
-     location.href='e-ticket.html';
- }
- },1000);
- return false;
+<script>
+var submitting = false;
+
+function handleSubmit(event) {
+    event.preventDefault();
+    if (submitting) return false;
+    
+    var selectedCat = document.querySelector('input[name="category"]:checked');
+    var catName = selectedCat ? selectedCat.value : '-';
+    
+    var dataToSave = {
+        jalur: 'URBANA QUALIFIERS',
+        prefix: 'URB2026',
+        nomor: 'URB2026-' + Math.random().toString(36).substring(2, 8).toUpperCase(),
+        nama: document.getElementById('fullName').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        kategori: catName,
+        harga: 'IDR 150.000',
+        rekening: '-'
+    };
+    localStorage.setItem('registrationData', JSON.stringify(dataToSave));
+    
+    var btn = document.getElementById('submitBtn');
+    submitting = true;
+    btn.disabled = true;
+    btn.innerHTML = '<span>Memproses...</span><span class="iconify" data-icon="mdi:loading"></span>';
+    
+    showLoading();
+    return false;
+}
+
+function showLoading() {
+    var o = document.getElementById('loadingOverlay'),
+        b = document.getElementById('loadingBar'),
+        t = document.getElementById('loadingText'),
+        pEl = document.getElementById('lpct'),
+        sEl = document.getElementById('lsteps'),
+        ms = [
+            'Memverifikasi data virtual run...',
+            'Memvalidasi pembayaran QRIS...',
+            'Menyinkronkan data peserta...',
+            'Menghasilkan nomor registrasi Urbana...',
+            'Mengonfirmasi pendaftaran ke sistem...',
+            'Menerbitkan e-ticket Urbana...',
+            'Hampir selesai, mohon tunggu...'
+        ],
+        stepsCount = ms.length;
+    
+    sEl.innerHTML = '';
+    for (var i = 0; i < stepsCount; i++) {
+        var d = document.createElement('div');
+        d.className = 'lo-step';
+        sEl.appendChild(d);
+    }
+    var stepEls = sEl.querySelectorAll('.lo-step');
+    o.classList.add('on');
+    
+    var p = 0, mi = 0;
+    var total = 180000, start = Date.now();
+    var tm = setInterval(function() {
+        p = ((Date.now() - start) / total) * 100;
+        if (p > 100) p = 100;
+        b.style.width = p + '%';
+        pEl.textContent = Math.floor(p);
+        
+        var ni = Math.min(Math.floor((p / 100) * stepsCount), stepsCount - 1);
+        if (ni !== mi) {
+            mi = ni;
+            t.style.opacity = '0';
+            setTimeout(function() {
+                t.textContent = ms[mi];
+                t.style.opacity = '1';
+            }, 150);
+        }
+        
+        for (var k = 0; k < stepsCount; k++) {
+            if (k < ni) stepEls[k].className = 'lo-step done';
+            else if (k === ni) stepEls[k].className = 'lo-step active';
+            else stepEls[k].className = 'lo-step';
+        }
+        
+        if (p >= 100) {
+            clearInterval(tm);
+            t.textContent = 'Pendaftaran berhasil! Mengalihkan ke e-ticket...';
+            setTimeout(function() { window.location.href = 'e-ticket-urbana.html'; }, 800);
+        }
+    }, 30);
 }
 </script>
 </body>
