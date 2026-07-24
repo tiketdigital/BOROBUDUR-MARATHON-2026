@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E-Ticket - Borobudur Marathon 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
     body {
         margin: 0;
@@ -100,12 +101,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #000;
         border-radius: 12px;
-        font-weight: bold;
-        font-family: 'Oswald', sans-serif;
-        letter-spacing: 1px;
         box-shadow: 0 8px 20px rgba(196,30,58,0.15);
+        padding: 10px;
+    }
+    .qr-box img, .qr-box canvas {
+        width: 140px !important;
+        height: 140px !important;
     }
     
     .btn-group {
@@ -165,7 +167,7 @@
         <div class="row"><span class="label" id="acLabel">Keterangan:</span> <span class="value" id="ac">-</span></div>
     </div>
 
-    <div class="qr-box">QR CODE</div>
+    <div id="qrcode" class="qr-box"></div>
     
     <div class="btn-group">
         <button class="primary" onclick="window.print()">Cetak Tiket</button>
@@ -199,12 +201,24 @@
     document.getElementById('hgLabel').textContent = hgLabel + ":";
     document.getElementById('acLabel').textContent = acLabel + ":";
     
-    document.getElementById('no').textContent = d.nomor || (prefix + '-' + Math.random().toString(36).substr(2, 6).toUpperCase());
+    const regNum = d.nomor || (prefix + '-' + Math.random().toString(36).substr(2, 6).toUpperCase());
+    document.getElementById('no').textContent = regNum;
     document.getElementById('nm').textContent = d.nama || '-';
     document.getElementById('em').textContent = d.email || '-';
     document.getElementById('kt').textContent = d.kategori || '-';
     document.getElementById('hg').textContent = d.harga || '-';
     document.getElementById('ac').textContent = d.rekening || '-';
+    
+    const qrContainer = document.getElementById('qrcode');
+    qrContainer.innerHTML = '';
+    new QRCode(qrContainer, {
+        text: regNum,
+        width: 140,
+        height: 140,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
 </script>
 
 </body>
