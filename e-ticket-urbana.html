@@ -1,1 +1,81 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Ticket Urbana Qualifiers - Borobudur Marathon 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0A0A0A;color:#fff;font-family:'Inter',sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:30px}
+.card{max-width:450px;width:100%;background:linear-gradient(145deg,#151515,#1A1A1A);border:1px solid #333;border-radius:20px;padding:40px 30px;box-shadow:0 20px 50px rgba(0,0,0,.5);position:relative;overflow:hidden;text-align:center}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#C41E3A,#D4A843)}
+.logo-text{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:3px;color:#888;text-transform:uppercase;margin-bottom:10px}
+.jalur-badge{display:inline-block;background:rgba(196,30,58,.15);color:#C41E3A;border:1px solid rgba(196,30,58,.3);padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:15px}
+h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;margin:0 0 20px 0;background:linear-gradient(135deg,#D4A843,#F5E6A3 45%,#D4A843 55%,#B8860B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ticket-info{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px;margin-bottom:30px;text-align:left}
+.row{display:flex;justify-content:space-between;align-items:center;margin:12px 0;font-size:14px;border-bottom:1px solid rgba(255,255,255,.05);padding-bottom:12px}
+.row:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+.label{color:#888;font-weight:500}
+.value{font-weight:700;color:#fff;text-align:right;max-width:60%;word-break:break-word}
+.qr-box{width:160px;height:160px;background:#fff;margin:0 auto 30px;display:flex;align-items:center;justify-content:center;border-radius:12px;box-shadow:0 8px 20px rgba(196,30,58,.15);padding:10px}
+.qr-box img,.qr-box canvas{width:140px!important;height:140px!important}
+.btn-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+button{padding:14px 24px;border:1px solid #333;border-radius:10px;background:transparent;color:#fff;cursor:pointer;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:13px;transition:all .3s;font-weight:500}
+button:hover{border-color:#C41E3A;color:#C41E3A;background:rgba(196,30,58,.05)}
+button.primary{background:linear-gradient(135deg,#C41E3A,#8B0000);border-color:transparent;color:#fff}
+button.primary:hover{opacity:.9;color:#fff;background:linear-gradient(135deg,#C41E3A,#8B0000)}
+@media print{body{background:#fff;padding:0}.btn-group{display:none}.card{box-shadow:none;border:1px solid #ddd}}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="logo-text">Bank Jateng Borobudur Marathon 2026</div>
+    <div class="jalur-badge">Jalur Urbana Qualifiers</div>
+    <h1>E-Ticket Urbana</h1>
+    
+    <div class="ticket-info">
+        <div class="row"><span class="label">No. Registrasi:</span> <span class="value" id="no">-</span></div>
+        <div class="row"><span class="label">Nama Peserta:</span> <span class="value" id="nm">-</span></div>
+        <div class="row"><span class="label">Email:</span> <span class="value" id="em">-</span></div>
+        <div class="row"><span class="label">Kategori:</span> <span class="value" id="kt">-</span></div>
+        <div class="row"><span class="label">Biaya Registrasi:</span> <span class="value" id="hg">-</span></div>
+        <div class="row"><span class="label">Keterangan:</span> <span class="value" id="ac">-</span></div>
+    </div>
+
+    <div id="qrcode" class="qr-box"></div>
+    
+    <div class="btn-group">
+        <button class="primary" onclick="window.print()">Cetak Tiket</button>
+        <button onclick="location.href='index.html'">Beranda</button>
+    </div>
+</div>
+
+<script>
+const d = JSON.parse(localStorage.getItem('registrationData') || '{}');
+const regNum = d.nomor || ('URB2026-' + Math.random().toString(36).substring(2, 8).toUpperCase());
+
+document.getElementById('no').textContent = regNum;
+document.getElementById('nm').textContent = d.nama || '-';
+document.getElementById('em').textContent = d.email || '-';
+document.getElementById('kt').textContent = d.kategori || '-';
+document.getElementById('hg').textContent = d.harga || '-';
+document.getElementById('ac').textContent = d.rekening || 'Virtual Run Challenge';
+
+const qrContainer = document.getElementById('qrcode');
+qrContainer.innerHTML = '';
+new QRCode(qrContainer, {
+    text: regNum,
+    width: 140,
+    height: 140,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+});
+</script>
+
+</body>
+</html>
