@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://code.iconify.design/3/3.1.0/iconify.min.css">
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 <style>
 :root {
     --red-950: #330708;
@@ -248,7 +248,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
             <div class="form-grid">
                 <div class="form-group full">
                     <label class="form-label">Nama Lengkap <span class="req">*</span></label>
-                    <input type="text" class="form-control" placeholder="Contoh: Budi Santoso" required>
+                    <input type="text" id="fullName" class="form-control" placeholder="Contoh: Budi Santoso" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Nomor Identitas (KTP/SIM) <span class="req">*</span></label>
@@ -272,7 +272,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
                 </div>
                 <div class="form-group full">
                     <label class="form-label">Email Aktif <span class="req">*</span></label>
-                    <input type="email" class="form-control" placeholder="email@domain.com" required>
+                    <input type="email" id="email" class="form-control" placeholder="email@domain.com" required>
                 </div>
                 <div class="form-group full">
                     <label class="form-label">Alamat Domisili <span class="req">*</span></label>
@@ -380,18 +380,49 @@ function handleSubmit(event){
  event.preventDefault();
  if(submitting) return false;
  submitting=true;
+ 
+ // ===== SIMPAN DATA URBANA QUALIFIERS KE LOCALSTORAGE UNTUK E-TICKET =====
+ var selectedCat = document.querySelector('input[name="category"]:checked');
+ var catName = selectedCat ? selectedCat.value : '-';
+ 
+ var dataToSave = {
+     jalur: 'URBANA QUALIFIERS',
+     prefix: 'URB2026',
+     nomor: 'URB2026-' + Math.random().toString(36).substring(2, 8).toUpperCase(),
+     nama: document.getElementById('fullName').value.trim(),
+     email: document.getElementById('email').value.trim(),
+     kategori: catName,
+     harga: 'IDR 150.000', // Harga dapat disesuaikan sesuai kebijakan panitia
+     rekening: '-'
+ };
+ localStorage.setItem('registrationData', JSON.stringify(dataToSave));
+ // =====================================================================
+
+ // Tampilan Loading Premium
  const ov=document.createElement('div');
- ov.style='position:fixed;inset:0;background:#111;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999';
- ov.innerHTML='<h2>Loading Premium</h2><div style="width:80%;height:18px;background:#333"><div id=p style="height:100%;width:0;background:#d4ad4a"></div></div><div id=s>Validasi Data</div>';
+ ov.style.cssText='position:fixed;inset:0;background:rgba(10,10,10,0.96);backdrop-filter:blur(10px);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999;font-family:Inter,sans-serif;';
+ ov.innerHTML=`
+ <div style="font-family:'Playfair Display',serif;font-size:24px;color:#D4A843;margin-bottom:30px;letter-spacing:2px;">Memproses Pendaftaran</div>
+ <div style="width:280px;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;">
+     <div id="p" style="height:100%;width:0%;background:linear-gradient(90deg,#C62828,#D4A843);transition:width 1s linear;"></div>
+ </div>
+ <div id="s" style="margin-top:20px;font-size:14px;color:#aaa;letter-spacing:1px;text-transform:uppercase;">Validasi Data</div>
+ `;
  document.body.appendChild(ov);
- let i=0,st=['Validasi Data','Verifikasi Pembayaran','Sinkronisasi Server','Membuat E-Ticket','Selesai'];
+ 
+ let i=0;
+ let st=['Validasi Data','Verifikasi Pembayaran','Sinkronisasi Server','Membuat E-Ticket','Selesai'];
  let t=setInterval(()=>{
  i++;
  document.getElementById('p').style.width=(i/60*100)+'%';
  document.getElementById('s').textContent=st[Math.min(4,Math.floor(i/12))];
- if(i>=60){clearInterval(t);location.href='e-ticket.html';}
+ if(i>=60){
+     clearInterval(t);
+     location.href='e-ticket.html';
+ }
  },1000);
  return false;
 }
-</script></body>
+</script>
+</body>
 </html>
